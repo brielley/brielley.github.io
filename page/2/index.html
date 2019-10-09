@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Brielley">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Brielley">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Brielley">
+  <link rel="canonical" href="http://yoursite.com/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Brielley</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Brielley</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-news">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>News</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-musical">
+      
+    
+
+    <a href="/categories/Musical/" rel="section"><i class="fa fa-fw fa-film"></i>Musical</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-timeline">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-history"></i>Timeline</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>Search</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/idea-game-of-jcs00/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/10/03/idea-game-of-jcs00/" class="post-title-link" itemprop="url">JCS游戏脑洞</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-10-03 15:51:00" itemprop="dateCreated datePublished" datetime="2019-10-03T15:51:00+08:00">2019-10-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-09 00:45:55" itemprop="dateModified" datetime="2019-10-09T00:45:55+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/" itemprop="url" rel="index"><span itemprop="name">Musical</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/Idea/" itemprop="url" rel="index"><span itemprop="name">Idea</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>旧文，原发于lofter，存档待更（别信。</li>
+<li>沙雕预警。</li>
+</ul>
+<hr>
+<h2 id="游戏设定"><a href="#游戏设定" class="headerlink" title="游戏设定"></a>游戏设定</h2><p>可选主控角色犹大、彼得、西门。自带队友耶稣、玛利。</p>
+<p>游戏目标是打通所有关卡顺带和自家CP HE（西门？？？</p>
+<p>无论选择哪个主控角色，你都将拥有两种基础道具，分别为面包和酒，其中面包用于攻击，酒用于回复。这两项道具均仅可由你的队友耶稣产出而无其他获取途径，耶稣的产出速度受两个数值影响：耶稣对你的好感值和耶稣的压力值。而你的另一名队友玛利产出的任务道具摇篮曲可以缓解耶稣的压力值，摇篮曲的产出需要投入单价300银币的香膏，但如果你和玛利的好感值够高她会自己支付。</p>
+<p>所有主控角色将拥有三个基础属性：智慧、武力、外交。主控角色不同，角色基础属性和成长值倾向不同，比如犹大有智慧值成长优势，西门有武力值成长优势，彼得有外交值成长优势。武力数值会影响面包的攻击力，智慧数值会影响酒的恢复能力，外交属性会影响对方攻击力。同时，每项数值达到一定点数后将开启新功能，武力数值达到一定值以上将开启武器库功能，使你的面包具有群体攻击能力，最高群攻数值可以达到5万；智慧数值达到一定值以上将开启复活酒功能，你的角色将获取一次复活机会，用于在某关卡阵亡后能以灵魂形态继续通关；外交数值达到一定值以上将开启白背心功能，使得你的面包有一定概率使敌军获得”被战五渣吓尿”debuff而不战而胜。</p>
+<p>同时，每个主控角色会有一个角色特有系统：</p>
+<p>犹大会有一个大掌柜系统，你可以控制你的犹大用这些银币进行模拟经营，收益的10%会作为报酬归你的犹大所有，因此，如果不想把行动点用在刷玛利好感值上来产出摇篮曲，那么强烈建议你选择犹大，否则你会发现你的使徒工资很难支付香膏的账单。但另一方面，如果你的模拟经营是亏损的，你将非但不能从中提取任何报酬，还会大大降低耶稣对你的好感度。</p>
+<p>西门会有一个广场舞系统，你可以控制你的西门组织人们练习广场舞，而不同的广场舞曲对于吸引舞者数量(会影响你面包最大可群攻数量)和增加舞者力量(会影响你面包的单体攻击数值)是不同的，你需要在这二者之间进行权衡。注意不要在你的队友耶稣面前进入广场舞练习界面，会影响他对你的西门的好感度。</p>
+<p>彼得会有一个好闺蜜系统，你可以控制你的彼得和女性门徒们进行互动，增加彼得的”好闺蜜”属性，而这一属性值将会加成在你的彼得的外交值上并最终提高你的彼得的白背心功能触发几率。但请注意，千万不要试图利用这个系统来刷你的彼得和攻略对象玛利的好感值，否则你会触发”闺蜜卡”BE结局。</p>
+<p>现在你对游戏的主控角色都有一定了解了，那么选择你的角色，开始你的游戏旅程吧。</p>
+<h2 id="第一关-脑洞天堂"><a href="#第一关-脑洞天堂" class="headerlink" title="第一关 脑洞天堂"></a>第一关 脑洞天堂</h2><p>你所面临的第一个关卡是脑洞天堂，你所选择的角色不同，所需面临的游戏任务也有一定的区别。</p>
+<h3 id="犹大篇"><a href="#犹大篇" class="headerlink" title="犹大篇"></a>犹大篇</h3><p>如果你选择的是犹大，那么你这一关的任务是降低耶稣的抗拒值，耶稣的初始抗拒值是100，你需要把它降低到60以下才能通关。</p>
+<p>战斗将分为两段，第一段是在给定的2分半时间内你和耶稣的1V1，你的面包每次命中耶稣都会直接降低他的抗拒值，耶稣不会攻击你，但你会发现你很难命中到耶稣。友情提示耶稣的不同部位命中率是不一样的噢。但千万别贪图命中率就只往高命中率的地方投掷面包，否则你会发现尽管耶稣肩部的命中率奇低，但如果你在这里一次都没有击中耶稣肩部的话，那么在下一关卡你会无法触发特殊剧情而进不了HE线。这一段战斗除非你开挂修改好感值否则在给定时间内你是不可能把耶稣的抗拒值降到0直接告诉你的犹大真相进入HE的，2分半时间到后使徒们会出现，你将进入第二段群体战斗环节。</p>
+<p>第二段耶稣将会被使徒们环绕起来，你会发现你需要至少把三名使徒的抗拒值降到0以后你才能继续投掷到耶稣。你可以任意选择你所愿意投掷的3名使徒，注意，有的使徒在被你投掷面包后会攻击你，注意谨慎选择你的投掷对象。这一段战斗的给定时间是1分半，但请放心，使徒们的抗拒值血条尽管长短不一但比起耶稣而言非常短并且命中相对容易。</p>
+<p>无论你这一关的通关分数是多少，增加的来自耶稣的好感值都是固定的。但如果你高分通关(把耶稣抗拒值降低到50及以下)，你将会获取一个”来自耶稣的注视”buff，这会使你下一关对耶稣的命中率提升20%，这对于进入HE线非常关键，强烈建议你在这关反复刷取不要只图低空飘过啦。</p>
+<h3 id="西门篇"><a href="#西门篇" class="headerlink" title="西门篇"></a>西门篇</h3><p>如果你选择的是西门，那么这一关你的主要任务是为武器库筹资，在1分半的战斗中，你需要把筹资进度从0%提高到50%才能通关。</p>
+<p>你可以向任意使徒投掷你的面包，不同使徒的命中率不一样，如果命中将会提升筹资进度值，但每名使徒都有最大可筹资额，超出以后即使你再命中也不会提升你的筹资进度了，因此不要只对着命中率高的使徒死命刷啦。</p>
+<p>这一关的真正难点在于，你投掷面包的时候，必须避开你的队友耶稣和另一名NPC使徒犹大的视野。他们的视野范围为他们面向方向的正前方150%视距30米，而这一关你的面包的射程是5米，因此不要妄图通过远程攻击来获胜。注意灵活应用掩体来规避耶稣和犹大的视线，尤其是要灵活应用移动中的使徒们的身体作为掩体。提醒注意的是，耶稣的视线很好规避，因为他的坐标是静止不动的，只会扭转视角；而犹大的坐标则是移动的，他甚至有一段时间会不断去寻找使徒们，需要格外留心，但如果你认真观察，会发现他的移动规律有迹可循，并且和耶稣的视角转动存在联动。嘘，不要点破，不然他们的坐标和视角移动会变得无规律提升你的战斗难度啦。</p>
+<p>尽管50%进度就能通关，但依然建议你把数值刷高，因为能刷进度的机会不多，如果你错过了这个关卡，那么很可能就不得不在后面某些提升进度的剧情中为了那么三五点进度而选yes，而它们导向BE的概率会非常大。</p>
+<h3 id="彼得篇"><a href="#彼得篇" class="headerlink" title="彼得篇"></a>彼得篇</h3><p>如果你选择的是彼得，那么这一关你的主要任务是攒白背心，在1分半的战斗中，你需要把进度从0%攒到50%以上才能通关。</p>
+<p>你可以向任意使徒和耶稣投掷面包，但需要注意的是，彼得的投掷需要格外讲求技巧，因为对于每个目标NPC都仅有一个部位是可以命中的而其他部位会全部miss。对于大部分使徒这个部位是肩，但也有很多特殊，比如对于耶稣你只有投掷他的手背才能命中，而你需要控制你的彼得蹲下才能命中得到他的手背，虽然这比较麻烦，但命中耶稣的手背进度能直接涨5%，因此强烈建议你不要错过。对于犹大建议你直接放弃向他丢面包，因为他的皮甲的防御很厚，你目前等级的面包很难破防，但并不是说你就无法从犹大这里攒到进度了，在关卡中有一个时刻犹大会主动攻击你，而如果你避开了他的攻击并且用你的酒命中了他(酒是范围攻击非常好命中)给他回血那么你的进度会直接增长5%，而这一关除了犹大以外不会有人攻击你因此你完全可以不用留着酒治疗自己，这个特殊事件大约发生在战斗开始后的30秒左右，强烈建议你留心把握机会，因为，悄悄告诉你，如果在这里你用酒命中了犹大还会涨耶稣对你的好感值哟。</p>
+<p>仍然强烈建议你不要拘泥于50%的通关线尽量把数据刷高，因为如果你发现自己就差那么一点白背心进度而不得不去好闺蜜系统里刷的话，就可能发生为了最后差的那么三五点而不得不去刷玛利的闺蜜值，而尽管闺蜜值会按照30%的百分比加成到玛利对你的好感度上，但闺蜜值一旦超过某个临界值，就会直接进入”闺蜜卡”BE结局。当然，如果你的彼得真的只希望和玛利做闺蜜，那就怎么都好啦~但，小声提醒你，即使你的彼得选择只和玛利做闺蜜，也不会使得耶稣变成可攻略角色的噢！</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/03/idea-game-of-jcs00/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/subtitle-zh-gc-interview-2018/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/10/03/subtitle-zh-gc-interview-2018/" class="post-title-link" itemprop="url">【中字】John Hannam Meets Glenn Carter <i class="fa fa-music"></i></a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-10-03 13:06:24" itemprop="dateCreated datePublished" datetime="2019-10-03T13:06:24+08:00">2019-10-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-09 00:40:15" itemprop="dateModified" datetime="2019-10-09T00:40:15+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/" itemprop="url" rel="index"><span itemprop="name">Musical</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/Subtitle/" itemprop="url" rel="index"><span itemprop="name">Subtitle</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>万世巨星2000版耶稣扮演者Glenn Carter在2018年11月的采访音频，B站中字弹幕施工完毕。附script。</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/03/subtitle-zh-gc-interview-2018/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/subtitle-zh-the-making-of-jcs-bilibili/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/10/03/subtitle-zh-the-making-of-jcs-bilibili/" class="post-title-link" itemprop="url">【中字】The Making of Jesus Christ Superstar 2000 <i class="fa fa-film"></i></a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-10-03 13:06:24" itemprop="dateCreated datePublished" datetime="2019-10-03T13:06:24+08:00">2019-10-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-09 00:38:17" itemprop="dateModified" datetime="2019-10-09T00:38:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/" itemprop="url" rel="index"><span itemprop="name">Musical</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/Subtitle/" itemprop="url" rel="index"><span itemprop="name">Subtitle</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>JCS00官方花絮，与电影同时以纪录片形式放出，B站中字弹幕施工完毕，附原发于lofter的response。</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/03/subtitle-zh-the-making-of-jcs-bilibili/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/subtitle-en-zh-jcs00-bilibili-yunmusic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/10/03/subtitle-en-zh-jcs00-bilibili-yunmusic/" class="post-title-link" itemprop="url">【中英双字】Jesus Christ Superstar 2000 <i class="fa fa-film"></i> <i class="fa fa-music"></i></a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-10-03 13:06:24" itemprop="dateCreated datePublished" datetime="2019-10-03T13:06:24+08:00">2019-10-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-09 00:41:05" itemprop="dateModified" datetime="2019-10-09T00:41:05+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/" itemprop="url" rel="index"><span itemprop="name">Musical</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/Subtitle/" itemprop="url" rel="index"><span itemprop="name">Subtitle</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>精校了英文字幕，并按照尽可能保留原本歌词含义(包含剧情语境下双关多关含义)和原词节奏韵律的原则，兼顾可唱性进行了中文翻译。</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/03/subtitle-en-zh-jcs00-bilibili-yunmusic/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/subtitle-en-ai-bilibili/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/10/03/subtitle-en-ai-bilibili/" class="post-title-link" itemprop="url">【英字】American Idiot 2010 <i class="fa fa-film"></i></a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-10-03 13:06:24" itemprop="dateCreated datePublished" datetime="2019-10-03T13:06:24+08:00">2019-10-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-06 16:10:58" itemprop="dateModified" datetime="2019-10-06T16:10:58+08:00">2019-10-06</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/" itemprop="url" rel="index"><span itemprop="name">Musical</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Musical/Subtitle/" itemprop="url" rel="index"><span itemprop="name">Subtitle</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>音乐剧American Idiot百老汇初版，很遗憾没有官录只有这个相对清晰一丢丢的tp，B站弹幕英字施工完毕，未经精校。</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/03/subtitle-en-ai-bilibili/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Brielley</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">categories</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">tags</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:brielley@163.com" title="Contact me &rarr; mailto:brielley@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Contact me</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Brielley</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
