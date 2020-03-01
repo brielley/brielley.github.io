@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Brielley">
 <meta property="og:description" content="【环境】win10，python3.8.0，anaconda3 【安装、运行与退出、交互】 安装：官网下载，安装时需要add to environment viablity，否则无法在命令运行符里交互。 运行：win10下运行cmd或直接搜索进入命令运行符，输入python，如返回显示python版本号，且提行显示&amp;gt;&amp;gt;&amp;gt;待输入命令，则已运行python，可直接在&amp;gt;&amp;gt;&amp;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-01T13:47:37.031Z">
+<meta property="og:updated_time" content="2020-03-01T14:03:50.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Study Notes I">
 <meta name="twitter:description" content="【环境】win10，python3.8.0，anaconda3 【安装、运行与退出、交互】 安装：官网下载，安装时需要add to environment viablity，否则无法在命令运行符里交互。 运行：win10下运行cmd或直接搜索进入命令运行符，输入python，如返回显示python版本号，且提行显示&amp;gt;&amp;gt;&amp;gt;待输入命令，则已运行python，可直接在&amp;gt;&amp;gt;&amp;">
@@ -274,7 +274,7 @@
                 
               
 
-              <time title="Created: 2020-03-01 21:44:10 / Modified: 21:47:37" itemprop="dateCreated datePublished" datetime="2020-03-01T21:44:10+08:00">2020-03-01</time>
+              <time title="Created: 2020-03-01 21:44:10 / Modified: 22:03:50" itemprop="dateCreated datePublished" datetime="2020-03-01T21:44:10+08:00">2020-03-01</time>
             </span>
           
             
@@ -359,10 +359,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 想输出“尊敬的张三，会员号N-21-00233，您的余额为100.50元。”，可写为：</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'尊敬的%s，会员号N-%1d-%05d，您的余额为%.2f元'</span> % (<span class="string">'张三'</span>, 21, 233, 100.5))</span><br></pre></td></tr></table></figure>
 
 <p>同样，需要直接表示%用`%%`，使用举例：<br>小明上学期72分，这学期85分，需要告诉小明他成绩提升了多少百分比，精确到小数点后一位，可写为：</p>
-
-undefined
-
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">s1=72</span><br><span class="line">s2=85</span><br><span class="line">r=(&apos;小明&apos;, round(100*(s2/s1-1),1) )</span><br><span class="line">print(&apos;你好，%s，本学期你的成绩提升了%s &#123;% raw %&#125;%%&#123;% endraw %&#125;&apos; % r)</span><br></pre></td></tr></table></figure>
 
 <p>【数列】<br><strong>不可变数列tuple</strong>（又称元组）：一旦定义后就不能修改<br><code>t=(1, [2, 3])</code>,可以在tuple里嵌套list，里面的1和<code>[]</code>的位置不能修改，但<code>[]</code>里的可以修改。<br><code>t=(1,)</code>为避免小括号的歧义，如果表tuple而里面的数组只有一个取值时需要加逗号。<br><code>t=(1, &#39;anna&#39;, 2.33)</code>，一个组里可以同时有不同格式整数、字符串、浮点数等。</p>
 <p><strong>可变数列list</strong>（又称数组）：定义后可以修改<br><code>len(L)</code>求list里包含的数值个数<br><code>listname[0], listname[1], listname[2], listname[-1]</code>求数组中第1、第2、第3、倒数第1个值，如果超出长度没有取值会报错<br><code>listname[1][0]</code>取数组中第2个值也是一个子数列中的第1个值<br><code>listname[n:m]</code>，又称作“切片”。取数组中第n个到第m个值<code>[nvalue, n+1value,...,m-1value, mvalue]</code>，可省略n或m，表示从开头取到m或从n取到结尾，n和m均可用负数表示倒数第n或m个值。<br><code>listname.append(&#39;ToBeAdd&#39;)</code>追加到列最后<br><code>listname.insert(2,&#39;Tobeadd&#39;)</code>插入到数列第3个值的位置<br><code>listname.pop()</code>删除最后一个值<br><code>listname.pop(1)</code>删除数列第2个值<br><code>listname[2]=&#39;abc&#39;</code>替换数列第3个值</p>
@@ -437,7 +434,10 @@ undefined
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s=pd.Series([1,2,3],index=[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;])</span><br></pre></td></tr></table></figure>
 
 <p>那么左边的索引就不是0 1 2而是a b c。</p>
-<p>用索引取值的原理和numpy里的array以及python自带的list差不多，都是用方括号，在上面的例子里，<br><code>s[&#39;a&#39;]</code>取1<br><code>s[&#39;a&#39;:&#39;c&#39;]</code>取a    1<br>              b    2<br>              c    3<br><code>s[[&#39;a&#39;,&#39;c&#39;]]</code>取a    1    #注意要嵌套一层方括号<br>                c    3</p>
+<p>用索引取值的原理和numpy里的array以及python自带的list差不多，都是用方括号，在上面的例子里，<br><code>s[&#39;a&#39;]</code>取1<br><code>s[&#39;a&#39;:&#39;c&#39;]</code>取<code>a    1
+               b    2
+               c    3</code><br><code>s[[&#39;a&#39;,&#39;c&#39;]]</code>取<code>a    1    #注意要嵌套一层方括号
+                 c    3</code></p>
 <p>除了list以外，dict也可以转Series，dict里的key会变成Series里的index。如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;dict1=&#123;&apos;name&apos;:&apos;ana&apos;,&apos;gender&apos;:&apos;f&apos;&#125;</span><br><span class="line">&gt;&gt;&gt;s2=pd.Series(dict1)</span><br><span class="line">&gt;&gt;&gt;s2</span><br><span class="line">&gt;&gt;&gt;name      ana</span><br><span class="line">   gender      f</span><br><span class="line">   dtype: object</span><br></pre></td></tr></table></figure>
 
