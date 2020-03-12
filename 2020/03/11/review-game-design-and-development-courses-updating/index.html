@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="游戏设计导论推荐度：★★★☆授课方：加州艺术学院平台：Coursera费用：听课免费，证书收费但可申请全额助学金语言：英语字幕：中字  Repo：最零基础上手的游戏设计课程。不同于许多别的在讲游戏设计之前得先讲好几个小时的如何使用某个游戏引擎来呈现你的设计的课程，这个课不需要任何意义上的前置技能，会用纸笔就行了。特点是别说那么多就是干。课程的构架基本上是你先随便设计一个游戏，然后我们一起看看它是不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Online Courses and Resources about Game Design and Development">
+<meta property="og:url" content="http://yoursite.com/2020/03/11/review-game-design-and-development-courses-updating/index.html">
+<meta property="og:site_name" content="Brielley">
+<meta property="og:description" content="游戏设计导论推荐度：★★★☆授课方：加州艺术学院平台：Coursera费用：听课免费，证书收费但可申请全额助学金语言：英语字幕：中字  Repo：最零基础上手的游戏设计课程。不同于许多别的在讲游戏设计之前得先讲好几个小时的如何使用某个游戏引擎来呈现你的设计的课程，这个课不需要任何意义上的前置技能，会用纸笔就行了。特点是别说那么多就是干。课程的构架基本上是你先随便设计一个游戏，然后我们一起看看它是不">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-12T18:38:49.885Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Online Courses and Resources about Game Design and Development">
+<meta name="twitter:description" content="游戏设计导论推荐度：★★★☆授课方：加州艺术学院平台：Coursera费用：听课免费，证书收费但可申请全额助学金语言：英语字幕：中字  Repo：最零基础上手的游戏设计课程。不同于许多别的在讲游戏设计之前得先讲好几个小时的如何使用某个游戏引擎来呈现你的设计的课程，这个课不需要任何意义上的前置技能，会用纸笔就行了。特点是别说那么多就是干。课程的构架基本上是你先随便设计一个游戏，然后我们一起看看它是不">
+  <link rel="canonical" href="http://yoursite.com/2020/03/11/review-game-design-and-development-courses-updating/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Online Courses and Resources about Game Design and Development | Brielley</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Brielley</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-news">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>News</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-musical">
+      
+    
+
+    <a href="/categories/Musical/" rel="section"><i class="fa fa-fw fa-film"></i>Musical</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-topics">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Topics</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>Search</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/11/review-game-design-and-development-courses-updating/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Online Courses and Resources about Game Design and Development
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-03-11 01:15:38" itemprop="dateCreated datePublished" datetime="2020-03-11T01:15:38+08:00">2020-03-11</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-13 02:38:49" itemprop="dateModified" datetime="2020-03-13T02:38:49+08:00">2020-03-13</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="游戏设计导论"><a href="#游戏设计导论" class="headerlink" title="游戏设计导论"></a><a href="https://www.coursera.org/learn/game-design/home/welcome" target="_blank" rel="noopener">游戏设计导论</a></h4><p>推荐度：★★★☆<br>授课方：加州艺术学院<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：英语<br>字幕：中字 </p>
+<p>Repo：最零基础上手的游戏设计课程。<br>不同于许多别的在讲游戏设计之前得先讲好几个小时的如何使用某个游戏引擎来呈现你的设计的课程，这个课不需要任何意义上的前置技能，会用纸笔就行了。<br>特点是别说那么多就是干。课程的构架基本上是你先随便设计一个游戏，然后我们一起看看它是不是有点不那么耐玩，来加点什么东西进去，看看迭代以后的是不是好玩一点了，但还不够，我们一起看看最好再加点什么东西进去，现在是不是更好玩一点了，重复以上过程。<br>于是这门课基本上没有什么授课内容，更像我们小时候的兴趣课，每周讲十分钟，然后用十小时来做自己的游戏、改自己的游戏、看别人的游戏。btw，虽然课程只要求看三个别人的游戏就可以了，但多看没限制，墙裂推荐多看看，我上的时候深觉这门课讲课是赠品做东西是前戏看别人的东西才是本体2333<br>这门课的不足之处也很明显，一是课程上让做的项目是桌游，而且是能简化到一页纸上的桌游，于是如果不是本身想做大富翁之类的游戏话可能直接的收获不大，更多的是收获管它做成啥样总之先行动起来的心态，以及迭代式开发的习惯；二是虽然整门课都在讲怎么提高游戏的游戏性，但讲授的方式更接近于直接丢出一堆公式去让人去套，对于为什么公式是这么写的如果我的情况不适合套公式有什么办法自己改公式或者造公式吗则没有涉及。</p>
+<h4 id="游戏化"><a href="#游戏化" class="headerlink" title="游戏化"></a><a href="https://www.coursera.org/learn/gamification/home/welcome" target="_blank" rel="noopener">游戏化</a></h4><p>推荐度：★★★★☆<br>授课方：宾夕法尼亚大学<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：英语<br>字幕：中字</p>
+<p>Repo：对游戏为什么好玩怎么设计才能让游戏好玩让人想玩讲得最深入的课程。<br>虽然这其实并不是一门讲游戏设计的课程，但确是我上过的所有课程中，对于如何让游戏好玩分析得最深入的。一般课程对这个问题的回答都是要么集中在游戏叙事和游戏机制的技术细节和经验技巧上，要么提一嘴根源是不断的落在玩家心流区域的正反馈，但为什么是正反馈，是什么样的正反馈，则少有课程去触及。而这门课从心理学角度去继续往下挖并提出这根源于人的motivation，处于刚刚超过人当前能力上方一点点的任务被完成的正反馈，会让人的competence（能力感，觉得自己有能力克服障碍解决问题）得到满足，这是人的三大intrinsic motivation（内生驱动力，不依赖于外物刺激仅仅源于内心意愿驱动）之一，而除此之外，人的另两个主要的内生驱动力autonomy（自主感，觉得自己是完全出于自我意志作出有意义的选择）和relatedness（归属感，觉得自身的行为让自己与某些外在的具体事物或超越的抽象概念产生了连结）也与游戏好玩与否密切相关，是游戏设计需要核心注意的内容。而在设计中，对于extrinsic motivation（外生驱动力，外在奖励刺激）这把双刃剑则应谨慎使用，用得好的情况下，外生驱动力能够在内生驱动力不足的情况下提供有效的补充让游戏变得更好玩，但如果用得不好，则会掉入替代效应的陷阱——原本玩家是出于内生动力热爱一件事物，但由于提供了外生奖励，于是人们反而变得依赖于外生奖励才能激发动力，内生的热爱被挤占消失了。原则上来说，外生驱动力的四种形式external regulation（外在调节，内心厌恶完全因为外在的强迫而不得不做）、introjection（摄入调节，尽管自己不喜欢也不认同但考虑到他人会因自己做这件事而认同自己因此选择做）、identifucation（认同调节，尽管不喜欢但认同这件事的一些部分是有意义的因此认为自己应该做）、integration（整合调节，完全认可这整件事的意义和价值觉得自己必须做只是不能从做这件事中获得乐趣于是感到很难坚持），越往后的形式越接近于内生动力，越往前越接近于无动力（amotivation），在设计的时候如果需要外生动力作为补充，最好选择尽可能靠后的形式。这个理论是在课程的第三周讲的，目前为止我没有看到比它更好用的理论，墙裂安利即使没有时间上完整门课，第三周这俩小时的课程视频也绝对值得一看。<br>这门课的不足之处几乎恰好是前面加州艺术学院那门课的相反面，这是一门讲如何运用游戏机制设计产品或者项目管理的商科课，也因此有着绝大部分商科课最典型的毛病——分析了又分析挖掘了又挖掘但绝不撸袖子去做东西。这门课有三个作业，一个比一个要求的字数多，但始终不见让学生自己做方案，最后的两千词大作业也只让写出你认为在设计给定要求的方案时需要注意什么，而不是把方案本身写出来……所以如果不是想练英文写作，而是想学游戏设计，这门课本身的作业并没有太大帮助，不如给自己布置个运用所学分析自己玩过的游戏或者设计的游戏的作业更实用。</p>
+<h4 id="游戏产业概论"><a href="#游戏产业概论" class="headerlink" title="游戏产业概论"></a><a href="https://www.coursera.org/learn/youxi-chanye-gailun/home/welcome" target="_blank" rel="noopener">游戏产业概论</a></h4><p>推荐度：★<br>授课方：上海戏剧学院<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：中文<br>字幕：中字</p>
+<p>Repo：我上过的游戏相关课程中唯一没有任何收获的，不推荐。<br>其实课程框架还可以，把游戏本身、游戏行业、资本环境都囊括到了，虽然产学结合算是高等教育的一个基本要求，但能做到的国内高校课程确实不多，理论上应该会是个好课程苗子。但很遗憾的是，即使相关知识极为有限的我也能明显感觉到，主讲老师对这三个领域都不太了解，于是理想很美好但执行不下去，于是只好给框架半颗星。有一点值得肯定的是，这门课也是我上过的唯一一门主讲老师会在课程论坛里跟学生交流的一门网课，这样的精神值得半颗星，这也给了这门课进化的可能，不知道几年过去这门课有没有迭代出撑得起框架的内容来。</p>
+<p><em>以上三门课上于2016年春夏，不排除三四年过去课程内容有修改目前内容已与repo不符的可能。</em></p>
+<p><em>以下课程为最近半个月新上，repo内容即为当前内容</em></p>
+<h4 id="游戏开发导论"><a href="#游戏开发导论" class="headerlink" title="游戏开发导论"></a><a href="https://www.coursera.org/learn/game-development/home/welcome" target="_blank" rel="noopener">游戏开发导论</a></h4><p>推荐度：★★★★☆<br>授课方：密歇根州立大学<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：英语<br>字幕：部分中字</p>
+<p>Repo：我上过的最系统的unity入门教程，如果时间有限只能选一个教程来学unity的话那就它吧。<br>课程设置的时长是四周，具体可以按自己进度调整，体测总共上下来需要大约25小时。第一周是装软件熟悉基本界面，第二周是用一个都不是游戏的例子来讲软件的基本功能和从新建一个空项目到做完打包输出适配指定平台的过程。第三周是从零做一个第三人称视角的3D小游戏的例子，所有功能的实现都是用unity自带组件。第四周是从零做一个第一人称视角的3D小游戏的例子，部分功能的实现需要写代码（但完全自己写代码的时候比较少大部分工作是当调包侠调用unity自己内置的一些组件和一些三方开源组件）。其中后两周的两个项目开着unity自己跟着做下来，虽然比较花时间，每个要花接近10小时，但超级值，上完之后会有一种自己会用这个软件了的错觉，当然很快当真去自己做东西的时候会马上被打脸，但至少虽然做不出来但心里大概有点思路有几个方向，不至于像上课前那样完全两眼一抹黑。<br>虽然只扣了它半颗星，但这门课也有很多需要提高的地方，首先我一定要吐槽它用的素材实在太太太太太丑了，基本上都是开局unity里新建一个球就是主控角色，新建一个方块儿就是小怪，然后分别蒙上大红大绿的辣眼皮就开始讲课……尤其第二周讲的栗子甚至都还不是游戏，导致我差一点点就半途弃了，还好没有。虽然理论上我知道有时候随手用个方块圆球来演示是个省时省力的替代方式，在设计原型的时候也经常用到，但，如果……授课老师能在他第一周提供的那么多免费素材网站里去随便拖点不那么辣眼睛的素材来用就更好了。<br>另一个我觉得这门课或有不足的地方，是乐趣性不够高。部分原因可能是因为课程想要把软件的方方面面都讲到，于是在选例子的时候就拿这个为标准来选，于是除了第四周的栗子以外，另两个例子都并不是我们通常会玩到的游戏类型，于是乐趣性有不足。与它相反的是unity learn上的几个新手教程，基本上都是大家平时会玩到的rpg啊fps啊解密啊潜行啊roguelike啊，素材大部分也都美美哒，学的过程就愉快得多，当然，确实我也很明显的感觉到了unity learn的那几门课上下来都只学到一些很碎片的东西，脑子里缺少对unity能做什么不能做什么从头做一个游戏都需要做些什么的整体概念，而且很多东西知其然不知其所以然。最理想的是结合起来上就好了，但似乎有时候乐趣和全面不可得兼。我的感觉是，如果心中有明确的想要做的游戏的概念了，需要学unity来实现它，或者至少实现个demo或者原型，那就只上这门课就可以了。而如果还没有明确的概念，那就这个教程加unity learn上找点自己感兴趣的游戏类型的教程结合起来看，比较能兼顾学的效果和学的乐趣。</p>
+<h5 id="游戏设计原理"><a href="#游戏设计原理" class="headerlink" title="游戏设计原理"></a><a href="https://www.coursera.org/learn/gamedesign?specialization=game-development" target="_blank" rel="noopener">游戏设计原理</a></h5><p>推荐度：★★★ （目前上到第3周，总4周，不排除之后会更新评价）<br>授课方：密歇根州立大学<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：英语<br>字幕：部分中字</p>
+<p>Repo：感觉这门课的目标受众大概是有志从事商业游戏设计的海外党，但对非目标受众来说感觉水分比干货多。<br>这门课是前面那门课所属系列的第二门课程，因为有上门课的好印象加成，我对它期待值很高，但目前看来比上门课水得多，或者说我不是它的目标受众，于是大部分课程内容对我来说不太有价值。比如第一周整周在讲怎么让自己想出个创意来写文档的时候怎么强调它和竞品不一样的地方来拉钱，比如第二周除了最后讲game documents那十几分钟视频以外的绝大部分内容，都完全没必要上。第三周目前只上了游戏机制和关卡设计，游戏平衡那小节还没上，相对来说比起前两周干货多了一些，但仍然完全可以再挤挤水分。<br>但这门课尽管干货部分少，但干货部分确实对我来说有帮助和启发。从整体的思路变清晰了，到他偶尔随口一句的让我发现自己之前的设想可能有问题或者可能有没有考虑到的地方。<br>不足之处首先是前面提到的需要精简一点去去水分，然后对里面的干货部分可以扩展开来多讲一讲，很多一句话带过的其实倒是对我比较有启发，如果能多深入讲一讲会挺好的。另外这门课有个与内容无关但对我来说体验很糟的地方，不知道是视频问题还是我的网络问题，如果我1.5倍播放的话会一卡一卡的，然后不知道是收音问题还是怎么，这门课的这位授课老师声音的音频偏高发摩擦音的时候尤其是他一句话里就要带一两次的口癖right的t对耳膜实在非常不友好，再加上我听人说话拖音也会很难受，如果这门课内容很精彩的话这些都不是问题，但当它水分很多的时候这些体验上的瑕疵就放大了，尤其对一口气上下来的人来说，原本我打算第三周也就还有半小时内容了一口气拉完吧，但现在看着耳机都有点生理性抵触。</p>
+<h4 id="游戏分析与评测"><a href="#游戏分析与评测" class="headerlink" title="游戏分析与评测"></a><a href="https://next.xuetangx.com/course/tencentgames00001002032/1515957" target="_blank" rel="noopener">游戏分析与评测</a></h4><p>推荐度：★★★★ （目前上完章5，总14章，不排除之后会更新评价）<br>授课方：腾讯<br>平台：学堂在线<br>费用：听课免费，证书收费<br>语言：中文<br>字幕：中字</p>
+<p>Repo：我所有上过的国内课程中最好的，推荐。<br>目前上到第五章，除了第一章略水可以跳过以外，其它四章都很棒。这门课的结构是第二章讲对每一款游戏具体可以从哪些方面去分析它，然后第三章开始到第十四章每章分析一个游戏类型，按照这个类型的发展历史从早到晚，选出有代表性的作品去逐一分析，然后归纳出整个类型的核心特点和变化趋势。这种自下而上从微观到中观的分析思路对我来说比较亲切，虽然我个人更习惯自上而下从宏观到中观到微观的思路，但自上而下和自下而上可以结合验证。然后我要说这门课真的超有趣，除了能听到不少有趣的古早八卦，每章的主讲人们都是卖安利一把好手，才四个类别上下来我就吃了好多好多游戏的安利，to-play-list简直能一路排到明年。<br>不足之处的话就是太多地方浅尝辄止了，我刚觉得这个话题有意思结果就换话题了，虽然受限于课程时长大部分课程都这样，但一般会给出扩展阅读的资料清单，而这门课没有这么做。虽然我上的别的很多课给出的扩展阅读清单里的大部分我也没有兴趣去读，有些有兴趣读的下下来目录扫过去发现和我想像的内容偏差太大也就弃了，但也有少部分打开我新世界大门的，这门课如果能加上这个就好了。</p>
+<h4 id="游戏心理学"><a href="#游戏心理学" class="headerlink" title="游戏心理学"></a><a href="https://gameinstitute.qq.com/course/detail/10005" target="_blank" rel="noopener">游戏心理学</a></h4><p>推荐度：★★<br>授课方：腾讯<br>平台：腾讯游戏学院<br>费用：听课免费，不提供证书<br>语言：中文<br>字幕：中字</p>
+<p>Repo：题目很大内容其实不多就简单谈了谈心流的一门课。<br>对于把正反馈循环描述为一种魔法式的神秘过程的做法我个人不是特别认同。但这门课对我而言提供了一个很有启发的地方，即在探究心流所需要的一定难度的挑战上，把游戏的难度分为了思考难度和操作难度，然后把主流游戏画在了这个坐标轴中。<br>思考难度和操作难度这个分法有点像一个古早概念文和武，但我觉得其实更准确用来描述它们的应该是《思考快与慢》提出的大脑的两个系统，潜意识层面的条件反射系统和意识层面的思考系统。在玩OW的时候我想过这个问题，但没有深挖下去，在上这门课后又重新想起了这个话题，感觉应该找个时间详细想一想写一写。</p>
+<h4 id="Creator-Kit-RPG"><a href="#Creator-Kit-RPG" class="headerlink" title="Creator Kit: RPG"></a><a href="https://learn.unity.com/project/creator-kit-rpg?language=en" target="_blank" rel="noopener">Creator Kit: RPG</a></h4><p>推荐度：★★★★<br>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：适合无游戏制作基础无编程基础的2D RPG游戏制作的入门教程。<br>非常新手友好的一门unity上手课程，不需要编程，涉及到需要实现的功能都预先写好脚本嵌入到组件了。对完全没有基础的人来说，也能一步步跟着做下来一个关卡。而且最大的优势是花的时间特别短，一个下午就能搞定，从游戏的角度来说就是反馈特别及时。<br>不足之处是涉及到的内容略少，对于RPG来说就涉及到对话和任务俩功能，有很多RPG的内容没有涉及到，对于它的标题来说显得太小了些。另外一方面对软件涉及到的也比较有限，不利于建立整体概念，这一点在这个和下面的另两个unity learn的kit系列教程里都多少有这个问题。</p>
+<h4 id="Creator-Kit-FPS"><a href="#Creator-Kit-FPS" class="headerlink" title="Creator Kit: FPS"></a><a href="https://learn.unity.com/project/creator-kit-fps?language=en" target="_blank" rel="noopener">Creator Kit: FPS</a></h4><p>推荐度：★★★★<br>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：适合无游戏制作基础无编程基础的3D FPS游戏制作的入门教程。<br>和前面的RPG Kit一样，是不需要编程的新手教程，也是可以很快用大半天就可以跟着做一个关卡的那种快速反馈大份快落的那种。有和前面差不多的问题，对标题所说的类型里的功能只简单涉及到很少一部分但并不全，比如作为FPS但没有任何涉及小怪AI的功能。对于软件整体也只涉及到很少的部分，无法让人以建立起对整体的概念。</p>
+<h4 id="Creator-Kit-Beginner-Code"><a href="#Creator-Kit-Beginner-Code" class="headerlink" title="Creator Kit: Beginner Code"></a><a href="https://learn.unity.com/project/creator-kit-beginner-code?language=en" target="_blank" rel="noopener">Creator Kit: Beginner Code</a></h4><p>推荐度：★★★★<br>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：适合有一定游戏制作概念但无编程基础的编程入门教程。<br>和前面两个Creator Kit系列的教程不同，这个教程的内容不是让人用给到的素材和预写好的功能组件去自己做一个关卡，而是用给到的预写好的功能组件的代码去改吧改吧成自己的代码。之前密歇根州立的那门课程的第四周提到了一个观念，说写代码的几重境界，初极就大概知道哪些能写出来哪些不能写出来，中级就大概能蒙出来别人代码的意思然后改吧改吧成自己的代码，高级才需要自己从零写代码，而美术的代码基础只需要初极，设计的代码基础只需要中级就可以了，但话虽这么说，第四周后面的课程他在讲的时候却还是基本都是从头写。而这个unity learn的教程，则是真的从一个写好的代码出发，教人怎么去猜测那些看不懂的代码里的关键要素，然后把关键要素改一改，去游戏里看看是不是猜对了，如果猜错了怎么一键还原继续猜，如果猜对了继续看需要改的东西是不是忒多了复制粘贴手动改要素太麻烦，是吧那看看怎么自定义个函数或者函数类，去让抄代码改要素的过程更自动化诸如此类的花式抄代码教学。</p>
+<p><em>以上是能给到相对完整Repo的教程，下面是半途弃了于是仅能提供不完整感想的教程，因没过完恐评价失真不打推荐度</em></p>
+<h4 id="The-Explorer-3D-Game-Kit"><a href="#The-Explorer-3D-Game-Kit" class="headerlink" title="The Explorer: 3D Game Kit"></a><a href="https://learn.unity.com/project/3d-game-kit?language=en" target="_blank" rel="noopener">The Explorer: 3D Game Kit</a></h4><p>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：适合无游戏制作基础无编程基础的3D第三人称RPG游戏制作的入门教程，硬盘和硬件杀手预警。<br>理论上这应该是一个不错的教程，从给出的Demo来看，会涉及到剧情触发、武器获得、战斗系统、解密系统等等常见的3D游戏会用到的功能，而且全是预制好的组件不需要自己编程，在几个无编程Kit教程中，这应该是涉及功能最多的一个，而且都挺实用的。然而，我只开了个头连试玩都没玩通就弃了的原因是，太太太太太太太卡了。我玩OW也从来没卡过的游戏本，在试玩这个游戏教程的Sample Level的时候硬生生卡得一个动作要延迟好几秒跑位起来看到的角色位置和实际的角色位置十万八千里……或许以后如果有一天我入了个台式机会重新过一遍它，但目前，我能想到的使用方式大概只有需要用到里面预置的某些功能时去看看能不能抄到点代码了。</p>
+<h4 id="近期准备上的课程"><a href="#近期准备上的课程" class="headerlink" title="近期准备上的课程"></a>近期准备上的课程</h4><p><em>游戏是个大坑，可以想见以后还会遇到很多教程，这篇Repo会持续更新，先列一些近期准备上的教程</em></p>
+<h5 id="2D-Roguelike"><a href="#2D-Roguelike" class="headerlink" title="2D Roguelike"></a><a href="https://learn.unity.com/project/2d-roguelike-tutorial?language=en" target="_blank" rel="noopener">2D Roguelike</a></h5><p>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：部分中译</p>
+<p>Repo：一开始发现这个教程里嵌入的视频都是油管上的看不了，后来在B站找到了有人传，其中有一个还做了中字。准备等上完MSU的那门游戏设计课以后就学起来。</p>
+<h5 id="Ruby’s-Adventure-2D-Beginner"><a href="#Ruby’s-Adventure-2D-Beginner" class="headerlink" title="Ruby’s Adventure: 2D Beginner"></a><a href="https://learn.unity.com/project/ruby-s-2d-rpg?language=en" target="_blank" rel="noopener">Ruby’s Adventure: 2D Beginner</a></h5><p>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：其实2D教程里我最早下的是这个，然后大致浏览了一下框架，感觉适合有点基础的而不是纯萌新，于是转投前面那个真新手教程。这个和下面那个3D都之后补起来。</p>
+<h5 id="John-Lemon’s-Haunted-Jaunt-3D-Beginner"><a href="#John-Lemon’s-Haunted-Jaunt-3D-Beginner" class="headerlink" title="John Lemon’s Haunted Jaunt: 3D Beginner"></a><a href="https://learn.unity.com/project/john-lemon-s-haunted-jaunt-3d-beginner-1" target="_blank" rel="noopener">John Lemon’s Haunted Jaunt: 3D Beginner</a></h5><p>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：中译</p>
+<p>Repo：这个是我最早下的3D教程，因为它叫beginner，又是unity learn上唯一一篇有中字的，看框架也比较系统。然后我在第二章卡住了，跳了二三章以后，在第五章又卡住了，于是醒悟这个beginner应该是指有一定游戏制作基础的unity新手，而不是游戏制作新手。</p>
+<h4 id="附：各平台使用Tips"><a href="#附：各平台使用Tips" class="headerlink" title="附：各平台使用Tips"></a>附：各平台使用Tips</h4><p>1.学堂在线的视屏播放页面，在IE上无法播放显示，在Chrome上可以播放显示但页面各控件的位置会出错并互相遮挡，在Edge上可正常显示和播放。</p>
+<p>2.Coursera的视频在国内大部分地区无法正常播放，解决方法和过去英文维基网站一样修改hosts就好。打开<code>C:\Windows\System32\drivers\etc\hosts</code>，在末尾粘贴如下语句并保存。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">52.84.246.90    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.252    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.144    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.72    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.106    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.135    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.114    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.90    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.227    d3c33hcgiwev3.cloudfront.net</span><br></pre></td></tr></table></figure>
+
+<p>随后运行cmd，输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig/flushdns</span><br></pre></td></tr></table></figure>
+
+<p>刷新浏览器，会发现视频可以播放了。</p>
+<p>3.Unity的教程素材下载有个巨坑，即无论是跟着Unity Hub给出的教程下载流程走，还是新建项目然后在Unity软件里打开Unity Asset Store去下载导入教程素材包，都会导致电脑里除了知道自己保存了的那个项目文件以外，还分别在C盘的两个临时文件夹中有两个文件备份。如果是下载的以M论的2D包还好，如果下载的3D包尤其是那个2个多G的课程包，分分钟C盘缩水近10G。<br>解决方法是该手动删掉手动删掉，该手动挪D盘手动挪D盘。<br>一般来说，下载的原始素材包会是一个有Unity图标的<code>.unitypackage</code>文件，这个文件在<code>C:\Users\电脑用户名\AppData\Roaming\Unity\Asset Store-5.x</code>，文件名一般就是你下载的那个素材的名字。直接挪到其它盘备份吧，以后如果需要用的时候可以重复导入。<br>然后当在Unity hub的教程页面里打开下载的那个原始素材包的时候，会生成一个原始的项目文件，准确的说是文件夹，文件夹下面和自己手动保存的项目文件夹下面的目录是一致的，这个文件夹在<code>C:\Users\电脑用户名\AppData\Local\Temp</code>，并且，文件夹名是乱码，也就是说没法通过名称找到它，只能通过推断。推断方法是，先选日期，筛选出打开它那个日期的所有临时文件，然后看文件大小，找到和自己手动保存的项目文件大小差不多的乱码文件夹，点开看看是不是和自己手动保存的项目文件夹内容大体一致，是的话就它了，直接删掉吧。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/03/03/notes-skill-blog-errors and solutions/" rel="next" title="Solutions to Hexo Errors I">
+                  <i class="fa fa-chevron-left"></i> Solutions to Hexo Errors I
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxNy8yMzQxOA=="></div>
+  </div>
+  
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#游戏设计导论"><span class="nav-number">1.</span> <span class="nav-text">游戏设计导论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#游戏化"><span class="nav-number">2.</span> <span class="nav-text">游戏化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#游戏产业概论"><span class="nav-number">3.</span> <span class="nav-text">游戏产业概论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#游戏开发导论"><span class="nav-number">4.</span> <span class="nav-text">游戏开发导论</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#游戏设计原理"><span class="nav-number">4.1.</span> <span class="nav-text">游戏设计原理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#游戏分析与评测"><span class="nav-number">5.</span> <span class="nav-text">游戏分析与评测</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#游戏心理学"><span class="nav-number">6.</span> <span class="nav-text">游戏心理学</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Creator-Kit-RPG"><span class="nav-number">7.</span> <span class="nav-text">Creator Kit: RPG</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Creator-Kit-FPS"><span class="nav-number">8.</span> <span class="nav-text">Creator Kit: FPS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Creator-Kit-Beginner-Code"><span class="nav-number">9.</span> <span class="nav-text">Creator Kit: Beginner Code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Explorer-3D-Game-Kit"><span class="nav-number">10.</span> <span class="nav-text">The Explorer: 3D Game Kit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#近期准备上的课程"><span class="nav-number">11.</span> <span class="nav-text">近期准备上的课程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2D-Roguelike"><span class="nav-number">11.1.</span> <span class="nav-text">2D Roguelike</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Ruby’s-Adventure-2D-Beginner"><span class="nav-number">11.2.</span> <span class="nav-text">Ruby’s Adventure: 2D Beginner</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#John-Lemon’s-Haunted-Jaunt-3D-Beginner"><span class="nav-number">11.3.</span> <span class="nav-text">John Lemon’s Haunted Jaunt: 3D Beginner</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附：各平台使用Tips"><span class="nav-number">12.</span> <span class="nav-text">附：各平台使用Tips</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Brielley</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:brielley@163.com" title="Contact me &rarr; mailto:brielley@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Contact me</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Brielley</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+</body>
+</html>
