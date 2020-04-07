@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="忘了在哪儿看过一句话，说从没完成过一个游戏的designer多半是很坑的，在我做第一个游戏的时候，这句话不断鬼使神差地冒出来，虽然做完第一个游戏第一版后的我现在仍然很坑……但比做之前的坑度大概还是要稍微少一点点，至少知道自己坑和知道自己哪儿坑了。 虽然意识到问题离解决问题还有巨大的鸿沟，巨大到很多人一辈子也跨不过去，我也没任何理由觉得我是幸运的能跨过去的那些个，但至少意识到问题让解决问题成为了可能">
+<meta name="keywords" content="生命不息debug不止,Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes for My First Game I">
+<meta property="og:url" content="http://yoursite.com/2020/04/07/notes-design-my first game/index.html">
+<meta property="og:site_name" content="Brielley">
+<meta property="og:description" content="忘了在哪儿看过一句话，说从没完成过一个游戏的designer多半是很坑的，在我做第一个游戏的时候，这句话不断鬼使神差地冒出来，虽然做完第一个游戏第一版后的我现在仍然很坑……但比做之前的坑度大概还是要稍微少一点点，至少知道自己坑和知道自己哪儿坑了。 虽然意识到问题离解决问题还有巨大的鸿沟，巨大到很多人一辈子也跨不过去，我也没任何理由觉得我是幸运的能跨过去的那些个，但至少意识到问题让解决问题成为了可能">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-07T17:47:14.647Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Notes for My First Game I">
+<meta name="twitter:description" content="忘了在哪儿看过一句话，说从没完成过一个游戏的designer多半是很坑的，在我做第一个游戏的时候，这句话不断鬼使神差地冒出来，虽然做完第一个游戏第一版后的我现在仍然很坑……但比做之前的坑度大概还是要稍微少一点点，至少知道自己坑和知道自己哪儿坑了。 虽然意识到问题离解决问题还有巨大的鸿沟，巨大到很多人一辈子也跨不过去，我也没任何理由觉得我是幸运的能跨过去的那些个，但至少意识到问题让解决问题成为了可能">
+  <link rel="canonical" href="http://yoursite.com/2020/04/07/notes-design-my first game/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Notes for My First Game I | Brielley</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Brielley</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-news">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>News</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-musical">
+      
+    
+
+    <a href="/categories/Musical/" rel="section"><i class="fa fa-fw fa-film"></i>Musical</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-topics">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Topics</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>Search</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/notes-design-my first game/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Notes for My First Game I
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-04-07 23:35:18" itemprop="dateCreated datePublished" datetime="2020-04-07T23:35:18+08:00">2020-04-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-08 01:47:14" itemprop="dateModified" datetime="2020-04-08T01:47:14+08:00">2020-04-08</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/" itemprop="url" rel="index"><span itemprop="name">Writing</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>忘了在哪儿看过一句话，说从没完成过一个游戏的designer多半是很坑的，在我做第一个游戏的时候，这句话不断鬼使神差地冒出来，虽然做完第一个游戏第一版后的我现在仍然很坑……但比做之前的坑度大概还是要稍微少一点点，至少知道自己坑和知道自己哪儿坑了。 虽然意识到问题离解决问题还有巨大的鸿沟，巨大到很多人一辈子也跨不过去，我也没任何理由觉得我是幸运的能跨过去的那些个，但至少意识到问题让解决问题成为了可能，而如果都意识不到问题，指望天降醍醐问题就迎刃而解了不如去解决提出问题的人来得更可能一些2333</p>
+<p>我翻了一下我最早开始写这个游戏的文档的时间是3月9号晚上，到4月5号凌晨游戏第一版实际做出来不过不到1个月时间，但游戏里绝大部分内容都和这个不到1个月前的文档里写的不一样了。大部分是在实现的过程中发现有问题或者效果并不好，有一部分是找到了更好的方案于是替换掉了原来的方案，还有一部分是做不出来。这次做游戏我最庆幸的事就是这第一个游戏是我一个人做的，如果是我只设计然后让剧情让美术让程序把东西做好再拼起来，那大概会返工无数次到原本就用爱发电的人散伙N波，成品比现在更无聊，甚至不一定能出成品，整个过程我能学到的东西也会很少。</p>
+<p>谢天谢地我选择了自己做全程，于是从这个游戏里我学到的东西很多，有灵光乍现的经验，但更多的是对不成功的设计的思考。因为大部分内容与个体体验有关，换个人未必有多少参考性，于是就反正只是写给自己看的想哪写哪儿了。等把游戏里目前为止发现的问题能修什么程度修什么程度完，再另写一篇可能对他人来说或有参考价值的功能实现思路和代码总结。</p>
+<p>1.我在这个游戏里学到的最大的而过去从来不在我意识中的东西应该是游戏的节奏。因为我要做的是同人游戏（重剧情重情感体验），又是FPS游戏（因为没有美术技能于是很容易想到的解决没有原作角色特有美术资源的办法就是做成一人称游戏这样就不需要特殊美术资源的了）。这个游戏的机制整体来说是FPS，虽然并没有太FPS，有一关没武器全靠跑和撞，有一关基本是挂机跑地图，另一关FPS一点的因为小怪的AI很弱智与其说是考验FPS技巧不如说是考验精打细算省子弹的艺术。虽然并不怎么FPS，但我在刚做完第一个关卡Mary的地图后就发现，虽然这个地图绝大部分地方甚至连个主动怪都没有，但我在玩儿的时候，心态上仍是FPS的那种节奏，用《思考快与慢》的理论来说就是唤醒的大脑思维功能是基于本能的快思考那部分，这对我的叙事来说是一个很大的挑战，因为传统的我所熟悉的叙事是国产RPG式的——冗长、细腻、擅于唤起情感的大段对话，也就是基于情感的慢思考（思考快与慢这本书说的慢思考仅指理性的没包含情感，但我个人认为基于情感的思维活动也是一种慢思考，并且和基于理性的慢思考不是一种），同时我还希望在这个游戏里加一点解谜要素，而这需要基于理性的慢思考（这个是思考快与慢中所提到的概念了）。这三个东西……它们的交集基本等于空集，它们的并集几乎等于全集……而最要命的是我计划的每个关卡的通关时间大概在3-5分钟——让人在三五分钟里同时调用并快速切换这几个不同的大脑思维模式会让人非常烦燥。于是刚做了第一个关卡的第一段对话（和大脑那段）后，我刚做完自己一玩儿立马觉出我的叙事方式出问题了，我写剧情的时候觉得还O的剧情，在游戏里根本就看不进去而且看得鬼火冒。但我当时并没有意识到是节奏冲突的问题，而是觉得是我缺乏美术资源和煽情文笔导致叙事让人无法入戏，那时的第一反应是或许我应该看看有没有擅长写情感类文字的GN有兴趣加入，或者看看能不能约到愿意画立绘的GN。但还好我没有这么做，因为我脑内设想了一下，即使那段剧情有很感人的文字很漂亮的立绘，但放在那里我就会不想看，这说明问题不在那里，然后我想起了之前上的MSU的那门游戏设计课里主讲老师提过的一句不要把解密和战斗放在同一个关卡里，然后我深刻体会到了这句话的含义。之后我改变了叙事方式，而叙事，是我在这次做游戏中做得最不好的地方，并且到现在也没有完全找到足够好的方案。</p>
+<p>2.在意识到我所习惯的对话式游戏叙事与FPS的节奏水火不容后，我把叙事方式改成了在玩游戏过程中触发的都基本上是一句话的短文字，而且承担叙事功能的少，承担关卡玩法提示的功能更多一点。然后把大段的剧情叙事，做成了一个回忆系统，大段文字放回忆面板里，要不要看什么时候看完全取决于玩家。Mary那关就是按这个思路做的。做完之后我又发现问题了，就是叙事和玩法虽然节奏上不同时要玩家既快速反应又慢慢思考或沉溺煽情了，但叙事和玩法完全脱节了。叙事部分其实和游戏里在做的事情关系不大，不放在游戏里也可以独立完成完整的叙事，而游戏里在做的事情就显得并没有太大的意义，完全是为了关卡需要刷数值。当然，细究起来其实我玩过的并不多的聚焦情感的国产RPG里战斗和剧情确实本身就一直是脱节的，除了最终的BOSS战，和少数几个小boss战，别的走的迷宫遇到的小怪并没有什么意义，除了练级把数值刷到能打BOSS以外；RPG网游的任务相对打怪或是地图和剧情的关联度大一些，但这种关联度，并不是叙事的一部分，而仅仅是美术风格上配合叙事中所描述的故事的背景。然后非国产……非国产的我就基本不是玩SLG就是玩SIM要么就FPS并木有玩过多少剧情向的游戏，我发现我还是游戏到做时方恨还是玩得太少了，脑子里完全找不到可以参考的巨人肩膀。我想要游戏里的所有这些东西都是叙事的一部分，它们并不仅仅是配合叙事，而是本身也在叙事，但我不知道要怎么把这种叙事表达出来传递给玩家，比如我在做游戏地图的时候是这么想地图所叙述的事情的：比如Mary的心虽然就在口的一墙之隔，但要绕很远很远才找得到，而且有很多岔道，这是因为剧情中她的心藏得太深了以至于很多时候她自己都不明白；再比如比起心脏，她的肠子就很短平直，因为她是个直肠子不像犹大那么多弯弯绕绕；再比如她这个关卡唯一的一个主动怪也是整个游戏血最厚的怪在胃，象征欲望，但被一道门和一组血管限制在胃室内不让它进入身体的其它区域，对应剧情里她对自身欲望的克制和压抑。这些东西我在做地图的时候是这么想的，但在剧情中就完全没有点出来……地图这么设计就算完成叙事了吗？需要剧情文字辅助点出地图叙事的含义吗？一定要文字叙事来点出地图叙事吗是不是应该更游戏一点用玩法来点出地图叙事的含义？这个问题我从做Mary的时候开始想，到Simon到Judas在不断尝试不断改，但始终没找到特别好的解决方法，比如到Judas的时候我在肠子那里加了一句犹大自己的吐槽说我肠子有这么多弯弯绕绕么，然后说但这样对耶稣有用呀，比起Mary那关至少提醒玩家注意到地图和角色存在叙事上的关系了，但这种仍然没够，因为我做犹大的肠子的时候，想表达的不仅是犹大是一个肠子里很多弯弯绕绕的人，而且更重要的是他肠子是一个周而复始的圆，也就是理论上他再多的弯弯绕绕其实也就跟西西弗斯的石头一样是一个花了很多力气但没什么用的东西，命运才是爸爸，但尽管理论上这样，在游戏机制中，由于肠子旁边的胃里有一个主动怪，于是这个周而复始的圆变得有用了，他可以在肠子里利用地形绕圈圈来避开小怪的视野从而摆脱怪物的追击，我一开始的时候把地图上的地形触发设计成的是心脏后面并没有小路通到肠子，必须从胃里进来，而在肠子里必须要绕到第二圈才会触发剧情，这样来完成我开始希望的地图叙事，但我后来发现这样不行，因为这样太难了，这样的玩法违背了玩家的直觉，在没有武器后面又有小怪追击的时候，玩家并不会想要在肠子里转圈圈，而是绕了一圈发现这里没有东西是条死路以后就会回胃那里夺路而逃了，然后于是就改成了现在的样子，可以从心脏绕小路避开胃里那只主动怪，而且走半圈就可以触发剧情拿到钥匙，但权衡两边兼顾两边的结果是其实一边都没有兼顾到……我感觉游戏的叙事真的是所有文学艺术作品中叙事最复杂的一种，我过去就这么觉得，但现在实际感受到的是我之前以为的好多好多倍。比如不难想到，最理想的是游戏里的一切都在叙事，文字、地图、角色、小怪、NPC、玩法、数值等等等等它们全都在讲同一个东西，它们共同完成叙事，但是，这样似乎也有不对的地方，因为大概除了文字稍好一点以外，别的东西都还承担了叙事以外的东西，而它们可能是冲突的。比如犹大这一关，核心的玩法是撞击，达成HE需要至少把一个酵撞进代表地狱的星空里去，但是，这在叙事代表什么呢？来自地狱的就应该滚回地狱去？主张天堂地狱二元割裂？但我这关完全不想表达这个，犹大的人设也不是这样的，但我很喜欢这个撞击的玩法啊！本来犹大这关我是准备做潜行的，结果在做西门那关的时候不小心挂错了collider和rigidbody的类型于是阴差阳错把小怪撞飞得差点从大脑室的五官洞口飞出去以后，我觉得太好玩了玩了一下午然后就把犹大这个无武器关卡的主玩法改成这个了，如果让我为了叙事取消这个玩法我会觉得很可惜，但如果因为这个玩法影响到了叙事也是我不想看到的。那么要怎么才能在中间找到一个平衡呢？游戏的叙事究竟应该包含哪些？要怎么运用好每一种共同完成叙事？要怎么权衡玩法可能带来叙事上的迷惑的问题？国产RPG在打怪走迷宫的时候完全和叙事脱节是一种简便有效的避免迷惑的办法，但我不喜欢这样，因为这种解决冲突的思路相当于是把玩法和叙事完全割裂开自然就不会冲突了，但这两个东西本身是没法割裂的，割裂开的结果就会变成我玩国产RPG时的心态……好烦啊又要进迷宫又要打小怪为了看个剧情真麻烦，算了直接去搜搜别人的直播跳过打怪吧。玩法是游戏的核心，即使是剧情向的游戏，我觉得游戏的叙事一定得有玩法的参与，否则何必用游戏来叙事，小说动画影视它不香吗？但到底应该怎么做呢？或许我应该去玩一些3A RPG大作或者以叙事著称的得奖独立名作来吸取一下经验，但……有时候不得不说，剧情向RPG是一个更强调让玩家产生relatedness的存在，虽然我最早接触的游戏就是RPG，但居然到现在RPG类的游戏也只接触过国产，欧美日本的不是没喜+1过，但基本上都是开了个头就放那里了，本质上还是没法在玩儿的时候对剧情产生relatedness吧……但换个角度想，如果有剧情向作品能跨过relatedness的鸿沟让我觉得好好玩，那就值得把它的叙事好好研究个透了。我觉得我还是去找找看这类的安利挨个试试……</p>
+<p>3.前面说到了犹大那关的玩法的由来，那应该是我这个游戏中目前为止最意外的收获，也是奠定了我觉得做游戏设计的人一定要自己动手去做或者至少在自己不那么experienced的时候一定要动手去做每一个环节的观念的关键。其实不止犹大，Simon的也是我在自己试玩的时候发现有限子弹是一个很适合这一关的机制的，做游戏的过程中会触发很多灵感，那些灵感中有一些部分可以通过别的渠道想到，比如有限子弹，可能对着文档想也某一刻能想出来；有一些部分只有对游戏引擎能做什么不能做什么非常了解才能想到，比如撞出地图，虽然我理论上知道unity引擎是支持各种材质的碰撞机制的，但如果只是知道，没有亲手去做，还是很难想到，而且很多idea，想到是一回事，但做出来好不好玩，和游戏的其它部分协不协调是另一回事，撞出地图这个玩法即使我空对空的想到了，但如果只是想象我未必会觉得它好玩，所以总之，设计者自己会去做游戏或者至少会在定设计案之前做过核心玩法的原型真的太重要了。</p>
+<p>4.说到资源，这次游戏中我觉得自己做得很棒的一点是在资源控制上做到了我能做到的极限，除了作为同人需要用到的原作音视频素材，其它所有的素材和处理素材的工具全是免费开源的。当然，如果做不到这个，我对做游戏这种事也就只能想想了。但对我来说，这仍然是一个很大的进步，虽然我算是一个一直以来就比较擅长在有限的资源下尽可能想办法把东西做出来的人，但放在几年前，别说同人游戏，就是原创游戏，在没有美术和程序的情况下要怎么做出来都是我没法想象并理所当然觉得我虽然想做游戏但一直没去动手做游戏是因为我没资源嘛的。当然，那个时候可能也许真的不行，但现在免费开源的东西越来越多了让这成为了可能。总之就，最主要的还是不能依赖，无论是依赖于自己去事无巨细什么都会什么都做，还是依赖于建一个能事无巨细什么都会什么都做的团队。另一方面我也发现，如果想做游戏，或者别的任何一种文艺作品，都是越早去做越好，越能参与每一个环节地去做越好，因为没有人是生来就会的，体验再多他人的作品、再怎么翻来覆去地研究他人的作品，都比不上自己亲手去做，只有去做才会发现问题才会在想办法解决问题的过程中慢慢变得会做，不自己去做只是研究别人的东西觉得应该如何如何都是空的，那些东西有用，但在练手不够的情况下，自己做的东西甚至都够不到需要用上那些东西的时候。</p>
+<p>5.之前我一直非常不理解为什么做游戏的教程们本身很少去探寻游戏好玩背后的心理根源，在这次自己做游戏的时候我找到了原因，因为做游戏的时候根本想不到这个！做游戏的时候我只会想我这个功能要怎么实现，啊我终于实现了，我去怎么又bug了，我想想bug的问题在哪儿，啊哈哈哈我找到原因了，哦耶你看现在不bug了吧，现在我很怀疑我把事情讲清楚了吗，不行没讲清楚要改，唔那前面修了半天bug的功能用不上了得换个功能来实现，好吧实现了让我来玩一玩，我怎么感觉我玩得鬼火冒，这么改呢会不会好一点，好像好一点了但好像还是有哪里不是很对劲我感觉不大好玩，不管了先做下去再说后面再改吧不然得一辈子卡这里了……完完全全一丝一毫想不到玩家在玩我做的游戏的时候能不能感觉到autonomy或者competence或者relatedness，在做游戏的时候，这些概念完全不在我的脑子里。也有点理解为什么恰恰是不做游戏的那帮人，反而在研究这种东西并且研究出一些东西了，因为跳出游戏制作的思维，才更能关注到这些问题。在我做完第一版放出去然后两天没开unity总算不再每天醒着睡着满脑子都是它了以后，我忽然从做游戏的思维中跳出来，开始从看游戏的角度去看事情，然后不得不承认这确实是游戏好不好玩的关键。比如我觉得Mary那关一点都不好玩，本质上是因为那关的autonomy和competence都完全近乎于零，玩家没有任何选择只能去收集东西，在并不如何环境优美的场景里跑地图，而且能收集到东西跟能力一点关系都没有。这一关之所以没有让我产生必须彻底回炉重造的想法而是觉得好像也可以先放出去以后再迭代仅仅是因为我无意中在relatedness上挽回了一点分，虽然这一关的叙事问题应该是最大的，和玩法完全割裂了，但比起另两关，叙事本身还算是至少把关卡准备讨论的主题宿命给表达出来了，而虽然可能大部分看JCS的人都对Mary这个角色没什么印象也不太可能跟她产生什么relatedness，但宿命算是一个比较共性的话题，不仅仅是在玛利亚和耶稣这两个角色身上存在共性，对于玩家来说也是这样，绝大部分成年人都感受过命运的力量，或者说大环境对个体的影响以及一些抽象特质尤其是一些不那么让人愉快的特质的代际传递，并且思考过自己是顺着它算了还是头破血流也绝不合作，于是它是一个能让无论什么背景的玩家都可以或多或少从中产生一些relatedness的东西。说到relatedness，其实在这个上面我也想到了另一个问题，文字的叙事，普遍来说分两大类，以情动人和以理服人（其实觉得这个服字不太合适，但考虑到令人信服也是服，服并不是只有服从的含义，姑且用之），我个人在年纪很小的时候喜欢前面那种，那时也只做得来前面那种，年纪稍微大一点到现在都更习惯后面那种，但其实前面那种方法并没有原罪，之所以很多时候会让人起鸡皮疙瘩，本质上是因为抒的情是一些非常个人体验的无法唤起他人共情的东西，但很多的masterpiece其实也是以情动人型的叙事，或者说以情动人型的masterpiece比以理服人型的同级别文艺作品多太多了，只是它们的叙事更共性，因此读者不会觉得矫情而是会觉得被触动，事实上，理性的摆事实上数据，本质上也是摒除个体感受，传递一些共性的东西的表达方式，只是这种方式传递的共性是客观的东西，而不是主观的感受，但主观的感受，并不必然是个体的感受，也可以是跨个体甚至跨群体的共性的感受。这是在过去我常常会混淆的点。当然，其实也不止是我，把主观等同于individual、客观等同于mutual是一种还算普遍的思维习惯。很多时候很多人认为，完全的客观是不可能的，跳出个人体验和立场的理性客观或是感性共情是不可能的，尽管客观和共情是世界上很多工作的基础，做不到它们的话世界发展不到目前的阶段。而我虽因后者而不持前面的观点，但仍难免受到这种深入人心的思维影响而未经思考就默认接受许多约定俗成。其实想一想，看待世界本身就有两种视角，上帝视角和第一人称视角，就像哲学分两大类，英美哲学关注的是哲学话题，而欧陆哲学关注的是哲学家一样，第一人称视角的看待是辐射式的，从自己身上向外辐射，或者某一个人身上向外辐射，上帝视角的视野没有中心，或者说重心是事不是人，而无论何种文化背景下所诞生出的绝大部分出色的文艺作品，共情的对象也往往是事而不是人，不是一个人的背景唤起了观众的共鸣，而是TA的事唤起了观众的共鸣，李白的举头望明月低头思故乡能唤起人的共鸣，不是大家跟一个一千多年前吃文学饭的人有什么相似体验或者共同立场，而是在想家这件事上有共鸣罢了。不过比起Mary这关，Simon和Judas这两关的relatedness严重不及格的原因倒并不是因为这两关的主题缺乏共性，而完完全全是我叙事的问题，我根本就没有把这两关的主题表达清楚！在我最早的文档里，Simon的主题是边界，关键帧是意识到不能把自己的愿望强加给耶稣，和意识到也无需把耶稣的愿望强加给自己；Judas的主题是理智，关键帧是意识到天真无益于理智（必须吐槽会认为祭司们不会伤害耶稣的犹大是有多天真，你哪怕跟西门唠唠嗑儿呢，看起来一根肠子通到底的奋锐党还知道反罗马侵略者和反希律集团本土代言人是一体的），和意识到理智和情感不矛盾；但我表达出来了吗？没有！没看过文档的玩家，可能能从游戏中总结出Mary那关的话题是宿命，但打死蒙不出Simon和Judas那两关的话题是什么。因为我离开文字就不会叙事了！但经过Mary那关之后，我觉得在游戏里不能依赖于大段与游戏玩法无关的文字来叙事，否则干嘛不去写文，于是我在后两关里抛弃大段文字叙事改为用游戏本身叙事，然后事实证明离开文字我还真就跟个还不会说话的婴儿一样丧失最基本的表达能力了。抛开relatedness，Simon那关的autonomy其实也是很欠缺的，因为通往HE的道路只有一条，而且有限子弹这个机制其实是把双刃剑，一方面它提供了一些competence，但另一方面这些competence本质上是以损失autonomy为前提的，毕竟子弹是真的只刚刚够。而且甚至，这种competence未必有普适性，我个人是一个能从提高资源使用效率上获取极大快感的人，但并不是每个人都这样，如果是喜爱能有充裕物资挥斥方遒的，可能只会觉得憋屈死了。Judas这关有两种方式达成HE提供了一定的autonomy，其实一开始是想要做三种HE方式的，第三种是主动进入星空，但想想这个音乐剧的好些粉丝还没成年于是作罢，还给信仰之跃加了危险提示，但总算有一定autonomy了，而撞撞撞成功确实能给人蛮大的competence，至少对手残如我来说是这样，于是尽管这关也有一大打的问题，但总体来说对比这仨是我感觉是最好玩的一关也就不奇怪了。当然，说一千道一万理论不是为了事后诸葛亮，而是为了给改进玩法提供帮助的，我感觉Mary和Simon两关我需要加入新的核心玩法，类似Judas那关的撞撞撞那样的，确实能给玩家带来挑战性和成就感的，而且需要提供通往HE的不同路径选择，至于叙事，那就更是三个关卡都需要改进的了，不仅仅是为relatedness，至少得先把事情叙述清楚。</p>
+<p>6.还有很多的技术问题，而且本质不是技术问题，而是做游戏的时候脑中的玩家的概念来自于我自己而不是真正的目标玩家而导致的问题。比如我发出去后才忽然想到，我做的1080P，在我15.6寸的电脑上显示起来是OK的，但忘了如果有人的电脑的分辨率低于这个，或者尺寸小于这个，ta的显示会出问题尤其是大段文字的地方很可能会出现文字溢出的情况。我也忘了虽然我习惯全屏玩游戏，但有的人会更习惯窗口。隐藏血条这个算是我的恶趣味，以及犯懒懒得做UI了，但其实这个是不应该的，且不说玩家一脸懵逼被BE的挫败感，就算Simon和Mary关卡隐藏血条无所谓，在Judas这关，知道自己的血量还有多少地图上能补充多少如果用大脑那里的持续回血buff需要用多少时间来换跟玩家准备采取的策略是密切相关的，如果不知道血量多少，玩家不想BE的本能就会让他们觉得苟一点吧别冒险了，这样就没有撞撞撞的乐趣了。这几样都是必须第一时间修的，改进叙事改进玩法一类的倒是可以慢慢想。另外，目标玩家的概念不清晰也造成了一些其它问题，最基本的就是看这个音乐剧的人大部分不玩游戏，玩游戏的也大多只玩过剧情向的AVG和RPG，所以我一方面想让他们也能爱玩，另一方面我做游戏的时候的整体思路又确实是按我的喜好而不是目标玩家的喜好来的，这又确实影响了叙事和玩法，想两头讨好的结果是两头都没顾到，典型表现就是前面提到的犹大的肠胃那里，那里叙事的问题很大，但目标玩家定位模糊的问题也同样突出。</p>
+<p>7.最后目前为止这个游戏最大的问题，大概是玩家在里面会很懵，因为我对游戏机制玩家任务的描述太少了，而且这些描述和叙事混在一起，我觉得除了我在表达上没有表达清楚我想表达的东西以外，更重要的是本质上我自己都没有完全理清楚，每关的通关时间是3-5分钟，短得我连存档功能都不用做，但我想要在每关这三五分钟里塞入原作剧情、脑洞剧情、探讨主题、围绕主题的叙事、玩法交代、游戏内各元素交代、重要数值交代、玩法元素数值与叙事的关联交代、玩，这些东西太多太杂，要在这么短的时限内条理清晰地讲清楚，并不是一个特别适合新手的挑战。理智来想我最好不要一开始就追求这么多，贪多嚼不烂。但一方面我这人热爱挑战，难啃的骨头比轻车驾熟给我的乐趣值要高得多，之前上MSU网课的时候里面说到做游戏最快乐的就是做设计的时候，到开发的时候就不快乐了，但我发现我这一个月做设计的时候并不是最开心的时候，反而是做开发绞尽脑汁想怎么实现功能的时候虽然挫败很多但快乐和满足感也更多，当然，这大概是因为我是在开发自己设计的东西，如果是开发别人的设计可能就不那么开心了；另一方面，我觉得其实人往往是在刚开始接触一个东西，脑中没有太多经验范式一类的东西束缚的时候，容易想出一些有意思的东西，如果现在都不追求这些，真到脱离新手期以后，可能反而就想不到或者想到也自我设限不想去追求这些还反过来觉得这些想法莫名其妙自寻烦恼了，如果我真能提高到脱离新手期的话。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/生命不息debug不止/" rel="tag"><i class="fa fa-tag"></i> 生命不息debug不止</a>
+            
+              <a href="/tags/Game/" rel="tag"><i class="fa fa-tag"></i> Game</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/03/11/review-game-design-and-development-courses-updating/" rel="next" title="Online Courses about Game Design and Development">
+                  <i class="fa fa-chevron-left"></i> Online Courses about Game Design and Development
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NjkxNy8yMzQxOA=="></div>
+  </div>
+  
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Brielley</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:brielley@163.com" title="Contact me &rarr; mailto:brielley@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Contact me</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Brielley</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+</body>
+</html>
