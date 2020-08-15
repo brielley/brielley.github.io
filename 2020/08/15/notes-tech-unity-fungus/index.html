@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Brielley">
 <meta property="og:description" content="在Unity的所有免费资源里，如果只能推荐一个，那么我一定是毫不犹豫地选Fungus，这是一个超级无敌棒的插件，而且居然是免费开源的。Fungus的主要功能是做剧情对话，如果是做传统的2D AVG游戏，这个插件基本上能够完成所有你需要的功能，比某些流氓软件功能多几倍还不会觊觎你作品的版权，当然，2D AVG的开源引擎其实比较多，除了Fungus以外，比较火的还有Ren’py、Twine等等，而后两">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-08-15T13:28:39.637Z">
+<meta property="og:updated_time" content="2020-08-15T13:38:36.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity插件I：Fungus">
 <meta name="twitter:description" content="在Unity的所有免费资源里，如果只能推荐一个，那么我一定是毫不犹豫地选Fungus，这是一个超级无敌棒的插件，而且居然是免费开源的。Fungus的主要功能是做剧情对话，如果是做传统的2D AVG游戏，这个插件基本上能够完成所有你需要的功能，比某些流氓软件功能多几倍还不会觊觎你作品的版权，当然，2D AVG的开源引擎其实比较多，除了Fungus以外，比较火的还有Ren’py、Twine等等，而后两">
@@ -274,7 +274,7 @@
                 
               
 
-              <time title="Created: 2020-08-15 21:02:26 / Modified: 21:28:39" itemprop="dateCreated datePublished" datetime="2020-08-15T21:02:26+08:00">2020-08-15</time>
+              <time title="Created: 2020-08-15 21:02:26 / Modified: 21:38:36" itemprop="dateCreated datePublished" datetime="2020-08-15T21:02:26+08:00">2020-08-15</time>
             </span>
           
             
@@ -314,12 +314,12 @@
 
       
         <p>在Unity的所有免费资源里，如果只能推荐一个，那么我一定是毫不犹豫地选Fungus，这是一个超级无敌棒的插件，而且居然是免费开源的。<br>Fungus的主要功能是做剧情对话，如果是做传统的2D AVG游戏，这个插件基本上能够完成所有你需要的功能，比某些流氓软件功能多几倍还不会觊觎你作品的版权，当然，2D AVG的开源引擎其实比较多，除了Fungus以外，比较火的还有Ren’py、Twine等等，而后两者在写自定义插件时分别用的python和前端三件套语言比起Fungus需要的c#或者Lua还用得更广泛一点，但我更推荐Fungus的原因，是因为它在3D游戏中也有非常不错的应用空间，尤其如果你需要做一个重剧情轻任务的3D游戏时。</p>
-<h5 id="哪些情况适合用Fungus"><a href="#哪些情况适合用Fungus" class="headerlink" title="哪些情况适合用Fungus"></a>哪些情况适合用Fungus</h5><p>1.2D的AVG游戏，这是Fungus最初也最本质的定位，自身功能非常强大，基本我能想到的传统2D AVG游戏里可能有的功能它都有直接提供，不需要自己额外写插件，非常适合擅长美术和编剧但编程苦手的人群，只要没有特别独特的需求，甚至可以零编程实现。而如果有特殊需求，也可以用Fungus来作为最基本的框架，然后对特殊需求部分自己写插件作为补充。</p>
+<h4 id="哪些情况适合用Fungus"><a href="#哪些情况适合用Fungus" class="headerlink" title="哪些情况适合用Fungus"></a>哪些情况适合用Fungus</h4><p>1.2D的AVG游戏，这是Fungus最初也最本质的定位，自身功能非常强大，基本我能想到的传统2D AVG游戏里可能有的功能它都有直接提供，不需要自己额外写插件，非常适合擅长美术和编剧但编程苦手的人群，只要没有特别独特的需求，甚至可以零编程实现。而如果有特殊需求，也可以用Fungus来作为最基本的框架，然后对特殊需求部分自己写插件作为补充。</p>
 <p>2.3D游戏中的剧情对话系统。Fungus支持Unity的3D碰撞检测，所以可以利用这个来做剧情触发，而Fungus的分支选项菜单、变量设置和条件触发、以及多样的文字呈现方式，基本能满足剧情对话的需要，而这样的功能如果完全自己来做，会多出几百行代码以及大量debug的工作量，而用Fungus的话，就只需要把自带的丑出天际且不适合3D的UI改一下就好。而且最棒的是，结合Unity的EventSystem和自定义c#脚本插件，你能用它做更多的事情，这个后面细讲。</p>
 <p>3.Fungus不适用于做任务系统，因为它没有物品清单系统，如果只涉及到很少的物品，可以用里面的变量功能来实现，当然如果涉及物品多且复杂，也可以自己写插件添加进去，但这样就没必要用Fungus了，选一个任务类插件然后自己再在它的基础上修改更省力。</p>
-<h5 id="Fungus使用Tips"><a href="#Fungus使用Tips" class="headerlink" title="Fungus使用Tips"></a>Fungus使用Tips</h5><h6 id="1-有必要一看的资源："><a href="#1-有必要一看的资源：" class="headerlink" title="1.有必要一看的资源："></a>1.有必要一看的资源：</h6><p>1.1.Fungus的包安装好后会发现它自带有一套example scene，可以挨个运行一下方便看都有哪些基本功能。<br>1.2.Fungus的<a href="https://github.com/snozbot/fungus/wiki/tutorial_videos" target="_blank" rel="noopener">官方指导视频</a>，B站有较完整的<a href="https://www.bilibili.com/video/BV1Tx411z7hz" target="_blank" rel="noopener">英字搬运</a>和不太完整的<a href="https://www.bilibili.com/video/BV1Fx411i7Y1" target="_blank" rel="noopener">中字搬运</a>。<br>1.3.Fungus的<a href="https://github.com/snozbot/fungus/wiki" target="_blank" rel="noopener">官方文档</a>，<br>1.4.Fungus的非官方教程不多，质量高的更少，至少在没科学上网的情况下是这样，对我有帮助的主要就<a href="https://www.bilibili.com/video/BV1Eb411P787" target="_blank" rel="noopener">这一个</a>。吐槽一下有些做教程的up主一定自己压根就不大用Fungus，按他的代码在他视频的场景里没问题，但只要他在场景里放第二个物体设第二个触发对话的trigger马上就会发现出bug，如果是刚接触Fungus和Unity的新人能给带沟里去。<br>1.5.Fungus的<a href="https://fungusgames.com/forum" target="_blank" rel="noopener">交流论坛入口</a>，第一个进不去了，第二三个可以。</p>
+<h4 id="Fungus使用Tips"><a href="#Fungus使用Tips" class="headerlink" title="Fungus使用Tips"></a>Fungus使用Tips</h4><h5 id="1-有必要一看的资源："><a href="#1-有必要一看的资源：" class="headerlink" title="1.有必要一看的资源："></a>1.有必要一看的资源：</h5><p>1.1.Fungus的包安装好后会发现它自带有一套example scene，可以挨个运行一下方便看都有哪些基本功能。<br>1.2.Fungus的<a href="https://github.com/snozbot/fungus/wiki/tutorial_videos" target="_blank" rel="noopener">官方指导视频</a>，B站有较完整的<a href="https://www.bilibili.com/video/BV1Tx411z7hz" target="_blank" rel="noopener">英字搬运</a>和不太完整的<a href="https://www.bilibili.com/video/BV1Fx411i7Y1" target="_blank" rel="noopener">中字搬运</a>。<br>1.3.Fungus的<a href="https://github.com/snozbot/fungus/wiki" target="_blank" rel="noopener">官方文档</a>，<br>1.4.Fungus的非官方教程不多，质量高的更少，至少在没科学上网的情况下是这样，对我有帮助的主要就<a href="https://www.bilibili.com/video/BV1Eb411P787" target="_blank" rel="noopener">这一个</a>。吐槽一下有些做教程的up主一定自己压根就不大用Fungus，按他的代码在他视频的场景里没问题，但只要他在场景里放第二个物体设第二个触发对话的trigger马上就会发现出bug，如果是刚接触Fungus和Unity的新人能给带沟里去。<br>1.5.Fungus的<a href="https://fungusgames.com/forum" target="_blank" rel="noopener">交流论坛入口</a>，第一个进不去了，第二三个可以。</p>
 <p>其中，<br>1.1和1.2建议在使用前看，可以二选一看就行了。<br>1.3和1.4建议在看了1.1或者1.2或者使用中遇到问题时再看，因为在对基本功能没有概念的时候，看它们会有点太抽象不知道在说什么，但如果对基本功能有概念后，尤其在带着使用中的问题时，看起来的收获就会比较大。<br>强烈建议在用了一段时间后拉通看一遍1.3，会发现好些用了很久但一直没发现但非常实用的功能，哪怕1.1和1.2都可以不看直接摸索着用，但1.3真的值得花一个下午通拉过去。要说它有什么不足之处，主要是Fungus一直在更新，但文档并非所有地方都同步更新，但可以通过对照其它章节来补足。比如在Document-Home-Blocks-Setting an Event Handler中，列举的触发对话的方式是非常古早的，后面更新的而且我们经常常用的触发对话方式都没有写进去，但在Document-EventHandlers页面中就分类列举了所有触发方式。<br>1.5适合在使用一段时间后遇到无法解决的问题时使用，我目前为止还没用过，但看到上面Fungus制作团队和一些热心使用者会回答问题，其中制作团队直到本月依然有活跃答疑。</p>
-<h6 id="2-Fungus在3D游戏中使用的注意事项："><a href="#2-Fungus在3D游戏中使用的注意事项：" class="headerlink" title="2.Fungus在3D游戏中使用的注意事项："></a>2.Fungus在3D游戏中使用的注意事项：</h6><p>想主要说一说3D，一是因为官方资源里基本是2D相关的，而3D的比较少；二是因为我自己主要是做3D的，在3D上踩过的坑和想到的点比较多。<br>1里列举的资料里有提到的就不赘述了，这里主要列一些实际使用中容易踩坑的地方和一些个人使用经验。</p>
+<h5 id="2-Fungus在3D游戏中使用的注意事项："><a href="#2-Fungus在3D游戏中使用的注意事项：" class="headerlink" title="2.Fungus在3D游戏中使用的注意事项："></a>2.Fungus在3D游戏中使用的注意事项：</h5><p>想主要说一说3D，一是因为官方资源里基本是2D相关的，而3D的比较少；二是因为我自己主要是做3D的，在3D上踩过的坑和想到的点比较多。<br>1里列举的资料里有提到的就不赘述了，这里主要列一些实际使用中容易踩坑的地方和一些个人使用经验。</p>
 <p><strong>2.1.碰撞检测与触发对话的相关：</strong></p>
 <p>2.1.1.需要把flowchart作为组件挂在主控角色这个物体上，才能触发各种碰撞检测。千万不要直接tools-fungus-creat-flowchart，然后你会发现怎么都触发不了对话呢。<br>2.1.2.尽可能用trigger而不是collider来触发对话，这个主要是unity的锅，无论是fungus还是自制ui或者别的什么，collider平均3次里能成功触发1次就不错了，而trigger则很少bug。<br>2.1.3.一定一定要在trigger上设置tag，需要格外注意的是，不同的挂了trigger的物体，无论名字再八竿子打不着，距离多十万八千里，只要tag一样，那么触发一个就会导致所有的全被触发，所以，除非是打算几个物体触发任何一个都触发相同剧情，否则tag一定要分开，具体来说，不同叙事方法对tag的用法不同，这个在2.2里详细讲。</p>
 <p><strong>2.2.不同叙事逻辑的实现技巧：</strong></p>
@@ -423,7 +423,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#哪些情况适合用Fungus"><span class="nav-number">1.</span> <span class="nav-text">哪些情况适合用Fungus</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Fungus使用Tips"><span class="nav-number">2.</span> <span class="nav-text">Fungus使用Tips</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-有必要一看的资源："><span class="nav-number">2.1.</span> <span class="nav-text">1.有必要一看的资源：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-Fungus在3D游戏中使用的注意事项："><span class="nav-number">2.2.</span> <span class="nav-text">2.Fungus在3D游戏中使用的注意事项：</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哪些情况适合用Fungus"><span class="nav-number">1.</span> <span class="nav-text">哪些情况适合用Fungus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fungus使用Tips"><span class="nav-number">2.</span> <span class="nav-text">Fungus使用Tips</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-有必要一看的资源："><span class="nav-number">2.1.</span> <span class="nav-text">1.有必要一看的资源：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Fungus在3D游戏中使用的注意事项："><span class="nav-number">2.2.</span> <span class="nav-text">2.Fungus在3D游戏中使用的注意事项：</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
