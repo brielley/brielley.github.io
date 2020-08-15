@@ -235,6 +235,197 @@
           <div id="content" class="content">
             
   <div id="posts" class="posts-expand">
+       
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/15/notes-tech-music-making/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/08/15/notes-tech-music-making/" class="post-title-link" itemprop="url">How to use IMSLP and GarageBand to make music for game development</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-08-15 21:02:31 / Modified: 21:25:27" itemprop="dateCreated datePublished" datetime="2020-08-15T21:02:31+08:00">2020-08-15</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>音乐一直是制作游戏中的一个比较令人头秃的方面，在美术资源和音效资源有大量的免费开源资源可用的时候，音乐资源虽然也有那么一些，但大部分比较一言难尽，让人觉得不如不用的好。MSU的游戏开发网课里有提到可以用苹果自带的GarageBand来制作游戏音乐，制作出来的音乐版权是完全归制作者所有的。但这个方法的难点在于不是所有人都会演奏乐器比如我，作曲更是在大部分人的技能树外。但我最近发现，有一些取巧的方法可以用，比如使用那些已经超过70年进入公共版权的曲谱，在GarageBand的音轨里直接照谱编辑。当然，这个方法的限制也很多。大部分乐曲都很难用这个方法做出来，其一，虽然据说GarageBand支持触控对演奏力度的模拟，但如果像我这样不会演奏只能在音轨里编辑的，演奏出来的往往是比较生硬的，这使得那些需要很高演奏技巧的曲子都不适合，因为模拟不出演奏技巧后，曲子听起来会非常怪异，而即使并不需要高超的演奏技巧，但如果是独奏曲的话，出来的效果往往也很单调，如果是在本身有大量游戏音效的环境下轻量使用还好，如果是在需要音乐做重点烘托的地方就很煞风景；其二，这个软件本质还是给人做流行音乐而不是古典音乐的，于是做起古典音乐来很多地方都很受限制，首先可选节拍只有4/4，3/4，6/8三种，虽然可以尽量把别的节拍往这上面凑，但还是局限很大，2/2凑4/4或者12/8凑6/8这种还好，9/8这种就很麻烦，凑3/4或者6/8出来的强弱音不太对怎么听怎么别扭，其次乐器有大量流行乐用的吉他以及各种鼓以及各种电音和效果，但古典乐器就比较少，经常照谱凑不齐；其三，这个软件虽然理论上支持很多音轨，但音轨间的混音功能极其有限，于是三四个乐器音轨出来还好，音轨太多之后听起来就不太对了，虽然理论上它可以导出多轨工程文件，但它的格式是它自己的.band文件，没法导进adobe audition这种更适合做多轨混音效果的软件里面去做下一步，虽然也可以单独把每个音轨存成一个单独的音频文件，然后去audition里新建一个工程，但这样不太方便看出合奏效果，尤其如果需要整个音轨调高或调低多少半音八度或者所有音轨调整节奏速度这些功能还是在garageband里做起来比较方便，在audition里混音好做但这个不好做，但如果有需要的话，确实也可以，只是预算时间得大幅增加。总的来说，因为现在进入公共版权的绝大部分都是古典乐，于是这个方法能做的相当有限。我试验了十来首不同风格的曲子，感觉效果最好的是那种1轨钢琴加1-2轨弦乐这样的曲子，能最大限度地掩盖住单调平板的缺点，虽然听起来还是不太耐听，但在游戏里再加上音效混音后，也还勉强可用。</p>
+<p>Tips：</p>
+<p>1.在<a href="https://cn.imslp.org/wiki/Main_Page" target="_blank" rel="noopener">IMSLP</a>上搜索曲目的乐谱时，有两点需要注意的，一是一般来说会有挺多不同的版本的，不同版本之间不仅是出版社以及扫描清晰程度不同，有些的编曲也是不同的，可以选择其中比较适合演奏的版本，但需要注意不同谱子的版权，有的最近年间被人重新编曲的并不是公版；二是这网站的搜索框不是网站内置的搜索，而是链接的谷歌搜索，于是会打不开，可以用bing国际版搜索“site:imslp.org 曲名”，这样一般搜索出来的第一二个就是。</p>
+<p>2.GarageBand里编辑音轨时对应的音高提示不是五线谱，而是标了调的乐器按键，在把IMSLP上找的五线谱编辑进去的时候，如果像我一样乐理水平有限，需要找表对照一下。</p>
+<p>3.GarageBand导出的无损音乐文件比较大，一般放游戏里得用有损文件，但有损文件的格式是.m4a，unity里无法使用，需要先把.m4a丢进adobe audition里去转导出为.mp3格式，才能在unity里使用。</p>
+<p>4.GarageBand的管类乐器比如长笛单簧管双簧管巴松法国号什么的，在键盘分类下面，别在大类里面去找，找不到的。</p>
+<p>5.GarageBand的弦类乐器输入有两种方式，一种是直接在弦类大类里，好处除了对会演奏的人来说可以触控模拟演奏以外，还有就是可以直接选具体是哪种乐器小提琴中提琴大提琴还是低音贝司，但坏处是没法在音轨里直接整条音轨调整升降几个八度或半音，也没法选择演奏手法；另一种方式是在键盘大类下的其它分类里，好处是可以选三种演奏方式拨奏、断奏、延音，这样听起来演奏方式要丰富一些，也可以整条音轨调整升降几个八度或半音，但坏处是没法选择具体是哪种弦乐器。对于每支乐曲来说，选哪种方式最好的办法还是试吧，用不同效果做4-8个小节试听一下决定用哪种，也可能发现没一个听起来是对头的于是整首曲子被划掉，目前看来遇到最后这种情况的可能性其实是最大的。</p>
+<p>6.音色上来说，GarageBand的钢琴高音比低音好听，弦乐低音比高音更友好，在谱子可选的情况下，尽量选钢琴是高声部，弦乐是低声部的大提琴协奏曲一类的效果比较好，弦乐高音钢琴低音的小提琴协奏曲一类的有时会比较辣耳朵。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+       
+    
+       
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/15/notes-tech-unity-fungus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/08/15/notes-tech-unity-fungus/" class="post-title-link" itemprop="url">Unity插件I：Fungus</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-08-15 21:02:26 / Modified: 21:25:03" itemprop="dateCreated datePublished" datetime="2020-08-15T21:02:26+08:00">2020-08-15</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/" itemprop="url" rel="index"><span itemprop="name">Writing</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在Unity的所有免费资源里，如果只能推荐一个，那么我一定是毫不犹豫地选Fungus，这是一个超级无敌棒的插件，而且居然是免费开源的。<br>Fungus的主要功能是做剧情对话，如果是做传统的2D AVG游戏，这个插件基本上能够完成所有你需要的功能，比某些流氓软件功能多几倍还不会觊觎你作品的版权，当然，2D AVG的开源引擎其实比较多，除了Fungus以外，比较火的还有Ren’py、Twine等等，而后两者在写自定义插件时分别用的python和前端三件套语言比起Fungus需要的c#或者Lua还用得更广泛一点，但我更推荐Fungus的原因，是因为它在3D游戏中也有非常不错的应用空间，尤其如果你需要做一个重剧情轻任务的3D游戏时。</p>
+<h5 id="哪些情况适合用Fungus"><a href="#哪些情况适合用Fungus" class="headerlink" title="哪些情况适合用Fungus"></a>哪些情况适合用Fungus</h5><p>1.2D的AVG游戏，这是Fungus最初也最本质的定位，自身功能非常强大，基本我能想到的传统2D AVG游戏里可能有的功能它都有直接提供，不需要自己额外写插件，非常适合擅长美术和编剧但编程苦手的人群，只要没有特别独特的需求，甚至可以零编程实现。而如果有特殊需求，也可以用Fungus来作为最基本的框架，然后对特殊需求部分自己写插件作为补充。</p>
+<p>2.3D游戏中的剧情对话系统。Fungus支持Unity的3D碰撞检测，所以可以利用这个来做剧情触发，而Fungus的分支选项菜单、变量设置和条件触发、以及多样的文字呈现方式，基本能满足剧情对话的需要，而这样的功能如果完全自己来做，会多出几百行代码以及大量debug的工作量，而用Fungus的话，就只需要把自带的丑出天际且不适合3D的UI改一下就好。而且最棒的是，结合Unity的EventSystem和自定义c#脚本插件，你能用它做更多的事情，这个后面细讲。</p>
+<p>3.Fungus不适用于做任务系统，因为它没有物品清单系统，如果只涉及到很少的物品，可以用里面的变量功能来实现，当然如果涉及物品多且复杂，也可以自己写插件添加进去，但这样就没必要用Fungus了，选一个任务类插件然后自己再在它的基础上修改更省力。</p>
+<h5 id="Fungus使用Tips"><a href="#Fungus使用Tips" class="headerlink" title="Fungus使用Tips"></a>Fungus使用Tips</h5><h6 id="1-有必要一看的资源："><a href="#1-有必要一看的资源：" class="headerlink" title="1.有必要一看的资源："></a>1.有必要一看的资源：</h6><p>1.1.Fungus的包安装好后会发现它自带有一套example scene，可以挨个运行一下方便看都有哪些基本功能。<br>1.2.Fungus的<a href="https://github.com/snozbot/fungus/wiki/tutorial_videos" target="_blank" rel="noopener">官方指导视频</a>，B站有较完整的<a href="https://www.bilibili.com/video/BV1Tx411z7hz" target="_blank" rel="noopener">英字搬运</a>和不太完整的<a href="https://www.bilibili.com/video/BV1Fx411i7Y1" target="_blank" rel="noopener">中字搬运</a>。<br>1.3.Fungus的<a href="https://github.com/snozbot/fungus/wiki" target="_blank" rel="noopener">官方文档</a>，<br>1.4.Fungus的非官方教程不多，质量高的更少，至少在没科学上网的情况下是这样，对我有帮助的主要就<a href="https://www.bilibili.com/video/BV1Eb411P787" target="_blank" rel="noopener">这一个</a>。吐槽一下有些做教程的up主一定自己压根就不大用Fungus，按他的代码在他视频的场景里没问题，但只要他在场景里放第二个物体设第二个触发对话的trigger马上就会发现出bug，如果是刚接触Fungus和Unity的新人能给带沟里去。<br>1.5.Fungus的<a href="https://fungusgames.com/forum" target="_blank" rel="noopener">交流论坛入口</a>，第一个进不去了，第二三个可以。</p>
+<p>其中，<br>1.1和1.2建议在使用前看，可以二选一看就行了。<br>1.3和1.4建议在看了1.1或者1.2或者使用中遇到问题时再看，因为在对基本功能没有概念的时候，看它们会有点太抽象不知道在说什么，但如果对基本功能有概念后，尤其在带着使用中的问题时，看起来的收获就会比较大。<br>强烈建议在用了一段时间后拉通看一遍1.3，会发现好些用了很久但一直没发现但非常实用的功能，哪怕1.1和1.2都可以不看直接摸索着用，但1.3真的值得花一个下午通拉过去。要说它有什么不足之处，主要是Fungus一直在更新，但文档并非所有地方都同步更新，但可以通过对照其它章节来补足。比如在Document-Home-Blocks-Setting an Event Handler中，列举的触发对话的方式是非常古早的，后面更新的而且我们经常常用的触发对话方式都没有写进去，但在Document-EventHandlers页面中就分类列举了所有触发方式。<br>1.5适合在使用一段时间后遇到无法解决的问题时使用，我目前为止还没用过，但看到上面Fungus制作团队和一些热心使用者会回答问题，其中制作团队直到本月依然有活跃答疑。</p>
+<h6 id="2-Fungus在3D游戏中使用的注意事项："><a href="#2-Fungus在3D游戏中使用的注意事项：" class="headerlink" title="2.Fungus在3D游戏中使用的注意事项："></a>2.Fungus在3D游戏中使用的注意事项：</h6><p>想主要说一说3D，一是因为官方资源里基本是2D相关的，而3D的比较少；二是因为我自己主要是做3D的，在3D上踩过的坑和想到的点比较多。<br>1里列举的资料里有提到的就不赘述了，这里主要列一些实际使用中容易踩坑的地方和一些个人使用经验。</p>
+<p><strong>2.1.碰撞检测与触发对话的相关：</strong></p>
+<p>2.1.1.需要把flowchart作为组件挂在主控角色这个物体上，才能触发各种碰撞检测。千万不要直接tools-fungus-creat-flowchart，然后你会发现怎么都触发不了对话呢。<br>2.1.2.尽可能用trigger而不是collider来触发对话，这个主要是unity的锅，无论是fungus还是自制ui或者别的什么，collider平均3次里能成功触发1次就不错了，而trigger则很少bug。<br>2.1.3.一定一定要在trigger上设置tag，需要格外注意的是，不同的挂了trigger的物体，无论名字再八竿子打不着，距离多十万八千里，只要tag一样，那么触发一个就会导致所有的全被触发，所以，除非是打算几个物体触发任何一个都触发相同剧情，否则tag一定要分开，具体来说，不同叙事方法对tag的用法不同，这个在2.2里详细讲。</p>
+<p><strong>2.2.不同叙事逻辑的实现技巧：</strong></p>
+<p>2.2.1.线性叙事：一个tag即可，用好set active是关键。<br>在scene的hierarchy中，对所有的剧情触发物体，只有第一个设置为active，其它全都不勾选。然后在flowchart中，对于第一段剧情的block触发方式设定为trigger enter，触发后先把当前这个触发物体的set active给变成否，然后剧情走完后把第二个剧情触发点的物体给set active，接下来会按顺序进行到的每一个剧情触发点都以此类推，触发后把当前物品取消激活，同时给下一个触发点激活，直到最后一个剧情触发点。</p>
+<p>2.2.2.主线-支线叙事：一条线一个tag，结合set active和variable来实现。<br>主线所有涉及到的触发点都共用一个tag就可以了，结合set active，按前面2.2.1的方法来实现。同时，对每一条支线需要设置一个tag和一个variable。<br>对所有variables的默认值都设为0，在主线进行到某个阶段可以触发某条支线剧情时，在主线的block里set variable设置支线甲int=1，然后在触发支线剧情的触发物体那里，除了用这条支线的特定tag去触发以外，还需满足if 支线甲int==1，这样就可以避免在主线没发展到可以接支线任务的时候就被提前触发了。支线任务如果有多段触发点，且多段出发点也是线性的，那么也可以结合set active来挨个激活每一个触发点，以保证每次是在正确的地方只触发下面一步的剧情。然后用同样的方法处理支线乙支线丙支线丁等等。</p>
+<p>2.2.3.开放世界叙事：归类tag池，综合应用set active、variable、text variation。<br>因为不知道玩家会先去触发哪个，所以原则上来说，每一个线头都需要一个独立的tag，线头可能是一段持续好几个触发点的剧情，这个用前面2.2.1的方法结合set active来做就可以了，涉及到必须先触发这个线头并且走到哪一步，才有可能触发到那个线头的，用前面2.2.2的方法综合set active和variables来做，第三种线头是那种同类事物，接触任何一个都可能开展类似的对话，并且也许接触第一次第二次第N次触发的对话不一样的，这种共用一个tag，并且全部set active，用text variation来实现。对那种遇到第几次对话不一样而且有特定顺序的，用<code>[1|2|3|...|n]</code>，对那种遇到任何一个都随机从一个对话池里选其中一句出来的，用<code>[~1|2|3|...|n]</code>。</p>
+<p><strong>2.3.结合Unity引擎的自身组件实现更多功能</strong></p>
+<p>2.3.1.前面提到过Fungus里有set active这个命令，也就是激活某个在hierarchy里处于未激活状态的物体，那么靠这个我们可以让Fungus里的剧情发展到某个地方时，激活某个特定的物体，这样直接实现某些功能，前面已经举出过例子了，不赘诉。<br>2.3.2.类似的功能还有spawn object以及destroy，前者可以利用它来生成一些hierarchy里没有但有预制在prefab里的物体，比如刷出小怪或者刷出资源等等；后者则是相反，销毁在hierarchy里现存的物品。<br>2.3.3.除此之外的大头是Invoke命令，可以直接对接调用Unity的Event System，实现里面所自带的或者自己写了挂上去的c#脚本所附加给它的特殊功能，这样让Fungus可以实现的功能边界一下扩展开了。<br>2.3.4.另外一个大头是UI命令，可以直接对接调用Unity的原生UI系统，这样一方面可以解决一些显示问题，比如根据剧情分支不同，某个游戏物体上的字显示不同，就可以通过这个来实现；另一方面也可以结合前面的Invoke命令结合Event System来实现菜单问题，比如把Fungus里的语言选项或者音量调节选项给集成到主菜单的UI按钮或拉杆里去。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+       
+    
       
     
       
