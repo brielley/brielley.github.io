@@ -241,6 +241,106 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/02/notes-tech-unity-vfx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2021/01/02/notes-tech-unity-vfx/" class="post-title-link" itemprop="url">Unity项目画质改进的一些思路</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2021-01-02 01:48:35 / Modified: 02:37:25" itemprop="dateCreated datePublished" datetime="2021-01-02T01:48:35+08:00">2021-01-02</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/" itemprop="url" rel="index"><span itemprop="name">Writing</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>用Unity做游戏一段时间应该都会发现，默认的画质会有一种仿佛表面蒙着一层白纱一样的泛白不清晰的感觉，即使把画质调到内置最高的ultra quality了还是会这样。虽然一般来说一开始选了unity而不是unreal来做游戏的人，基本上也没有在画质上有太高的追求，但这种仿佛眼镜花了一样的感觉还是会让人忍不住想要找块布来把眼镜擦擦干净。于是这篇笔记并不是面向对美术有高要求的人群，也不用于已有基础者进阶，而是对像我一样无论是在美术上还是在计算机图形学上都没什么基础也并不对游戏的美术质量抱太高要求但又希望能够一定程度改善画质的人，提供的一些最基础的画质改进思路。</p>
+<p>一个比较彻底改善画质的思路是改渲染管线。unity有三种渲染管线，分别是默认的build-in render pipeline、universal render pipeline、high definition render pipeline，三种画质依次提升，同时吃硬件也依次提升。吃硬件这个问题特别值得拿出来说，因为是真的非常吃，我的电脑是4年前买的主流配置游戏本，960的显卡在如今已经没法玩新出的3A单机了，但玩守望先锋这样的游戏是不卡的，玩模4这样的游戏更是开最高效也很流畅，但是，一旦使用universal render pipeline，一个模型素材只有仅仅50M的低模游戏项目，设置medium quality运行不到1分钟就会明显感觉到卡顿，而且电脑发热严重，所以除非是定位超级硬核的游戏，还是不要考虑直接用urp做游戏了。urp开低效的话吃硬件程度稍好一点，但强烈不推荐，因为低效的影子锯齿严重到把抗锯齿调到最高也还是不行，视觉效果上还不如好好倒腾下的build-in，但比build-in的哪怕最高效也更吃硬件一点，非常得不偿失。但实测感觉urp的中效确实比build-in的最高效效果更好，如果希望做一个不吃硬件的游戏，又希望尽可能适当提升画面质量，我感觉比较实用是思路是只用urp开中效或者如果设备支持的话开高效做开头结尾过场动画，录成mp4格式的视频，通过raw image把视频直接嵌入build-in做的游戏项目中。而在build-in的主体项目中，尽量通过后期处理来提升画质，或者说修正那些画质中需要眼镜布擦一擦的地方。</p>
+<p>我目前为止试出的在build-in项目里最具性价比的擦眼镜做法是：</p>
+<p>1.把color space从gamma调整为linear。linear比gamma能从肉眼上直观感觉到细节的增加和泛白的减少，但不足之处是会让色调整体变暖。</p>
+<p>2.安装unity可选包里的post-processing，设置一个global volumn，挂color grading组件，把tonemapping mode设置为aces模式。aces模式一改以后，会有一种画质瞬间上升两级的感觉，而且蒙着的白纱完全消失了，但不足之处是会让亮度整体变暗。</p>
+<p>3.这步主要不为擦眼镜，而是为调整前两步的副作用。<br>3.1.对1导致的画面泛黄，用color grading里的white balance来调整色温；<br>3.2.对2导致的画面变暗，用color grading里的post-exposure来调亮，如果在使用post-exposure后发现总体亮度合适了但高光部分不够亮或阴影部分不够暗，就再结合color grading里的contrast来调整至理想的高光阴影亮度；<br>3.3.如果觉得擦眼镜后的画面过于清晰，不便于表现富于层次的近中远景，可以在lighting setting里勾选fog，模式改为线性，然后调整可见度距离至合适数值，来让中远景随距离逐渐模糊。不建议用post-processing里的depth of field组件来模糊中远景，除非是2D游戏或者是锁镜头的3D游戏，否则会很可能导致晕3D，尤其是在第一人称模式下。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+       
+    
+       
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/15/notes-tech-music-making/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -3099,7 +3199,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
