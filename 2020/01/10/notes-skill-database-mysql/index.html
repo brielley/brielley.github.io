@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="数据提取与分析问题1 前几【涉及知识点】最值：单列最大max(column)，单列最小min(column)；多列最大greatest(column1,column2)，多列最小least(column1,column2)，注意greatest和least里不能有值为null否则会返回null剔重：distinct排序：按某column列从小到大order by column，从大到小order">
+  <meta name="description" content="在Leetcode刷完了database下的所有免费题，尝试把这些题目按问题进行了分类，并梳理出每种问题的所涉MySQL知识点与解决思路。 数据提取与分析问题1 前几【涉及知识点】最值：单列最大max(column)，单列最小min(column)；多列最大greatest(column1,column2)，多列最小least(column1,column2)，注意greatest和least里不">
 <meta name="keywords" content="MySQL,Database">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL Study Notes">
 <meta property="og:url" content="http://yoursite.com/2020/01/10/notes-skill-database-mysql/index.html">
 <meta property="og:site_name" content="Brielley">
-<meta property="og:description" content="数据提取与分析问题1 前几【涉及知识点】最值：单列最大max(column)，单列最小min(column)；多列最大greatest(column1,column2)，多列最小least(column1,column2)，注意greatest和least里不能有值为null否则会返回null剔重：distinct排序：按某column列从小到大order by column，从大到小order">
+<meta property="og:description" content="在Leetcode刷完了database下的所有免费题，尝试把这些题目按问题进行了分类，并梳理出每种问题的所涉MySQL知识点与解决思路。 数据提取与分析问题1 前几【涉及知识点】最值：单列最大max(column)，单列最小min(column)；多列最大greatest(column1,column2)，多列最小least(column1,column2)，注意greatest和least里不">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-03-23T06:41:18.938Z">
+<meta property="og:updated_time" content="2021-03-23T08:13:59.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL Study Notes">
-<meta name="twitter:description" content="数据提取与分析问题1 前几【涉及知识点】最值：单列最大max(column)，单列最小min(column)；多列最大greatest(column1,column2)，多列最小least(column1,column2)，注意greatest和least里不能有值为null否则会返回null剔重：distinct排序：按某column列从小到大order by column，从大到小order">
+<meta name="twitter:description" content="在Leetcode刷完了database下的所有免费题，尝试把这些题目按问题进行了分类，并梳理出每种问题的所涉MySQL知识点与解决思路。 数据提取与分析问题1 前几【涉及知识点】最值：单列最大max(column)，单列最小min(column)；多列最大greatest(column1,column2)，多列最小least(column1,column2)，注意greatest和least里不">
   <link rel="canonical" href="http://yoursite.com/2020/01/10/notes-skill-database-mysql/">
 
 
@@ -307,7 +307,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-23 14:41:18" itemprop="dateModified" datetime="2021-03-23T14:41:18+08:00">2021-03-23</time>
+                <time title="Modified: 2021-03-23 16:13:59" itemprop="dateModified" datetime="2021-03-23T16:13:59+08:00">2021-03-23</time>
               </span>
             
           
@@ -343,7 +343,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="数据提取与分析"><a href="#数据提取与分析" class="headerlink" title="数据提取与分析"></a>数据提取与分析</h4><h5 id="问题1-前几"><a href="#问题1-前几" class="headerlink" title="问题1 前几"></a>问题1 前几</h5><p>【涉及知识点】<br>最值：单列最大<code>max(column)</code>，单列最小<code>min(column)</code>；多列最大<code>greatest(column1,column2)</code>，多列最小<code>least(column1,column2)</code>，注意greatest和least里不能有值为null否则会返回null<br>剔重：<code>distinct</code><br>排序：按某column列从小到大<code>order by column</code>，从大到小<code>order by column desc</code><br>选取：<code>limit m offset n</code> 取第n+1至n+1+(m-1)=n+m名<br>没有结果时返回null：嵌套一层，内层没有结果什么也不会返回，外层在内层没有结果的情况下会返回null，也可以外层用<code>ifnull</code>更直观</p>
+        <p>在Leetcode刷完了database下的所有免费题，尝试把这些题目按问题进行了分类，并梳理出每种问题的所涉MySQL知识点与解决思路。</p>
+<h4 id="数据提取与分析"><a href="#数据提取与分析" class="headerlink" title="数据提取与分析"></a>数据提取与分析</h4><h5 id="问题1-前几"><a href="#问题1-前几" class="headerlink" title="问题1 前几"></a>问题1 前几</h5><p>【涉及知识点】<br>最值：单列最大<code>max(column)</code>，单列最小<code>min(column)</code>；多列最大<code>greatest(column1,column2)</code>，多列最小<code>least(column1,column2)</code>，注意greatest和least里不能有值为null否则会返回null<br>剔重：<code>distinct</code><br>排序：按某column列从小到大<code>order by column</code>，从大到小<code>order by column desc</code><br>选取：<code>limit m offset n</code> 取第n+1至n+1+(m-1)=n+m名<br>没有结果时返回null：嵌套一层，内层没有结果什么也不会返回，外层在内层没有结果的情况下会返回null，也可以外层用<code>ifnull</code>更直观</p>
 <p>【例题】#176 <a href="https://leetcode.com/problems/second-highest-salary/" target="_blank" rel="noopener">Second Highest Salary</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Write a SQL query to get the second highest salary from the Employee table.</span><br><span class="line"></span><br><span class="line">+----+--------+</span><br><span class="line">| Id | Salary |</span><br><span class="line">+----+--------+</span><br><span class="line">| 1  | 100    |</span><br><span class="line">| 2  | 200    |</span><br><span class="line">| 3  | 300    |</span><br><span class="line">+----+--------+</span><br><span class="line">For example, given the above Employee table, the query should <span class="built_in">return</span> 200 as the second highest salary. </span><br><span class="line">If there is no second highest salary, <span class="keyword">then</span> the query should <span class="built_in">return</span> null.</span><br><span class="line"></span><br><span class="line">+---------------------+</span><br><span class="line">| SecondHighestSalary |</span><br><span class="line">+---------------------+</span><br><span class="line">| 200                 |</span><br><span class="line">+---------------------+</span><br></pre></td></tr></table></figure>
 
@@ -527,6 +528,7 @@
 <p>备注：<br>1）这种方法的运算时间是1846ms<br>2）这里的delete后面没有<code>*</code>，而是直接接from，因为后面是where所限定的一个指标id<br>3）id not in的括号内必须嵌套一次，而不能直接一次，否则会报错，原因不明。</p>
 <h5 id="问题2-更新数据"><a href="#问题2-更新数据" class="headerlink" title="问题2 更新数据"></a>问题2 更新数据</h5><p>【涉及知识点】<br>更新数据的基本格式：<br><code>update table set column-need-to-be-update=xxx where column-condition=mmm</code></p>
 <p>【例题】 前面分析互换问题时在例题627中已经讲过，不赘述。</p>
+<p>Credit: 以上所有例题题目均来自Leetcode免费题库，可点击每道例题的标题链接进入Leetcode练习。</p>
 
     </div>
 
