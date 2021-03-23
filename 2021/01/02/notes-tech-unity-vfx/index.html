@@ -57,14 +57,14 @@
 </script>
 
   <meta name="description" content="用Unity做游戏一段时间应该都会发现，默认的画质会有一种仿佛表面蒙着一层白纱一样的泛白不清晰的感觉，即使把画质调到内置最高的ultra quality了还是会这样。虽然一般来说一开始选了unity而不是unreal来做游戏的人，基本上也没有在画质上有太高的追求，但这种仿佛眼镜花了一样的感觉还是会让人忍不住想要找块布来把眼镜擦擦干净。于是这篇笔记并不是面向对美术有高要求的人群，也不用于已有基础者进">
-<meta name="keywords" content="Tech,Game">
+<meta name="keywords" content="Game Dev,Unity,Pipeline,PostProcessing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Unity项目画质改进的一些思路">
 <meta property="og:url" content="http://yoursite.com/2021/01/02/notes-tech-unity-vfx/index.html">
 <meta property="og:site_name" content="Brielley">
 <meta property="og:description" content="用Unity做游戏一段时间应该都会发现，默认的画质会有一种仿佛表面蒙着一层白纱一样的泛白不清晰的感觉，即使把画质调到内置最高的ultra quality了还是会这样。虽然一般来说一开始选了unity而不是unreal来做游戏的人，基本上也没有在画质上有太高的追求，但这种仿佛眼镜花了一样的感觉还是会让人忍不住想要找块布来把眼镜擦擦干净。于是这篇笔记并不是面向对美术有高要求的人群，也不用于已有基础者进">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-01-01T18:37:25.234Z">
+<meta property="og:updated_time" content="2021-03-23T06:46:31.973Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Unity项目画质改进的一些思路">
 <meta name="twitter:description" content="用Unity做游戏一段时间应该都会发现，默认的画质会有一种仿佛表面蒙着一层白纱一样的泛白不清晰的感觉，即使把画质调到内置最高的ultra quality了还是会这样。虽然一般来说一开始选了unity而不是unreal来做游戏的人，基本上也没有在画质上有太高的追求，但这种仿佛眼镜花了一样的感觉还是会让人忍不住想要找块布来把眼镜擦擦干净。于是这篇笔记并不是面向对美术有高要求的人群，也不用于已有基础者进">
@@ -163,22 +163,33 @@
       
       
         
-        <li class="menu-item menu-item-musical">
+        <li class="menu-item menu-item-tech">
       
     
 
-    <a href="/categories/Musical/" rel="section"><i class="fa fa-fw fa-film"></i>Musical</a>
+    <a href="/categories/Tech/" rel="section"><i class="fa fa-fw fa-keyboard-o"></i>Tech</a>
 
   </li>
       
       
       
         
-        <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-game">
       
     
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+    <a href="/categories/Game/" rel="section"><i class="fa fa-fw fa-gamepad"></i>Game</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-life">
+      
+    
+
+    <a href="/categories/life/" rel="section"><i class="fa fa-fw fa-film"></i>Life</a>
 
   </li>
       
@@ -190,6 +201,17 @@
     
 
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Topics</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -274,11 +296,19 @@
                 
               
 
-              <time title="Created: 2021-01-02 01:48:35 / Modified: 02:37:25" itemprop="dateCreated datePublished" datetime="2021-01-02T01:48:35+08:00">2021-01-02</time>
+              <time title="Created: 2021-01-02 01:48:35" itemprop="dateCreated datePublished" datetime="2021-01-02T01:48:35+08:00">2021-01-02</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-23 14:46:31" itemprop="dateModified" datetime="2021-03-23T14:46:31+08:00">2021-03-23</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -287,14 +317,14 @@
               </span>
               <span class="post-meta-item-text">In</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/" itemprop="url" rel="index"><span itemprop="name">Writing</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
 
                 
                 
                   , 
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/Game-Dev/" itemprop="url" rel="index"><span itemprop="name">Game Dev</span></a></span>
 
                 
                 
@@ -334,9 +364,13 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Tech/" rel="tag"><i class="fa fa-tag"></i> Tech</a>
+              <a href="/tags/Game-Dev/" rel="tag"><i class="fa fa-tag"></i> Game Dev</a>
             
-              <a href="/tags/Game/" rel="tag"><i class="fa fa-tag"></i> Game</a>
+              <a href="/tags/Unity/" rel="tag"><i class="fa fa-tag"></i> Unity</a>
+            
+              <a href="/tags/Pipeline/" rel="tag"><i class="fa fa-tag"></i> Pipeline</a>
+            
+              <a href="/tags/PostProcessing/" rel="tag"><i class="fa fa-tag"></i> PostProcessing</a>
             
           </div>
         
@@ -450,7 +484,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Brielley. All Rights Reserved.</span>
+  <span class="author" itemprop="copyrightHolder">Brielley  All Rights Reserved</span>
 </div>
 
         
