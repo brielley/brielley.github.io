@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="这游戏hard模式和另两个模式完全就像两个游戏……一个是爽文游戏，一个是生存游戏…… 比起easy和medium模式下仅仅是创始人可以满两个半技能还是一个半技能，以及初始资金的差异以外，hard模式表现为不仅创始人只能满一个技能，初始资金0，最重要的是如果不是满技能做出来的软件几乎只会亏钱，甚至技能不够接外包会被bug扣钱扣到负了…… 测试了很多局，发现破局方式主要有两种，一种是创始人的程序技能点">
-<meta name="keywords" content="Gamer,Software Inc.">
+  <meta name="description" content="用Unity做游戏一段时间应该都会发现，默认的画质会有一种仿佛表面蒙着一层白纱一样的泛白不清晰的感觉，即使把画质调到内置最高的ultra quality了还是会这样。虽然一般来说一开始选了unity而不是unreal来做游戏的人，基本上也没有在画质上有太高的追求，但这种仿佛眼镜花了一样的感觉还是会让人忍不住想要找块布来把眼镜擦擦干净。于是这篇笔记并不是面向对美术有高要求的人群，也不用于已有基础者进">
+<meta name="keywords" content="Game Dev,Unity,Pipeline,PostProcessing">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【攻略】Software Inc.困难模式的两种破局方式">
-<meta property="og:url" content="http://yoursite.com/2020/04/07/game-software-inc/index.html">
+<meta property="og:title" content="Unity项目画质改进的一些思路">
+<meta property="og:url" content="http://yoursite.com/2021/01/02/tech-game-dev-unity-vfx/index.html">
 <meta property="og:site_name" content="Brielley">
-<meta property="og:description" content="这游戏hard模式和另两个模式完全就像两个游戏……一个是爽文游戏，一个是生存游戏…… 比起easy和medium模式下仅仅是创始人可以满两个半技能还是一个半技能，以及初始资金的差异以外，hard模式表现为不仅创始人只能满一个技能，初始资金0，最重要的是如果不是满技能做出来的软件几乎只会亏钱，甚至技能不够接外包会被bug扣钱扣到负了…… 测试了很多局，发现破局方式主要有两种，一种是创始人的程序技能点">
+<meta property="og:description" content="用Unity做游戏一段时间应该都会发现，默认的画质会有一种仿佛表面蒙着一层白纱一样的泛白不清晰的感觉，即使把画质调到内置最高的ultra quality了还是会这样。虽然一般来说一开始选了unity而不是unreal来做游戏的人，基本上也没有在画质上有太高的追求，但这种仿佛眼镜花了一样的感觉还是会让人忍不住想要找块布来把眼镜擦擦干净。于是这篇笔记并不是面向对美术有高要求的人群，也不用于已有基础者进">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-03-24T05:01:52.296Z">
+<meta property="og:updated_time" content="2021-03-24T09:07:31.374Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【攻略】Software Inc.困难模式的两种破局方式">
-<meta name="twitter:description" content="这游戏hard模式和另两个模式完全就像两个游戏……一个是爽文游戏，一个是生存游戏…… 比起easy和medium模式下仅仅是创始人可以满两个半技能还是一个半技能，以及初始资金的差异以外，hard模式表现为不仅创始人只能满一个技能，初始资金0，最重要的是如果不是满技能做出来的软件几乎只会亏钱，甚至技能不够接外包会被bug扣钱扣到负了…… 测试了很多局，发现破局方式主要有两种，一种是创始人的程序技能点">
-  <link rel="canonical" href="http://yoursite.com/2020/04/07/game-software-inc/">
+<meta name="twitter:title" content="Unity项目画质改进的一些思路">
+<meta name="twitter:description" content="用Unity做游戏一段时间应该都会发现，默认的画质会有一种仿佛表面蒙着一层白纱一样的泛白不清晰的感觉，即使把画质调到内置最高的ultra quality了还是会这样。虽然一般来说一开始选了unity而不是unreal来做游戏的人，基本上也没有在画质上有太高的追求，但这种仿佛眼镜花了一样的感觉还是会让人忍不住想要找块布来把眼镜擦擦干净。于是这篇笔记并不是面向对美术有高要求的人群，也不用于已有基础者进">
+  <link rel="canonical" href="http://yoursite.com/2021/01/02/tech-game-dev-unity-vfx/">
 
 
 <script id="page-configurations">
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>【攻略】Software Inc.困难模式的两种破局方式 | Brielley</title>
+  <title>Unity项目画质改进的一些思路 | Brielley</title>
   
 
 
@@ -268,7 +268,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/game-software-inc/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/02/tech-game-dev-unity-vfx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Brielley">
@@ -280,7 +280,7 @@
       <meta itemprop="name" content="Brielley">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">【攻略】Software Inc.困难模式的两种破局方式
+        <h1 class="post-title" itemprop="name headline">Unity项目画质改进的一些思路
 
           
         </h1>
@@ -296,7 +296,7 @@
                 
               
 
-              <time title="Created: 2020-04-07 23:35:18" itemprop="dateCreated datePublished" datetime="2020-04-07T23:35:18+08:00">2020-04-07</time>
+              <time title="Created: 2021-01-02 01:48:35" itemprop="dateCreated datePublished" datetime="2021-01-02T01:48:35+08:00">2021-01-02</time>
             </span>
           
             
@@ -307,7 +307,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-24 13:01:52" itemprop="dateModified" datetime="2021-03-24T13:01:52+08:00">2021-03-24</time>
+                <time title="Modified: 2021-03-24 17:07:31" itemprop="dateModified" datetime="2021-03-24T17:07:31+08:00">2021-03-24</time>
               </span>
             
           
@@ -317,7 +317,14 @@
               </span>
               <span class="post-meta-item-text">In</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Game/" itemprop="url" rel="index"><span itemprop="name">Game</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/Game-Dev/" itemprop="url" rel="index"><span itemprop="name">Game Dev</span></a></span>
 
                 
                 
@@ -336,10 +343,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>这游戏hard模式和另两个模式完全就像两个游戏……一个是爽文游戏，一个是生存游戏……</p>
-<p>比起easy和medium模式下仅仅是创始人可以满两个半技能还是一个半技能，以及初始资金的差异以外，hard模式表现为不仅创始人只能满一个技能，初始资金0，最重要的是如果不是满技能做出来的软件几乎只会亏钱，甚至技能不够接外包会被bug扣钱扣到负了……</p>
-<p>测试了很多局，发现破局方式主要有两种，一种是创始人的程序技能点满，特长2D，别的技能全空，不贷款，租最便宜的那间房子，第一天接满所有外包，大概有4-5k的先期款，用这笔先期款买必须的办公家具，剩下的钱招一个月薪2k学习能力强的新手美术，让美术上8小时白班，创始人自己上10小时夜班，美术做美术外包，创始人做程序外包，第二个月交了第一个外包有1w资金后，再招第二个新手美术，需要性格和第一个美术合拍，学习能力也尽量高。题外话一句，这游戏对学习能力这项数值的要求太变态了，技能不满做出的软件只能亏钱，但又不能让擅长2d的做2d，擅长音乐的做音乐，而是必须全部啥都做算他们技能的平均值，这样只能把人送去把相关技能全部培训满了才能用来做软件，而学习能力高的，培训不到1年可以满一个方向，学习能力低的，培训5年也满不了一个方向，而总方向有好多个，招一个满技能的程序通常本身就50+了，但只有1个方向满，1-2个方向半，要全部培训满如果是学习能力强还能在5年左右培训完用上，学习能力不行的话培训到退休也用不上，还不如招20出头的总技能不足10%但所有方向都接近全满的小年轻，虽然要差不多10年才能总技能到满，但不需要掏钱脱产培训了，而且还能压榨他们做外包赚钱，提升技能和榨取剩余价值两不误，更重要的是招个满技能的程序再培训到每个方向全满按年限涨工资到能用的时候月薪大概在1w2，而且用不了几年就退休了还得付退休金，而招新手小年轻可以用很多年不说，在满技能能用的时候按年涨起来的月薪才大概8k+，简直没理由不这么做。虽说策略游戏本质是看数值不要联系现实，但仍觉得这个设定太让人无力吐槽以及让它在relatedness上大大减分了。扯远了说回来，继续之前的办法每个月外包全接，这样每个月入账在5-6w，成本5k，这样到夏天的时候可以积攒到25w左右的初始资金。这时看这轮游戏随机刷出的支持2D渲染的操作系统是什么时候出的，有时是79年就出了，这样在80年夏天的现在市场上已经有品质为great的2D editor了，就开始着手做支持2D渲染的游戏引擎，需要招3个满技能的设计做4天才能设计好，招聘费用1w，每个设计月薪1w，总共成本13w，设计完后没有活儿干养不起只好先全部开了以后需要的时候再招（真是让人玩得罪恶感满满的设定），然后创始人开始码代码，再花1w招聘费用请一个满技能的2D美术做美术，这时由于创始人不再接外包，一个月薪6k的满技能美术（说起来，为什么满技能设计和满技能程序的月薪都是1w，但美术就是6k）、两个月薪2k新手美术、一个月薪1k清洁工以及房租水电每周大约1w2的支出，基本靠两个新手美术每月做2个外包扣除品质和bug的扣款入账大约1w5来维持，软件的美术大约4个月后完成，完成后把美术调去和另俩新手美术组队接外包，创始人继续码代码，码完之后修bug，先花1w招聘费用请2个月薪3k的新手程序和1个月薪6k的中级程序，来修简单bug，创始人恢复接外包，这样每个月外包入账恢复为5-6w，成本2w5，每个月能有2w左右纯入，当招来的程序已经修不了bug的时候，让他们做外包，创始人继续修bug，因为招来的程序技能不高做外包bug扣款很多，每个月的外包入账只有2w+，只能刚好覆盖成本，hard模式下，品质再高的软件，也得把bug修到满技能的程序也修不出任何bug的时候才能卖得动，不然就是妥妥的亏钱，这样全部完成大概是81年秋冬，竞品比创始人先发几个月，但品质一般是good到great，而用这个办法做出的创始人家的产品品质在great到outstanding，大约会在几个月内逐渐吸引到竞品家的用户大半转投过来，从而赚到第一桶金，之后就是买地盖房再招两组中带新的程序做运营支持，然后开始做下一个软件了。另一种随机的开局是支持2D渲染的操作系统在80年底才出，这样的话就开局同样的方式创始人和俩新手美术接外包一年，资金可以积攒到50w，然后操作系统一出马上开始请设计设计2D editor，因为2D editor比游戏引擎简单，只需要1个设计做3天就可以了，之后仍是创始人码代码，请个满技能2D美术，因为更简单大约大半年后的81年秋冬的时候就可以修完bug发出去，比竞品仍是晚两三个月发，但品质更高因此掘到第一桶金实现破局。</p>
-<p>另一个破局方法则是创始人选满设计或者满美术，如果满美术，那么创始人自己可以完成所有的美术外包，请3个新手程序接完所有的程序外包，因为新手程序员的bug扣款很多，这样的每个月净入只有2w左右，如果是满设计，那么创始人需要请2个新手美术3个新手程序做外包，每个月的净入也是在2w左右，如果开局随机的是80年底出支持2D渲染的操作系统，那么可以在这之后招满技能的2D程序员做2D editor，然后根据创始人的技能是美术还是设计，请个满技能设计或者满技能美术，这时基本就是烧之前一年外包积攒的钱，然后大约一年后在快破产的时候终于修完了bug发出去，实现破局。如果开局随机的是79年就已经出2D渲染操作系统了，那么就不用考虑做游戏引擎了，因为游戏引擎需要程序会的方向很多，而游戏设定除了创始人是某技能满就这个技能下几乎所有方向都接近全满，市场上招的某技能满的这个技能下往往只有1个技能满，游戏引擎这种需要多方向满的在有足够资金招人再烧钱烧时间去培训前只好不碰，只能一直做外包，直到84年初可以做3D editor之后，这个软件只需要3D程序这一个技能的一个方向，而且体量很小，1个满技能设计1个月，2个满技能的程序3个月就做好了，在84年夏秋的时候可以发布出去，实现破局。</p>
+        <p>用Unity做游戏一段时间应该都会发现，默认的画质会有一种仿佛表面蒙着一层白纱一样的泛白不清晰的感觉，即使把画质调到内置最高的ultra quality了还是会这样。虽然一般来说一开始选了unity而不是unreal来做游戏的人，基本上也没有在画质上有太高的追求，但这种仿佛眼镜花了一样的感觉还是会让人忍不住想要找块布来把眼镜擦擦干净。于是这篇笔记并不是面向对美术有高要求的人群，也不用于已有基础者进阶，而是对像我一样无论是在美术上还是在计算机图形学上都没什么基础也并不对游戏的美术质量抱太高要求但又希望能够一定程度改善画质的人，提供的一些最基础的画质改进思路。</p>
+<p>一个比较彻底改善画质的思路是改渲染管线。unity有三种渲染管线，分别是默认的build-in render pipeline、universal render pipeline、high definition render pipeline，三种画质依次提升，同时吃硬件也依次提升。吃硬件这个问题特别值得拿出来说，因为是真的非常吃，我的电脑是4年前买的主流配置游戏本，960的显卡在如今已经没法玩新出的3A单机了，但玩守望先锋这样的游戏是不卡的，玩模拟人生4这样的游戏更是开最高效也很流畅，但是，一旦使用universal render pipeline，一个模型素材只有仅仅50M的低模游戏项目，设置medium quality运行不到1分钟就会明显感觉到卡顿，而且电脑发热严重，所以除非是定位超级硬核的游戏，还是不要考虑直接用urp做游戏了。urp开低效的话吃硬件程度稍好一点，但强烈不推荐，因为低效的影子锯齿严重到把抗锯齿调到最高也还是不行，视觉效果上还不如好好倒腾下的build-in，但比build-in的哪怕最高效也更吃硬件一点，非常得不偿失。但实测感觉urp的中效确实比build-in的最高效效果更好，如果希望做一个不吃硬件的游戏，又希望尽可能适当提升画面质量，我感觉比较实用是思路是只用urp开中效或者如果设备支持的话开高效做开头结尾过场动画，录成mp4格式的视频，通过raw image把视频直接嵌入build-in做的游戏项目中。而在build-in的主体项目中，尽量通过后期处理来提升画质，或者说修正那些画质中需要眼镜布擦一擦的地方。</p>
+<p>我目前为止试出的在build-in项目里最具性价比的擦眼镜做法是：</p>
+<p>1.把color space从gamma调整为linear。linear比gamma能从肉眼上直观感觉到细节的增加和泛白的减少，但不足之处是会让色调整体变暖。</p>
+<p>2.安装unity可选包里的post-processing，设置一个global volumn，挂color grading组件，把tonemapping mode设置为aces模式。aces模式一改以后，会有一种画质瞬间上升两级的感觉，而且蒙着的白纱完全消失了，但不足之处是会让亮度整体变暗。</p>
+<p>3.这步主要不为擦眼镜，而是为调整前两步的副作用。<br>3.1.对1导致的画面泛黄，用color grading里的white balance来调整色温；<br>3.2.对2导致的画面变暗，用color grading里的post-exposure来调亮，如果在使用post-exposure后发现总体亮度合适了但高光部分不够亮或阴影部分不够暗，就再结合color grading里的contrast来调整至理想的高光阴影亮度；<br>3.3.如果觉得擦眼镜后的画面过于清晰，不便于表现富于层次的近中远景，可以在lighting setting里勾选fog，模式改为线性，然后调整可见度距离至合适数值，来让中远景随距离逐渐模糊。不建议用post-processing里的depth of field组件来模糊中远景，除非是2D游戏或者是锁镜头的3D游戏，否则会很可能导致晕3D，尤其是在第一人称模式下。</p>
 
     </div>
 
@@ -355,9 +364,13 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Gamer/" rel="tag"><i class="fa fa-tag"></i> Gamer</a>
+              <a href="/tags/Game-Dev/" rel="tag"><i class="fa fa-tag"></i> Game Dev</a>
             
-              <a href="/tags/Software-Inc/" rel="tag"><i class="fa fa-tag"></i> Software Inc.</a>
+              <a href="/tags/Unity/" rel="tag"><i class="fa fa-tag"></i> Unity</a>
+            
+              <a href="/tags/Pipeline/" rel="tag"><i class="fa fa-tag"></i> Pipeline</a>
+            
+              <a href="/tags/PostProcessing/" rel="tag"><i class="fa fa-tag"></i> PostProcessing</a>
             
           </div>
         
@@ -367,8 +380,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/03/11/tech-game-dev-mooc-1/" rel="next" title="Online Courses about Game Design and Development">
-                  <i class="fa fa-chevron-left"></i> Online Courses about Game Design and Development
+                <a href="/2020/08/15/tech-game-dev-music-making/" rel="next" title="How to use IMSLP and GarageBand to make game music">
+                  <i class="fa fa-chevron-left"></i> How to use IMSLP and GarageBand to make game music
                 </a>
               
             </div>
@@ -376,10 +389,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/05/07/life-makeup-tips/" rel="prev" title="Make-up Tips II">
-                  Make-up Tips II <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -545,7 +554,7 @@
       repo: 'brielley.github.io',
       owner: 'brielley',
       admin: ['brielley'],
-      id: '33ec945c97f8e6f380ec4817684aef6d',
+      id: '343a6fd47756152734686999e4e617d5',
         language: 'en',
       
       distractionFreeMode: 'true'

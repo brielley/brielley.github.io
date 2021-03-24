@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Brielley">
 <meta property="og:description" content="最近在考虑找个地儿给文存档，于是研究了下怎么搭博客。过程中找了不少资料也踩了不少坑，决定写下这篇简易教程，一方面给有需要的人做参考，另一方面也趁记忆尚热理顺留档自己备用。 1 前言1.1 本文适用性在搭博客之前，需要先想好自己的需求是什么，这会影响你选择搭建哪一类博客。因为不同类别的博客需要的东西是大不相同的。总体而言，网页分为两种，静态的和动态的。静态的网页并不是说页面上没有动态特效，而是说每一">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-03-24T07:32:53.939Z">
+<meta property="og:updated_time" content="2021-03-24T08:35:06.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Build a Blog on Github Pages">
 <meta name="twitter:description" content="最近在考虑找个地儿给文存档，于是研究了下怎么搭博客。过程中找了不少资料也踩了不少坑，决定写下这篇简易教程，一方面给有需要的人做参考，另一方面也趁记忆尚热理顺留档自己备用。 1 前言1.1 本文适用性在搭博客之前，需要先想好自己的需求是什么，这会影响你选择搭建哪一类博客。因为不同类别的博客需要的东西是大不相同的。总体而言，网页分为两种，静态的和动态的。静态的网页并不是说页面上没有动态特效，而是说每一">
@@ -307,7 +307,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-24 15:32:53" itemprop="dateModified" datetime="2021-03-24T15:32:53+08:00">2021-03-24</time>
+                <time title="Modified: 2021-03-24 16:35:06" itemprop="dateModified" datetime="2021-03-24T16:35:06+08:00">2021-03-24</time>
               </span>
             
           
@@ -395,13 +395,13 @@
 <h5 id="2-2-3-8-搜索功能：第798-829行。"><a href="#2-2-3-8-搜索功能：第798-829行。" class="headerlink" title="2.2.3.8 搜索功能：第798-829行。"></a>2.2.3.8 搜索功能：第798-829行。</h5><p>next默认是没有开启搜索功能的，如果希望添加搜索功能需要进行设置。next集成了几家搜索服务商，本着能不注册尽量不注册能原装尽量不三方的原则，我选择的是local search这个本站搜索服务。设置它需要进行几步操作：</p>
 <p>首先是把主题配置文件里<code>local search</code>下的<code>enable</code>值改为<code>true</code>。</p>
 <p>第二步打开git bash，在里面输入命令<code>$ npm install hexo-generator-search --save</code>来安装这个搜索模块，这条命令可能会修改，可以去它的网页(<a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">https://github.com/wzpan/hexo-generator-search</a>) 查看最新的命令。</p>
-<p>第三步打开blog/_config.yml（注意不是主题配置文件而是blog文件夹下的那个），在里面新增一个<code>#search searvice</code>，把下面语句贴进去（或者先去上面网页查看它是否有什么最新修改）：</p>
+<p>第三步打开<code>blog/_config.yml</code>（注意不是主题配置文件而是blog文件夹下的那个），在里面新增一个<code>#search searvice</code>，把下面语句贴进去（或者先去上面网页查看它是否有什么最新修改）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search: </span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <p>最后你可以设置搜索时是需要按回车才能开始搜索，还是在访客输字的同时就开始搜索了。如果需要按回车，在主题配置文件第820行的<code>trigger:</code>后的值设置为<code>manual</code>，如果要支持边输边搜，设置为<code>auto</code>即可。</p>
 <p>以上是我个人在使用中发现的一些非常实用的功能的设置方法，但next所集成的功能还远不止于此，你还可以在next的主题设置文件中进行修改和设置，来显示你文章的阅读次数和热度统计、来设置支付宝或微信打赏、来在界面背景和鼠标上添加水纹线巢拖尾桃心等动态效果、来给图片增加放大和幻灯片视图等等等等。由于我没有相关需求也未进行相应设置，故不赘述。除此之外，对于github上的适用于hexo的开源功能插件，如果发现有自己喜欢的，即使你选用的主题没有集成，也可以根据那些插件的说明修改blog文件夹下的相应文件，把它们集成添加到你的博客页面中。</p>
 <h3 id="2-3-编辑博文"><a href="#2-3-编辑博文" class="headerlink" title="2.3 编辑博文"></a>2.3 编辑博文</h3><p>我们终于设置好了博客界面，下面我们可以写博文了。可以选择一篇你过去写好的博文，看看怎么把它显示在浏览器中。</p>
-<h4 id="2-3-1-用markdown语句编写博文"><a href="#2-3-1-用markdown语句编写博文" class="headerlink" title="2.3.1 用markdown语句编写博文"></a>2.3.1 用markdown语句编写博文</h4><p>博文的存放位置在blog/source/_posts文件夹中，点开它我们会发现这里已经有一个hello-world.md的文件，这就是我们在安装好hexo后就出现在我们博客页面上的那篇示例博文。如果我们想要新建一篇博文，可以输入命令，但更直观的方法是直接复制这个.md文件，然后打开去里面修改就可以了。</p>
+<h4 id="2-3-1-用markdown语句编写博文"><a href="#2-3-1-用markdown语句编写博文" class="headerlink" title="2.3.1 用markdown语句编写博文"></a>2.3.1 用markdown语句编写博文</h4><p>博文的存放位置在<code>blog/source/_posts</code>文件夹中，点开它我们会发现这里已经有一个hello-world.md的文件，这就是我们在安装好hexo后就出现在我们博客页面上的那篇示例博文。如果我们想要新建一篇博文，可以输入命令，但更直观的方法是直接复制这个.md文件，然后打开去里面修改就可以了。</p>
 <p>首先修改一些基本的博文设置，在最前面的<code>title:</code>后输入你博文的标题。在<code>tags:</code>后输入它的标签，设置多个标签的时候要写成<code>tags: [aaa, bbb, ccc]</code>，注意符号均需在英文输入法下输入，符号后均有空格。在<code>categories:</code>后输入它所属的分类，比如<code>categories: jcs</code>。注意如果要设置多层分类，比如我希望一篇文章属于musical大类下的jcs小类中，那么需要按顺序写在方括号中，即写成<code>categories: [musical, jcs]</code>。</p>
 <p>然后我们进入到博文。.md文件里使用的是mardown语句，我们在编写博文的时候也需要使用它。如果你的博文是一个大长段，那么无需进行任何修改。如果里面有多层小标题，那么在每层标题前加上不同个数的#，比如第一层为<code>##</code>，第二层为<code>###</code>，以此类推，博文在显示时会把每一层标题相应的字体增大加粗，同时会用这些多层小标题自动生成博文的目录大纲。除此之外，还有一些常用的格式比如加粗需写为<code>**需加粗文字**</code>，斜体字需写为<code>*需斜体文字*</code>，更多的可以去搜索markdown常用语法。</p>
 <h4 id="2-3-2-插入链接视频音频"><a href="#2-3-2-插入链接视频音频" class="headerlink" title="2.3.2 插入链接视频音频"></a>2.3.2 插入链接视频音频</h4><p>1) 如果需要在文章中插入链接，只需要按照下面这样写就可以了：</p>
@@ -432,9 +432,9 @@
 <p>如果返回的是<code>Are you sure you want to continue connecting (yes/no)?</code>，输入<code>yes</code>后，返回<code>Hi, xxx. You&#39;ve successfully...</code>则表示已经配置成功了。</p>
 <h4 id="3-2-2-配置用户名和邮箱"><a href="#3-2-2-配置用户名和邮箱" class="headerlink" title="3.2.2 配置用户名和邮箱"></a>3.2.2 配置用户名和邮箱</h4><p>除了密码，我们仍需设置在github上的账户，因为，想像一下，如果你有两个github账号，电脑怎么知道一个命令下去应该把你的同人文传到二次元账号还是三次元账号下呢？因此，我们还需配置上传的账户，包括准备上传到的github账号的用户名和注册邮箱。</p>
 <p>在git bash中输入下面的语句完成配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name<span class="string">"xxx"</span></span><br><span class="line">$ git config --global user.email<span class="string">"xxx@163.com"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name<span class="string">"xxx"</span></span><br><span class="line">$ git config --global user.email<span class="string">"xxx@outlook.com"</span></span><br></pre></td></tr></table></figure>
 
-<p>其中xxx是你的github注册的用户名，<a href="mailto:xxx@163.com" target="_blank" rel="noopener">xxx@163.com</a>是你注册github时的注册邮箱，两个xxx未必是一致的。</p>
+<p>其中xxx是你的github注册的用户名，<a href="mailto:xxx@outlook.com" target="_blank" rel="noopener">xxx@outlook.com</a>是你注册github时的注册邮箱，两个xxx未必是一致的。</p>
 <h3 id="3-3-发布博文"><a href="#3-3-发布博文" class="headerlink" title="3.3 发布博文"></a>3.3 发布博文</h3><h4 id="3-3-1-修改博客配置文件"><a href="#3-3-1-修改博客配置文件" class="headerlink" title="3.3.1 修改博客配置文件"></a>3.3.1 修改博客配置文件</h4><p>前面我们对github进行了配置，让它知道谁会给它传文件了。但沟通是双向的，我们还需对电脑上的hexo进行设置，让它明白自己需要把博文传到哪里。</p>
 <p>打开blog/_config.yml（注意，不是themes子文件夹下的那个同名文件），在最后添加上以下语句：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:xxx/xxx.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
