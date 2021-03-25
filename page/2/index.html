@@ -263,6 +263,423 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://brielley.github.io/2020/08/15/tech-game-dev-unity-fungus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/08/15/tech-game-dev-unity-fungus/" class="post-title-link" itemprop="url">Unity插件安利：Fungus</a>
+          
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-08-15 21:02:26" itemprop="dateCreated datePublished" datetime="2020-08-15T21:02:26+08:00">2020-08-15</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/Game-Dev/" itemprop="url" rel="index"><span itemprop="name">Game Dev</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+              <span>3.8k</span>
+            </span>
+          
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+              <span>8 mins.</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在Unity的所有免费资源里，如果只能推荐一个，那么我一定是毫不犹豫地选Fungus，这是一个超级无敌棒的插件，而且居然是免费开源的。<br>Fungus的主要功能是做剧情对话，如果是做传统的2D AVG游戏，这个插件基本上能够完成所有你需要的功能，比某些流氓软件功能多几倍还不会觊觎你作品的版权，当然，2D AVG的开源引擎其实比较多，除了Fungus以外，比较火的还有Ren’py、Twine等等，而后两者在写自定义插件时分别用的python和前端三件套语言比起Fungus需要的c#或者Lua还用得更广泛一点，但我更推荐Fungus的原因，是因为它在3D游戏中也有非常不错的应用空间，尤其如果你需要做一个重剧情轻任务的3D游戏时。</p>
+<h4 id="哪些情况适合用Fungus"><a href="#哪些情况适合用Fungus" class="headerlink" title="哪些情况适合用Fungus"></a>哪些情况适合用Fungus</h4><p>1.2D的AVG游戏，这是Fungus最初也最本质的定位，自身功能非常强大，基本我能想到的传统2D AVG游戏里可能有的功能它都有直接提供，不需要自己额外写插件，非常适合擅长美术和编剧但编程苦手的人群，只要没有特别独特的需求，甚至可以零编程实现。而如果有特殊需求，也可以用Fungus来作为最基本的框架，然后对特殊需求部分自己写插件作为补充。</p>
+<p>2.3D游戏中的剧情对话系统。Fungus支持Unity的3D碰撞检测，所以可以利用这个来做剧情触发，而Fungus的分支选项菜单、变量设置和条件触发、以及多样的文字呈现方式，基本能满足剧情对话的需要，而这样的功能如果完全自己来做，会多出几百行代码以及大量debug的工作量，而用Fungus的话，就只需要把自带的丑出天际且不适合3D的UI改一下就好。而且最棒的是，结合Unity的EventSystem和自定义c#脚本插件，你能用它做更多的事情，这个后面细讲。</p>
+<p>3.Fungus不适用于做任务系统，因为它没有物品清单系统，如果只涉及到很少的物品，可以用里面的变量功能来实现，当然如果涉及物品多且复杂，也可以自己写插件添加进去，但这样就没必要用Fungus了，选一个任务类插件然后自己再在它的基础上修改更省力。</p>
+<h4 id="Fungus使用Tips"><a href="#Fungus使用Tips" class="headerlink" title="Fungus使用Tips"></a>Fungus使用Tips</h4><h5 id="1-有必要一看的资源："><a href="#1-有必要一看的资源：" class="headerlink" title="1.有必要一看的资源："></a>1.有必要一看的资源：</h5><p>1.1.Fungus的包安装好后会发现它自带有一套example scene，可以挨个运行一下方便看都有哪些基本功能。<br>1.2.Fungus的<a href="https://github.com/snozbot/fungus/wiki/tutorial_videos" target="_blank" rel="noopener">官方指导视频</a>，B站有较完整的<a href="https://www.bilibili.com/video/BV1Tx411z7hz" target="_blank" rel="noopener">英字搬运</a>和不太完整的<a href="https://www.bilibili.com/video/BV1Fx411i7Y1" target="_blank" rel="noopener">中字搬运</a>。<br>1.3.Fungus的<a href="https://github.com/snozbot/fungus/wiki" target="_blank" rel="noopener">官方文档</a>，<br>1.4.Fungus的非官方教程不多，质量高的更少，至少在没科学上网的情况下是这样，对我有帮助的主要就<a href="https://www.bilibili.com/video/BV1Eb411P787" target="_blank" rel="noopener">这一个</a>。吐槽一下有些做教程的up主一定自己压根就不大用Fungus，按他的代码在他视频的场景里没问题，但只要他在场景里放第二个物体设第二个触发对话的trigger马上就会发现出bug，如果是刚接触Fungus和Unity的新人能给带沟里去。<br>1.5.Fungus的<a href="https://fungusgames.com/forum" target="_blank" rel="noopener">交流论坛入口</a>，第一个进不去了，第二三个可以。</p>
+<p>其中，<br>1.1和1.2建议在使用前看，可以二选一看就行了。<br>1.3和1.4建议在看了1.1或者1.2或者使用中遇到问题时再看，因为在对基本功能没有概念的时候，看它们会有点太抽象不知道在说什么，但如果对基本功能有概念后，尤其在带着使用中的问题时，看起来的收获就会比较大。<br>强烈建议在用了一段时间后拉通看一遍1.3，会发现好些用了很久但一直没发现但非常实用的功能，哪怕1.1和1.2都可以不看直接摸索着用，但1.3真的值得花一个下午通拉过去。要说它有什么不足之处，主要是Fungus一直在更新，但文档并非所有地方都同步更新，但可以通过对照其它章节来补足。比如在Document-Home-Blocks-Setting an Event Handler中，列举的触发对话的方式是非常古早的，后面更新的而且我们经常常用的触发对话方式都没有写进去，但在Document-EventHandlers页面中就分类列举了所有触发方式。<br>1.5适合在使用一段时间后遇到无法解决的问题时使用，我目前为止还没用过，但看到上面Fungus制作团队和一些热心使用者会回答问题，其中制作团队直到本月依然有活跃答疑。</p>
+<h5 id="2-Fungus在3D游戏中使用的注意事项："><a href="#2-Fungus在3D游戏中使用的注意事项：" class="headerlink" title="2.Fungus在3D游戏中使用的注意事项："></a>2.Fungus在3D游戏中使用的注意事项：</h5><p>想主要说一说3D，一是因为官方资源里基本是2D相关的，而3D的比较少；二是因为我自己主要是做3D的，在3D上踩过的坑和想到的点比较多。<br>1里列举的资料里有提到的就不赘述了，这里主要列一些实际使用中容易踩坑的地方和一些个人使用经验。</p>
+<p><strong>2.1.碰撞检测与触发对话的相关：</strong></p>
+<p>2.1.1.需要把flowchart作为组件挂在主控角色这个物体上，才能触发各种碰撞检测。千万不要直接tools-fungus-creat-flowchart，然后你会发现怎么都触发不了对话呢。<br>2.1.2.尽可能用trigger而不是collider来触发对话，这个主要是unity的锅，无论是fungus还是自制ui或者别的什么，collider平均3次里能成功触发1次就不错了，而trigger则很少bug。<br>2.1.3.一定一定要在trigger上设置tag，需要格外注意的是，不同的挂了trigger的物体，无论名字再八竿子打不着，距离多十万八千里，只要tag一样，那么触发一个就会导致所有的全被触发，所以，除非是打算几个物体触发任何一个都触发相同剧情，否则tag一定要分开，具体来说，不同叙事方法对tag的用法不同，这个在2.2里详细讲。</p>
+<p><strong>2.2.不同叙事逻辑的实现技巧：</strong></p>
+<p>2.2.1.线性叙事：一个tag即可，用好set active是关键。<br>在scene的hierarchy中，对所有的剧情触发物体，只有第一个设置为active，其它全都不勾选。然后在flowchart中，对于第一段剧情的block触发方式设定为trigger enter，触发后先把当前这个触发物体的set active给变成否，然后剧情走完后把第二个剧情触发点的物体给set active，接下来会按顺序进行到的每一个剧情触发点都以此类推，触发后把当前物品取消激活，同时给下一个触发点激活，直到最后一个剧情触发点。</p>
+<p>2.2.2.主线-支线叙事：一条线一个tag，结合set active和variable来实现。<br>主线所有涉及到的触发点都共用一个tag就可以了，结合set active，按前面2.2.1的方法来实现。同时，对每一条支线需要设置一个tag和一个variable。<br>对所有variables的默认值都设为0，在主线进行到某个阶段可以触发某条支线剧情时，在主线的block里set variable设置支线甲int=1，然后在触发支线剧情的触发物体那里，除了用这条支线的特定tag去触发以外，还需满足if 支线甲int==1，这样就可以避免在主线没发展到可以接支线任务的时候就被提前触发了。支线任务如果有多段触发点，且多段出发点也是线性的，那么也可以结合set active来挨个激活每一个触发点，以保证每次是在正确的地方只触发下面一步的剧情。然后用同样的方法处理支线乙支线丙支线丁等等。</p>
+<p>2.2.3.开放世界叙事：归类tag池，综合应用set active、variable、text variation。<br>因为不知道玩家会先去触发哪个，所以原则上来说，每一个线头都需要一个独立的tag，线头可能是一段持续好几个触发点的剧情，这个用前面2.2.1的方法结合set active来做就可以了，涉及到必须先触发这个线头并且走到哪一步，才有可能触发到那个线头的，用前面2.2.2的方法综合set active和variables来做，第三种线头是那种同类事物，接触任何一个都可能开展类似的对话，并且也许接触第一次第二次第N次触发的对话不一样的，这种共用一个tag，并且全部set active，用text variation来实现。对那种遇到第几次对话不一样而且有特定顺序的，用<code>[1|2|3|...|n]</code>，对那种遇到任何一个都随机从一个对话池里选其中一句出来的，用<code>[~1|2|3|...|n]</code>。</p>
+<p><strong>2.3.结合Unity引擎的自身组件实现更多功能</strong></p>
+<p>2.3.1.前面提到过Fungus里有set active这个命令，也就是激活某个在hierarchy里处于未激活状态的物体，那么靠这个我们可以让Fungus里的剧情发展到某个地方时，激活某个特定的物体，这样直接实现某些功能，前面已经举出过例子了，不赘诉。<br>2.3.2.类似的功能还有spawn object以及destroy，前者可以利用它来生成一些hierarchy里没有但有预制在prefab里的物体，比如刷出小怪或者刷出资源等等；后者则是相反，销毁在hierarchy里现存的物品。<br>2.3.3.除此之外的大头是Invoke命令，可以直接对接调用Unity的Event System，实现里面所自带的或者自己写了挂上去的c#脚本所附加给它的特殊功能，这样让Fungus可以实现的功能边界一下扩展开了。<br>2.3.4.另外一个大头是UI命令，可以直接对接调用Unity的原生UI系统，这样一方面可以解决一些显示问题，比如根据剧情分支不同，某个游戏物体上的字显示不同，就可以通过这个来实现；另一方面也可以结合前面的Invoke命令结合Event System来实现菜单问题等等。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+       
+    
+       
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://brielley.github.io/2020/05/07/life-makeup-tips/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/05/07/life-makeup-tips/" class="post-title-link" itemprop="url">Make-up Tips II</a>
+          
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-05-07 21:00:27" itemprop="dateCreated datePublished" datetime="2020-05-07T21:00:27+08:00">2020-05-07</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Life/Makeup/" itemprop="url" rel="index"><span itemprop="name">Makeup</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+              <span>5.8k</span>
+            </span>
+          
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+              <span>12 mins.</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><em>折腾了小半年，总算在化妆上折腾出一点心得，虽然画了并不比不画好看，但也总算不再是画了比不画还难看了，于是阶段性总结一下目前为止摸索出来的东西。</em></p>
+<h4 id="1-整体思路"><a href="#1-整体思路" class="headerlink" title="1.整体思路"></a>1.整体思路</h4><h5 id="1-1-色调"><a href="#1-1-色调" class="headerlink" title="1.1.色调"></a>1.1.色调</h5><p><strong>1.色调统一，尽量不要冷色与暖色混用，否则会非常容易显脏。</strong></p>
+<p>在不露肤的季节，理想的色调是用底妆把肤色修正到中性色调，然后彩妆可以选择冷色调或暖色调，并需与服装的冷暖色调配合。<br>在会露出大片皮肤的夏季，较为省力的方式是根据身体皮肤的色调决定全身从服装到底妆到彩妆的色调。</p>
+<p><strong>2.实际中即使是中性色也存在冷暖之分。</strong></p>
+<p>比如白色的服饰其实往往有偏暖调的乳白和偏冷调的雪白，黑色也有偏冷调藏青的黑和偏暖调深棕的黑，大部分灰色因染料偏蓝其实应归入冷色调，也有部分灰色面料是与浅原木色混纺的因此提供了少量的暖调。在使用的时候不能一股脑把它们看作中性色。</p>
+<p><strong>3.彩妆的冷暖调，是相对于肤色而言的，而非相对于白色而言的。</strong></p>
+<p>比如用于打阴影的浅灰棕色，如果与白色对比，那么无论何种色号的浅灰棕色都是暖调。但当与肤色对比时，灰调更重的浅灰棕色则更适合冷皮，棕调更重的浅灰棕色则更适合暖皮，如果用了与肤色不同色调的阴影色，会显得脸脏脏的，而用对了色调则会感觉像是凹陷的阴影。<br>肤色是一个因人而异的相对概念。比如对非常偏暖的肤色而言，中性略偏暖的色调用在这个皮肤上也会显得偏冷调。</p>
+<p><strong>4.并非完全不可使用与肤色冷暖调相悖的色调。</strong></p>
+<p>覆盖力低的彩妆品在上妆轻薄的情况下，其自身的暖冷调特性会降得极低，呈现出的是叠加肤色后的色调。可以选择覆盖力低着色力不强质感轻透的产品，用薄涂或晕染或按压的手法把妆上得极薄。</p>
+<p><strong>5.如确需冷暖色同时出现，可以采取以下几种策略：</strong></p>
+<p>以其中一种为主色调，然后少量使用另一种色调来撞色，并且其中至少有一种色调是低饱和色。<br>让冷色调单品和暖色调单品物理距离较远，且它们之间有中性色过渡。<br>让冷暖色调的彩妆分别呼应冷调和暖调的发肤，如冷调皮肤泛出粉色腮红和暖调头发投射的暖调腮红按照下冷上暖晕染叠加，参照<a href="https://www.bilibili.com/video/BV1fb411L7G9" target="_blank" rel="noopener">视频</a>。</p>
+<h5 id="1-2-光影"><a href="#1-2-光影" class="headerlink" title="1.2.光影"></a>1.2.光影</h5><p><strong>1.所有的线本质不是线，是密度大的影子轮廓。</strong></p>
+<p>彩妆涉及的线主要包含三种：眼线、眉毛、唇线。</p>
+<p>眼线是本质是睫毛的阴影。内眼线应该完全藏在睫毛根部的范围内，使得视觉效果是浓密的睫毛根部形成的阴影，而不是一道线条。挑出眼角的外眼线实际上是睫毛的阴影，弧度需与眼尾睫毛的弧度一致，且不宜过粗，除非佩戴了非常浓密的假睫毛使得过粗的阴影线条是合理的。眼线不应用于调整眼型，至少不应单独用于调整眼型，因为修改的线条会与没有修改的眼球体积冲突，使得妆效极不自然，应该通过眼影来调整眼球的体积感从而起到调整眼型的效果。</p>
+<p>眉毛的线条不应是整条眉毛的边缘，而是一根一根的眉毛。或者更准确的说，眉毛是线条分明的一根一根的眉毛和它们所构成的阴影，不同于脸颊鼻梁，眉毛阴影的深浅受到眉骨高低和毛发疏密双重影响。综合来说，阴影最重的位置在眉毛的中段，这里眉骨的位置是除眉弓外的最高，而眉毛浓密程度最高，综合来说颜色是最重的，并且由于阴影非常重，几乎看不到一根一根的眉毛，用眉粉加深就可以了。眉弓至眉尾的部分是眉骨最高的位置，眉毛的浓密度从眉弓往眉尾下降，使得这里的颜色浓度会比眉毛中段稍轻，但由于眉骨最高处往往由于光线而使本身眉色降低，因此也需用眉粉略做加深，如果这里本身没有什么眉毛，则最好用眉笔画出少量几根很短的眉毛，不用画得特别明显，与阴影浑然一体略深一点即可，如本身毛量适中则无需画一根一根的眉毛。眉头部分的眉骨略低，且这里的毛量是最少的，用眉粉打的阴影应最淡，且最好与鼻影晕接自然，同时，竖起眉笔，顺着毛发生长的方向画出数根眉毛，由于这里的阴影较淡，单根眉毛的轮廓会较为明显。</p>
+<p>唇线尤其下唇线，实际是凸出的唇瓣投下的阴影，因此画唇线通常会在视觉上让嘴唇的丰盈程度提高，而上唇线则是人中在唇上投下的阴影，结合人中高光，会使人中的视觉效果更加凸出。和眼线一样，唇线的作用不是调整唇形，因为这与唇部的体积是相悖的，除非是拍平面照可以事后把体积所致的光影做相应修改，生活中用唇线修改唇形会视效上非常生硬，除非调整的范围是在唇部体积轮廓内做微调。</p>
+<p><strong>2.把面部和五官还原成球体和锥体，想像它们在斜上方打下来的光线下的光影是什么样的，由此决定彩妆的使用范围和晕染深浅。</strong></p>
+<p>彩妆进行的光影调整主要包含几种：脸颊、眼窝、鼻梁、眉骨及周边、人中、下巴。</p>
+<p>脸颊的光影结构最简单，是一个球面在斜上方光线打下来情况下的光影，最高的承光面是高光，球面最高点以下的球形区域会受到高点投下的阴影影响形成腮红，不是阴影是因为它也是凸起，而球面以下的腮帮位置则会因腮帮的凹陷和整个球面投下的影子影响成为阴影。</p>
+<p>眼窝的光影结构相对复杂，它受到三个体积的光影影响，一是比眼窝更高的眉骨投下的阴影，需注意的是眉骨在眉头部分是眉毛位置就是最高处，眉下就是阴影，但眉中至眉尾部分则眉下是凸起的眉弓，眉弓与眼窝交接处才是阴影；二是凸起的眼球形成的球体高光和阴影，三是睫毛和双眼皮褶子投下的阴影。<br>可以看到，整个眼窝阴影最深的地方应该是上眼皮的眼尾处，因为这里既是眉弓下的阴影，又是眼球的阴影，还是睫毛和双眼皮褶子的阴影，受到三个阴影影响。其次是下眼尾处和眼窝轮廓的位置，眼窝轮廓受到眼球阴影和眉骨投影两个阴影影响，下眼尾处受到眼球的阴影和下睫毛的影子两个阴影影响，对双眼皮而言两个阴影影响的范围还包括双眼皮褶子到上睫毛的部位，受睫毛和褶子影响，对单眼皮而言这里则只有睫毛投影单个阴影。而高光最高的位置在眉骨，这里是整个眼窝最高的位置，且不受任何阴影影响，这里的高光是最亮的；其次是眼球中部凸起处和眼头，眼球因凸出而呈现高光，但又受到一定的眉骨投影，眼头略微凸出，比之下眼睑中后段不被眼球阴影遮挡，因此呈现高光。</p>
+<p>鼻梁的光影比之眼窝相对简单，可以把整个鼻子看作一个大的三角锥体，在鼻梁山根处嵌叠了一个椭圆球体，在鼻尖处嵌叠了一个小的三角锥体。于是高光最亮处是椭圆球体凸起的位置和鼻尖，浅阴影处是椭圆球体和小三角锥体投射在大三角锥体上的阴影，深阴影处是大三角锥体两侧向下投射的阴影。和脸颊一样，用阴影粉打在深阴影处，腮红打在浅阴影处，高光处提亮即可。</p>
+<p>眉骨的光影在眼窝已经讲过了，眉骨周边主要是指眉心和太阳穴，这两个位置比起眉弓略低，但和眉头高度类似，如果眉头上方有提亮，那么这些位置也要跟着提亮，如果眉头上方没有打高光，那么这些地方也可以不打。例外的情况是，由于随着年龄增长，眉心和太阳穴会逐渐变得凹陷，因此对熟龄肌而言无论对眉骨是如何处理的，都需在这两个位置使用高光来让视觉上不觉凹陷。</p>
+<p>人中可以看作一个坡度较缓且中间有一个凹陷的三角锥体，上面被鼻梁所遮挡并投下阴影，最亮部分是锥体高处不凹陷的边缘的下端，这里一方面最高另一方面鼻梁的阴影投不到这里，需用高光提亮。鼻底的位置最深，但已经够深了除非是人中太长需要在视觉上缩短，否则无需打阴影。</p>
+<p>下巴可以看作在下巴尖嵌套了一个球体，而上端受到嘴唇投下的阴影。高光在下巴尖球体承光处，阴影在唇下。因为体积上并没有太大的高度差异，一般两者只选其一打即可，如希望显瘦或拉长下巴在下巴尖处打高光，如希望缩短脸长或丰盈唇部在下唇下方打阴影。</p>
+<p><strong>3.整个面部是一体的，选用局部晕染产品的颜色深浅，不仅会影响局部的体积感，也会影响全脸的体积感。</strong></p>
+<p>如选用颜色较深的眼部彩妆，在使得眼窝在视觉上显得更深邃的同时，也会令眼窝以外的部位，不仅是眼窝边的鼻梁，也包括同在头这个球体上距离眼窝相当遥远的下巴视觉上显得更凸出。<br>而相应的，如果在眉骨颧骨和笑肌顶部打更强的高光，在使得与其邻近的眼窝更深邃的同时，也会使得面部整个大球体中的额头和下巴因颜色相对较浅而显得相对更短且不凸起。<br>但这种对整体的影响可以通过对受影响的局部做光影调整来改善。如选择深邃眼窝，可在下巴的下唇下方打上深下浅的阴影，来让下唇显得更丰盈的同时，均衡加深眼窝带来的对下巴视觉效果的影响，并适当加深发际线来均衡对额头的影响。</p>
+<h4 id="2-操作技巧"><a href="#2-操作技巧" class="headerlink" title="2.操作技巧"></a>2.操作技巧</h4><h5 id="2-1-修正肤色"><a href="#2-1-修正肤色" class="headerlink" title="2.1.修正肤色"></a>2.1.修正肤色</h5><p>底妆修正肤色主要是选对色号，这个在makeup foundation那篇里已经写过了，不赘述。额外需要注意的是，对于泛红皮肤的修正，最好是从抗过敏和抗出油这两个源头来解决，而不是靠遮瑕产品来掩盖。在洁面后护肤前使用抗过敏喷雾，在护肤后底妆前在出油区域使用抗出油妆前乳是最好的修正皮肤泛红的方法。</p>
+<p>另一个修正肤色的方法是用适当颜色的彩妆品，来改变肤色给人的视觉效果。最简单的方法是选择比肤色乃至瑕疵更深的产品，这样通过一个更深的颜色来对比显得其它颜色更浅而且它们之间的色差在这个深色的对比下显得不明显，这是为什么很多人都钟爱色彩浓郁的唇部产品。但深色的产品也有它的问题，一是妆感会较浓，二是给局部一个深色那么会使得其它没有深色产品的面部区域视觉上显得更凸，需要去相应地调整其它区域的光影来均衡这个深色产品所致的附带问题。另一种更细微用彩妆品调整肤色的方法是在需要调整肤色的局部区域上叠加一个深浅与自身肤色差不多但略偏冷或略偏暖的产品，并通过上得特别薄来与原本的肤色叠加进行修正。比如薄涂一个暖调的覆盖力极低的裸色唇膏，往往可以很有效地修正唇色发紫。</p>
+<h5 id="2-2-精准线条"><a href="#2-2-精准线条" class="headerlink" title="2.2.精准线条"></a>2.2.精准线条</h5><p>眉毛和唇线都是顺着原本的线条方向去描画就可以了，难度不大，画线条难度比较大且对精准度要求比较高的主要是眼线。画眼线一般有两种产品，一种是膏体，一种是液体，它们使用时的要点是不一样的。<br>液体的产品在画线条时需要竖起笔尖匀速画过，斜着笔尖或是在一些地方停留时间过长另一些地方过短都可能使得线条粗细不均。因此要画出流畅精准的线条，需要足够的练习，通过练习来对该画哪儿心里有数于是匀速画过不中途停顿，以及通过练习来让手不抖且位置准。眼线液的色彩比较浓郁，一般除非是画大浓妆否则需要把眼线完全画在睫毛根部的范围内，如果一笔画下去超出了一点，可以马上用一根尖头棉签把超出部分擦除，一定要马上擦，因为眼线液为了防水防晕总是干得很快而且干了就很难擦掉了。<br>膏体的产品在使用时则可以慢慢描画，同时对于画错的线可以随时用尖头棉签调整，因此对于画出自然的线条相对简单。膏体的难点在于很容易画粗，以及无论选择多么防晕的产品一出油或者一哭都很容易晕妆。对于画粗这一点，眼线膏笔每次使用前一定要把笔尖磨尖，否则完全没法画内眼线，因为膏笔质地比较软，如果用削笔器一类的产品会非常容易弄断笔芯，因此最好是斜着笔在手上磨几圈就好了。而对于抗晕染，最好的办法是在画之前先用准备画眼窝的粉按一下，画好眼线后再在上面继续画眼影，这样只要不大哭一般不容易晕。膏体眼线笔还有一个问题是由于质地较为厚重，对于部分比较敏感的人，用它画内眼线会导致眼睛有异物感狂眨狂掉泪花，如果是这种体质，只能尽量选择敏感肌适用产品，如果怎么选都不行就还是老老实实苦练眼线液技术吧。</p>
+<h5 id="2-3-晕染手法"><a href="#2-3-晕染手法" class="headerlink" title="2.3.晕染手法"></a>2.3.晕染手法</h5><p>晕染基本上有三种思路，<br>一种是用比较上色的密毛刷子上色，然后用一把松散的刷子把边缘通过物理上的刷刷刷晕开。这种方法的好处是上色的区域会比较精准，色块中央色彩浓郁，缺点是对技巧和彩妆产品及工具的质量要求都比较高，并且晕染自然需要比较长的时间。<br>第二种方法和第一种类似，也是先用比较上色的密毛刷子上色，然后用一把松散刷子蘸点浅色去晕染边缘。这种方法能获得第一种的好处，同时更省时间，对质量和技巧的要求降低了，缺点是需要对色彩理解准确，才能选择好合适的晕染浅色，否则很可能会越晕越脏。比较省力不出错的选择是用肤色粉饼晕或者白色哑光眼影晕，缺点是前者可能会影响彩妆品本身的色泽，后者可能产生不必要的高光效果。<br>第三种方法是直接用松散但有一定支撑力的晕染刷子上色晕染一起做。这种方法的好处是晕染会非常自然，晕得再差也不会有色块，缺点是如果产品的显色度不够会上不了色，且对一些精细的位置可能会画不精准。对于前者，需在选择彩妆产品时即选择适合使用这种手法的显色度较好的产品；对于后者，可以通过尖头的小刷子大刷子混用，以及刷子先在色彩最深的地方略按一下再晕染上色的方式。</p>
+<h4 id="3-Debug"><a href="#3-Debug" class="headerlink" title="3.Debug"></a>3.Debug</h4><h5 id="3-1-妆面脏"><a href="#3-1-妆面脏" class="headerlink" title="3.1.妆面脏"></a>3.1.妆面脏</h5><p>一般来说妆面脏的原因要么是色调乱了，要么是光影错了。如果彩妆色调统一、位置符合光影、晕染自然，那么无论什么颜色都不会显脏。因此最根本的办法是加强对色彩冷暖和光影明暗的理解。而如果短期内的理解有限，也可以通过一些方法来让它相对看起来比较不那么脏一点。</p>
+<p>如果无法掌握光影的准确位置，那么尽可能选择颜色较浅的产品，少量多次地用前面说到的晕染手法的第三种来晕染上色，如果感觉不该上色的位置上了色，就用一点粉晕上去盖掉。这个试错的过程也能帮助加深对自己脸上的光影范围到底在哪里的理解和掌握。缺点是会非常费时。<br>另一种不那么费时的方法是局部小范围使用一些深色的彩妆单品，比如眼尾处或者咬唇中部，通过深色的对比来使得那些浅色显得不那么脏。注意边缘要晕染自然，且其它地方的高光阴影要配合加重。这种方法并非解决妆面脏的根本之计，但对于如果也想掌握画浓重妆面的技巧时在如何维持整个妆面的平衡上也是一个不错的练习。</p>
+<h5 id="3-2-妆感重"><a href="#3-2-妆感重" class="headerlink" title="3.2.妆感重"></a>3.2.妆感重</h5><p>分两种，一种是产品质地造成的，一种是上妆手法的问题。<br>上妆手法的问题，一般是没有晕染好，或者线条没有修好，使得它们看起来不像光影而像线条和色块。解决方法参见前面操作技巧的精准线条和晕染手法。</p>
+<p>产品质地问题又分两种，产品本身不够自然，或者脸上产品质地不统一。<br>产品质地不统一是水润程度不统一，一般来说，所有的底妆和彩妆产品无论是粉质还是膏体，妆效都可以按照从水到干分为水光、奶油、哑光三大类，这些妆效其实是模拟皮肤的干油性，也与皮肤的熟龄度有关，如果不统一就不自然了。比如哑光底妆产品配上玻璃唇的唇妆就会容易有突兀感，水光肌配上哑光唇也会感觉哪里怪怪的。<br>另一种是产品本身不自然，而导致不自然的原因有可能是产品不适合自己，也可能是选择了不适合该产品的上妆方式导致的。一般来说先考虑后者，排除了后者的可能再考虑前者。比如经常看到有观点说上眼影最好的方式是用手，但不难想到眼窝那么复杂的光影结构，对不够经验丰富的人来说，是很难用手指晕出自然的效果的。再比如判断眼影腮红高光等粉质需晕染产品是本身质地不好晕染还是自己没晕对，最好是在手上试试，如果在手上无论用什么刷子怎么晕也晕不出效果，那就是产品的问题，如果手上能晕出来，那么理论上脸上也能晕出来，没晕出来很可能是对光影的理解有误或者刷子太大了。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+       
+    
+       
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://brielley.github.io/2020/03/11/tech-game-dev-mooc-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/03/11/tech-game-dev-mooc-1/" class="post-title-link" itemprop="url">Online Courses about Game Design and Development</a>
+          
+        </h1>
+
+        <div class="post-meta">
+          
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-03-11 01:15:38" itemprop="dateCreated datePublished" datetime="2020-03-11T01:15:38+08:00">2020-03-11</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/Study-Notes/" itemprop="url" rel="index"><span itemprop="name">Study Notes</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+              <span>8.8k</span>
+            </span>
+          
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+              <span>18 mins.</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="游戏设计导论"><a href="#游戏设计导论" class="headerlink" title="游戏设计导论"></a><a href="https://www.coursera.org/learn/game-design/home/welcome" target="_blank" rel="noopener">游戏设计导论</a></h4><p>推荐度：★★★☆<br>授课方：加州艺术学院<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：英语<br>字幕：中字 </p>
+<p>Repo：最零基础上手的游戏设计课程。<br>不同于许多别的在讲游戏设计之前得先讲好几个小时的如何使用某个游戏引擎来呈现你的设计的课程，这个课不需要任何意义上的前置技能，会用纸笔就行了。<br>特点是别说那么多就是干。课程的构架基本上是你先随便设计一个游戏，然后我们一起看看它是不是有点不那么耐玩，来加点什么东西进去，看看迭代以后的是不是好玩一点了，但还不够，我们一起看看最好再加点什么东西进去，现在是不是更好玩一点了，重复以上过程。<br>于是这门课基本上没有什么授课内容，更像我们小时候的兴趣课，每周讲十分钟，然后用十小时来做自己的游戏、改自己的游戏、看别人的游戏。btw，虽然课程只要求看三个别人的游戏就可以了，但多看没限制，墙裂推荐多看看，我上的时候深觉这门课讲课是赠品做东西是预备看别人的东西才是本体2333<br>这门课的不足之处也很明显，一是课程上让做的项目是桌游，而且是能简化到一页纸上的桌游，于是如果不是本身想做大富翁之类的游戏话可能直接的收获不大，更多的是收获管它做成啥样总之先行动起来的心态，以及迭代式开发的习惯；二是虽然整门课都在讲怎么提高游戏的游戏性，但讲授的方式更接近于直接丢出一堆公式去让人去套，对于为什么公式是这么写的如果我的情况不适合套公式有什么办法自己改公式或者造公式吗则没有涉及。</p>
+<h4 id="游戏化"><a href="#游戏化" class="headerlink" title="游戏化"></a><a href="https://www.coursera.org/learn/gamification/home/welcome" target="_blank" rel="noopener">游戏化</a></h4><p>推荐度：★★★★☆<br>授课方：宾夕法尼亚大学<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：英语<br>字幕：中字</p>
+<p>Repo：对游戏为什么好玩怎么设计才能让游戏好玩让人想玩讲得最深入的课程。<br>虽然这其实并不是一门讲游戏设计的课程，但确是我上过的所有课程中，对于如何让游戏好玩分析得最深入的。一般课程对这个问题的回答都是要么集中在游戏叙事和游戏机制的技术细节和经验技巧上，要么提一嘴根源是不断的落在玩家心流区域的正反馈，但为什么是正反馈，是什么样的正反馈，则少有课程去触及。而这门课从心理学角度去继续往下挖并提出这根源于人的motivation，处于刚刚超过人当前能力上方一点点的任务被完成的正反馈，会让人的competence（能力感，觉得自己有能力克服障碍解决问题）得到满足，这是人的三大intrinsic motivation（内生驱动力，不依赖于外物刺激仅仅源于内心意愿驱动）之一，而除此之外，人的另两个主要的内生驱动力autonomy（自主感，觉得自己是完全出于自我意志作出有意义的选择）和relatedness（归属感，觉得自身的行为让自己与某些外在的具体事物或超越的抽象概念产生了连结）也与游戏好玩与否密切相关，是游戏设计需要核心注意的内容。而在设计中，对于extrinsic motivation（外生驱动力，外在奖励刺激）这把双刃剑则应谨慎使用，用得好的情况下，外生驱动力能够在内生驱动力不足的情况下提供有效的补充让游戏变得更好玩，但如果用得不好，则会掉入替代效应的陷阱——原本玩家是出于内生动力热爱一件事物，但由于提供了外生奖励，于是人们反而变得依赖于外生奖励才能激发动力，内生的热爱被挤占消失了。原则上来说，外生驱动力的四种形式external regulation（外在调节，内心厌恶完全因为外在的强迫而不得不做）、introjection（摄入调节，尽管自己不喜欢也不认同但考虑到他人会因自己做这件事而认同自己因此选择做）、identifucation（认同调节，尽管不喜欢但认同这件事的一些部分是有意义的因此认为自己应该做）、integration（整合调节，完全认可这整件事的意义和价值觉得自己必须做只是不能从做这件事中获得乐趣于是感到很难坚持），越往后的形式越接近于内生动力，越往前越接近于无动力（amotivation），在设计的时候如果需要外生动力作为补充，最好选择尽可能靠后的形式。这个理论是在课程的第三周讲的，目前为止我没有看到比它更好用的理论，墙裂安利即使没有时间上完整门课，第三周这俩小时的课程视频也绝对值得一看。<br>这门课的不足之处几乎恰好是前面加州艺术学院那门课的相反面，这是一门讲如何运用游戏机制设计产品或者项目管理的商科课，也因此有着绝大部分商科课最典型的特点——分析了又分析挖掘了又挖掘但绝不撸袖子去做东西。这门课有三个作业，一个比一个要求的字数多，但始终不见让学生自己做方案，最后的两千词大作业也只让写出你认为在设计给定要求的方案时需要注意什么，而不是把方案本身写出来……所以如果不是想练英文写作，而是想学游戏设计，这门课本身的作业并没有太大帮助，不如给自己布置个运用所学分析自己玩过的游戏或者设计的游戏的作业更实用。</p>
+<h4 id="游戏产业概论"><a href="#游戏产业概论" class="headerlink" title="游戏产业概论"></a><a href="https://www.coursera.org/learn/youxi-chanye-gailun/home/welcome" target="_blank" rel="noopener">游戏产业概论</a></h4><p>推荐度：★<br>授课方：上海戏剧学院<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：中文<br>字幕：中字</p>
+<p>Repo：我上过的游戏相关课程中唯一没有任何收获的，不推荐。<br>其实课程框架还可以，把游戏本身、游戏行业、资本环境都囊括到了，虽然产学结合算是高等教育的一个基本要求，但能做到的国内高校课程确实不多，理论上应该会是个好课程苗子。但很遗憾的是，即使相关知识极为有限的我也能明显感觉到，主讲老师对这三个领域都不太了解，于是理想很美好但执行不下去，于是只好给框架半颗星。有一点值得肯定的是，这门课也是我上过的唯一一门主讲老师会在课程论坛里跟学生交流的一门网课，这样的精神值得半颗星，这也给了这门课进化的可能，不知道几年过去这门课有没有迭代出撑得起框架的内容来。</p>
+<p><em>以上三门课上于2016年春夏，不排除三四年过去课程内容有修改目前内容已与repo不符的可能。</em></p>
+<p><em>以下课程为最近上的，repo内容即为当前内容</em></p>
+<h4 id="游戏开发导论"><a href="#游戏开发导论" class="headerlink" title="游戏开发导论"></a><a href="https://www.coursera.org/learn/game-development/home/welcome" target="_blank" rel="noopener">游戏开发导论</a></h4><p>推荐度：★★★★☆<br>授课方：密歇根州立大学<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：英语<br>字幕：部分中字</p>
+<p>Repo：我上过的最系统的unity入门教程，如果时间有限只能选一个教程来学unity的话那就它吧。<br>课程设置的时长是四周，具体可以按自己进度调整，体测总共上下来需要大约25小时。第一周是装软件熟悉基本界面，第二周是用一个都不是游戏的例子来讲软件的基本功能和从新建一个空项目到做完打包输出适配指定平台的过程。第三周是从零做一个第三人称视角的3D小游戏的例子，所有功能的实现都是用unity自带组件。第四周是从零做一个第一人称视角的3D小游戏的例子，部分功能的实现需要写代码（但完全自己写代码的时候比较少大部分工作是当调包侠调用unity自己内置的一些组件和一些三方开源组件）。其中后两周的两个项目开着unity自己跟着做下来，虽然比较花时间，每个要花接近10小时，但超级值，上完之后会有一种自己会用这个软件了的错觉，当然很快真去自己做东西的时候会马上被打脸，但至少虽然做不出来但心里大概有点思路有几个方向，不至于像上课前那样完全两眼一抹黑。<br>虽然只扣了它半颗星，但这门课也有很多需要提高的地方，首先我一定要吐槽它用的素材实在太太太太太丑了，基本上都是开局unity里新建一个球就是主控角色，新建一个方块儿就是小怪，然后分别蒙上大红大绿的辣眼皮就开始讲课……尤其第二周讲的栗子甚至都还不是游戏，导致我差一点点就半途弃了，还好没有。虽然理论上我知道有时候随手用个方块圆球来演示是个省时省力的替代方式，在设计原型的时候也经常用到，但，如果……授课老师能在他第一周提供的那么多免费素材网站里去随便拖点不那么辣眼睛的素材来用就更好了。<br>另一个我觉得这门课或有不足的地方，是乐趣性不够高。部分原因可能是因为课程想要把软件的方方面面都讲到，于是在选例子的时候就拿这个为标准来选，于是除了第四周的栗子以外，另两个例子都并不是我们通常会玩到的游戏类型，于是乐趣性有不足。与它相反的是unity learn上的几个新手教程，基本上都是大家平时会玩到的rpg啊fps啊解密啊潜行啊roguelike啊，素材大部分也都美美哒，学的过程就愉快得多，当然，确实我也很明显的感觉到了unity learn的那几门课上下来都只学到一些很碎片的东西，脑子里缺少对unity能做什么不能做什么从头做一个游戏都需要做些什么的整体概念，而且很多东西知其然不知其所以然。最理想的是结合起来上就好了，但似乎有时候乐趣和全面不可得兼。我的感觉是，如果心中有明确的想要做的游戏的概念了，需要学unity来实现它，或者至少实现个demo或者原型，那就只上这门课就可以了。而如果还没有明确的概念，那就这个教程加unity learn上找点自己感兴趣的游戏类型的教程结合起来看，比较能兼顾学的效果和学的乐趣。</p>
+<h4 id="游戏设计原理"><a href="#游戏设计原理" class="headerlink" title="游戏设计原理"></a><a href="https://www.coursera.org/learn/gamedesign?specialization=game-development" target="_blank" rel="noopener">游戏设计原理</a></h4><p>推荐度：★★★☆<br>授课方：密歇根州立大学<br>平台：Coursera<br>费用：听课免费，证书收费但可申请全额助学金<br>语言：英语<br>字幕：部分中字</p>
+<p>Repo：感觉这门课的目标受众大概是有志从事商业游戏设计的海外党，但对非目标受众来说感觉水分比干货多。<br>这门课是前面那门课所属系列的第二门课程，因为有上门课的好印象加成，我对它期待值很高，但上下来感觉比上门课水得多，或者说我不是它的目标受众，于是接近半数的课程内容对我来说不太有价值。比如第一周整周都可以跳过，第二周只需要听游戏文档那小节就可以了，第三周虽然水分不少但干货也不少可以整个听听，第四周除了原型和测试外的俩小节都挺水的可以跳过。<br>但这门课尽管干货部分少，但干货部分确实对我来说有帮助和启发。一方面整体思路变清晰了，另一方面他偶尔的随口一句经常会让我发现自己之前可能想的有问题或者没有考虑到的地方。<br>不足之处首先是前面提到的需要精简一点去去水分，然后对里面的干货部分可以扩展开来多讲一讲，很多一句话带过的其实倒是对我比较有启发，如果能多深入讲一讲会挺好的。另外这门课有个与内容无关但对我来说体验很糟的地方，是它的音频。主讲人说话拖音比较重，而我听拖音一向跟听刮黑板一样浑身难受，一般遇到这种情况我的解决方法是开1.5倍速这样就听不到拖音了，但这个视频这么做会一卡一卡的更难受了，加上他发摩擦音的时候音频特别高，而他一句话里就要带一两个的口癖right更是一个拖音加一个摩擦音简直能把人逼疯，上完以后大松一口气，希望以后的课程不是他主讲了。</p>
+<h4 id="游戏分析与评测"><a href="#游戏分析与评测" class="headerlink" title="游戏分析与评测"></a><a href="https://next.xuetangx.com/course/tencentgames00001002032/1515957" target="_blank" rel="noopener">游戏分析与评测</a></h4><p>推荐度：★★★★ （目前上完章5，总14章，不排除之后会更新评价）<br>授课方：腾讯<br>平台：学堂在线<br>费用：听课免费，证书收费<br>语言：中文<br>字幕：中字</p>
+<p>Repo：我所有上过的国内课程中最好的，推荐。<br>目前上到第五章，除了第一章略水可以跳过以外，其它四章都很棒。这门课的结构是第二章讲对每一款游戏具体可以从哪些方面去分析它，然后第三章开始到第十四章每章分析一个游戏类型，按照这个类型的发展历史从早到晚，选出有代表性的作品去逐一分析，然后归纳出整个类型的核心特点和变化趋势。这种自下而上从微观到中观的分析思路对我来说比较亲切，虽然我个人更习惯自上而下从宏观到中观到微观的思路，但自上而下和自下而上可以结合验证。然后我要说这门课真的超有趣，除了能听到不少有趣的古早八卦，每章的主讲人们都是卖安利一把好手，才四个类别上下来我就吃了好多好多游戏的安利，to-play-list简直能一路排到明年。<br>不足之处的话就是太多地方浅尝辄止了，我刚觉得这个话题有意思结果就换话题了，虽然受限于课程时长大部分课程都这样，但一般会给出扩展阅读的资料清单，而这门课没有这么做。虽然我上的别的很多课给出的扩展阅读清单里的大部分我也没有兴趣去读，有些有兴趣读的下下来目录扫过去发现和我想像的内容偏差太大也就弃了，但也有少部分打开我新世界大门的，这门课如果能加上这个就好了。</p>
+<h4 id="游戏心理学"><a href="#游戏心理学" class="headerlink" title="游戏心理学"></a><a href="https://gameinstitute.qq.com/course/detail/10005" target="_blank" rel="noopener">游戏心理学</a></h4><p>推荐度：★★<br>授课方：腾讯<br>平台：腾讯游戏学院<br>费用：听课免费，不提供证书<br>语言：中文<br>字幕：中字</p>
+<p>Repo：题目很大内容其实不多就简单谈了谈心流的一门课。<br>对于把正反馈循环描述为一种魔法式的神秘过程的做法我个人不是特别认同。但这门课对我而言提供了一个很有启发的地方，即在探究心流所需要的一定难度的挑战上，把游戏的难度分为了思考难度和操作难度，然后把主流游戏画在了这个坐标轴中。<br>思考难度和操作难度这个分法有点像一个古早概念文和武，但我觉得其实更准确用来描述它们的应该是《思考快与慢》提出的大脑的两个系统，潜意识层面的条件反射系统和意识层面的思考系统。在玩OW的时候我想过这个问题，但没有深挖下去，在上这门课后又重新想起了这个话题，感觉应该找个时间详细想一想写一写。</p>
+<h4 id="Creator-Kit-RPG"><a href="#Creator-Kit-RPG" class="headerlink" title="Creator Kit: RPG"></a><a href="https://learn.unity.com/project/creator-kit-rpg?language=en" target="_blank" rel="noopener">Creator Kit: RPG</a></h4><p>推荐度：★★★★<br>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：适合无游戏制作基础无编程基础的2D RPG游戏制作的入门教程。<br>非常新手友好的一门unity上手课程，不需要编程，涉及到需要实现的功能都预先写好脚本嵌入到组件了。对完全没有基础的人来说，也能一步步跟着做下来一个关卡。而且最大的优势是花的时间特别短，一个下午就能搞定，从游戏的角度来说就是反馈特别及时。<br>不足之处是涉及到的内容略少，对于RPG来说就涉及到对话和任务俩功能，很多RPG的内容都没有涉及到，对于它的标题来说显得不太名副其实。另外一方面对软件涉及到的也比较有限，上下来没法建立起整体概念，在另两个unity learn上的creator kit系列教程里也多少都有点这个问题。</p>
+<h4 id="Creator-Kit-FPS"><a href="#Creator-Kit-FPS" class="headerlink" title="Creator Kit: FPS"></a><a href="https://learn.unity.com/project/creator-kit-fps?language=en" target="_blank" rel="noopener">Creator Kit: FPS</a></h4><p>推荐度：★★★★<br>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：适合无游戏制作基础无编程基础的3D FPS游戏制作的入门教程。<br>和前面的RPG Kit一样，是不需要编程的新手教程，也是可以很快上手用最多大半天就可以跟着做出一个关卡的那种快速反馈大份快落的教程。有和前面差不多的问题，对标题所说的游戏类型里的功能只简单涉及到很少一部分但并不全，比如作为FPS但没有任何涉及小怪的移动或者小怪的攻击等等小怪行为的功能。对于软件整体也只涉及到很少的部分，没法让人建立起对整体的概念。</p>
+<h4 id="Creator-Kit-Beginner-Code"><a href="#Creator-Kit-Beginner-Code" class="headerlink" title="Creator Kit: Beginner Code"></a><a href="https://learn.unity.com/project/creator-kit-beginner-code?language=en" target="_blank" rel="noopener">Creator Kit: Beginner Code</a></h4><p>推荐度：★★★★<br>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：适合有一定游戏制作概念但无编程基础的编程入门教程。<br>和前面两个Creator Kit系列的教程不同，这个教程的内容不是让人用给到的素材和预写好的功能组件去自己做一个关卡，而是用给到的预写好的功能组件的代码去改吧改吧成自己的代码。之前密歇根州立的那门unity课在第四周提到了一个观念，说有代码基础分几种，初极就大概知道哪些东西能写出来哪些东西不能写出来，中级就大概能蒙出来别人代码的意思然后改吧改吧成自己的代码，高级才需要自己从零写代码，做美术代码基础只需要初极，做设计只需要中级就够用了。这个观点挺震惊我的，一是它默认应该全民有代码基础，二是有代码基础的绝大部分其实是有用代码的能力而不是有造代码的能力，这和我之前上的好些国内代码入门教程都是让人从造简单代码开始慢慢升级造复杂代码的思路是完全不一样的，而且不得不说这个思路比较实用。但那门课虽提了这个思路，课程里讲代码的时候还是从头写的，只是调包的活儿做得比较多。而这个unity learn的教程体现了一样的思路，而且内容也真的是从一个别人写好的代码出发，教人怎么去猜那些看不懂的代码里的关键要素，然后把关键要素改一改，去游戏里看看是不是猜对了，如果猜错了怎么一键还原继续猜，如果猜对了继续看需要改的东西是不是忒多了复制粘贴手动改要素太麻烦，是吧那看看怎么自定义个函数或者函数类，去让抄代码改要素的过程更省事儿诸如此类的手把手花式抄代码教学。</p>
+<h4 id="2D-Roguelike"><a href="#2D-Roguelike" class="headerlink" title="2D Roguelike"></a><a href="https://learn.unity.com/project/2d-roguelike-tutorial?language=en" target="_blank" rel="noopener">2D Roguelike</a></h4><p>推荐度：     （目前上到视频5，总14视频，完成后再打推荐度）<br>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：部分中译</p>
+<p>Repo：深刻体会到为啥这是一个中级教程了……前面仨视频都觉得还挺新手友好的呀，然后就被第一个脚本卡住了……耗了3个小时在上面现在还是有几个地方没看明白。按说有地方没看明白也没事，用前面俩教程的办法，可以先照抄然后去游戏里改变量来蒙，但是……把脚本拖到gameobject上的时候报错了，提示在修好bug之前挂不上去，但vs里标出来的bug我都修了呀……不管了先睡觉，眼睛都快成二筒了……</p>
+<p><em>以上是能给到相对完整Repo的教程，下面是半途弃了于是仅能提供不完整感想的教程，因没看完不打推荐度</em></p>
+<h4 id="The-Explorer-3D-Game-Kit"><a href="#The-Explorer-3D-Game-Kit" class="headerlink" title="The Explorer: 3D Game Kit"></a><a href="https://learn.unity.com/project/3d-game-kit?language=en" target="_blank" rel="noopener">The Explorer: 3D Game Kit</a></h4><p>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：适合无游戏制作基础无编程基础的3D第三人称RPG游戏制作的入门教程，硬盘和硬件杀手预警。<br>理论上这应该是一个不错的教程，从给出的Demo来看，会涉及到剧情触发、武器获得、战斗系统、解密系统等等常见的3D游戏会用到的功能，而且全是预制好的组件不需要自己编程，在几个无编程Kit教程中，这应该是涉及功能最多的一个，而且都挺实用的。然而，我只开了个头连试玩都没玩通就弃了的原因是，太太太太太太太卡了。我玩OW也从来没卡过的游戏本，在试玩这个游戏教程的Sample Level的时候硬生生卡得一个动作要延迟好几秒跑位起来看到的角色位置和实际的角色位置十万八千里……或许以后如果有一天我入了个台式会重新过一遍它，但目前，我能想到的使用方式大概只有需要用到里面预置的某些功能时看看能不能抄到点代码。</p>
+<h4 id="附1-近期准备上的课程"><a href="#附1-近期准备上的课程" class="headerlink" title="附1 近期准备上的课程"></a>附1 近期准备上的课程</h4><p><em>游戏是个大坑，目测以后还会遇到很多教程，这篇Repo会持续更新，先列一些近期准备上的教程</em></p>
+<h5 id="Ruby’s-Adventure-2D-Beginner"><a href="#Ruby’s-Adventure-2D-Beginner" class="headerlink" title="Ruby’s Adventure: 2D Beginner"></a><a href="https://learn.unity.com/project/ruby-s-2d-rpg?language=en" target="_blank" rel="noopener">Ruby’s Adventure: 2D Beginner</a></h5><p>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：英文</p>
+<p>Repo：其实2D教程里我最早下的是这个，然后大致浏览了一下框架，感觉适合有点基础的而不是纯萌新，于是转投了前面那个真新手教程。</p>
+<h5 id="John-Lemon’s-Haunted-Jaunt-3D-Beginner"><a href="#John-Lemon’s-Haunted-Jaunt-3D-Beginner" class="headerlink" title="John Lemon’s Haunted Jaunt: 3D Beginner"></a><a href="https://learn.unity.com/project/john-lemon-s-haunted-jaunt-3d-beginner-1" target="_blank" rel="noopener">John Lemon’s Haunted Jaunt: 3D Beginner</a></h5><p>授课方：Unity<br>平台：Unity Learn<br>费用：听课免费，不提供证书<br>语言：中译</p>
+<p>Repo：这个是我最早下的3D教程，因为它的标题里有个Beginner，又是Unity Learn上唯一一篇有中字的，看框架也还挺系统。然后我在第二章卡住了，跳了二三章以后，在第五章又卡住了，于是醒悟这个Beginner应该是指有一定游戏制作基础的Unity新手，而不是游戏制作新手。</p>
+<h4 id="附2-各平台使用Tips"><a href="#附2-各平台使用Tips" class="headerlink" title="附2 各平台使用Tips"></a>附2 各平台使用Tips</h4><p>1.学堂在线的视屏播放页面，在IE上无法播放显示，在Chrome上可以播放显示但页面各控件的位置会出错并互相遮挡，在Edge上可正常显示和播放。</p>
+<p>2.Coursera的视频在国内大部分地区无法正常播放，解决方法是修改hosts就好。打开<code>C:\Windows\System32\drivers\etc\hosts</code>，在末尾粘贴如下语句并保存。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">52.84.246.90    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.252    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.144    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.72    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.106    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.135    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.114    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.90    d3c33hcgiwev3.cloudfront.net</span><br><span class="line">52.84.246.227    d3c33hcgiwev3.cloudfront.net</span><br></pre></td></tr></table></figure>
+
+<p>随后运行cmd，输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig/flushdns</span><br></pre></td></tr></table></figure>
+
+<p>刷新浏览器，会发现视频可以播放了。<br>随着时间推移上面的地址可能会失效，使用前先看看能不能ping通，如果不能ping通找一下最近的能ping通的。</p>
+<p>3.Unity的教程素材下载有个巨坑，即无论是跟着Unity Hub给出的教程下载流程走，还是新建项目然后在Unity软件里打开Unity Asset Store去下载导入教程素材包，都会导致电脑里除了知道自己保存了的那个项目文件以外，还分别在C盘的两个临时文件夹中有两个文件备份。如果是下载的以M论的2D包还好，如果下载的3D包尤其是那个2个多G的课程包，分分钟C盘缩水近10G。<br>解决方法是该手动删掉手动删掉，该手动挪D盘手动挪D盘。<br>一般来说，下载的原始素材包会是一个有Unity图标的<code>.unitypackage</code>文件，这个文件在<code>C:\Users\电脑用户名\AppData\Roaming\Unity\Asset Store-5.x</code>，文件名一般就是你下载的那个素材的名字。直接挪到其它盘备份吧，以后如果需要用的时候可以重复导入。<br>然后当在Unity hub的教程页面里打开下载的那个原始素材包的时候，会生成一个原始的项目文件，准确的说是文件夹，文件夹下面和自己手动保存的项目文件夹下面的目录是一致的，这个文件夹在<code>C:\Users\电脑用户名\AppData\Local\Temp</code>，并且，文件夹名是乱码，也就是说没法通过名称找到它，只能通过推断。推断方法是，先选日期，筛选出打开它那个日期的所有临时文件，然后看文件大小，找到和自己手动保存的项目文件大小差不多的乱码文件夹，点开看看是不是和自己手动保存的项目文件夹内容大体一致，是的话就它了，直接删掉吧。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+       
+    
+       
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://brielley.github.io/2020/03/03/tech-blog-hexo-errors-and-solutions/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -398,124 +815,11 @@
     
       
     
-       
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://brielley.github.io/2019/12/29/game-this-war-of-mine/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Brielley">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Brielley">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/12/29/game-this-war-of-mine/" class="post-title-link" itemprop="url">This War Of Mine三周目通关纪念&那些新手时踩过的坑</a>
-          
-        </h1>
-
-        <div class="post-meta">
-          
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-12-29 14:27:35" itemprop="dateCreated datePublished" datetime="2019-12-29T14:27:35+08:00">2019-12-29</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Game/" itemprop="url" rel="index"><span itemprop="name">Game</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-          
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-              <span>2k</span>
-            </span>
-          
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-              <span>4 mins.</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="一周目通关"><a href="#一周目通关" class="headerlink" title="一周目通关"></a>一周目通关</h3><p>罗曼受了致命伤，崩溃状态没法去医院，扎拉塔带着仅剩3块肉出去换了绷带回来的时候，发现他离开了避难所，家里少了一颗子弹，只少了一颗子弹，没有少枪，我以为他死了。最后看到结局他在战争中活了下来但因离开后的罪行被判十五年时松了口气，至少还活着。<br>两个妹子战后一个开始了新学业，一个开始了新家庭。大厨找到了他的朋友，她也幸存了下来。如果罗曼转致命伤那晚我让他出门拾荒他没和大厨打架就好了…… </p>
-<h3 id="二周目通关"><a href="#二周目通关" class="headerlink" title="二周目通关"></a>二周目通关</h3><p>原本想弥补一周目罗曼的缺憾，没想这次随机到的角色没他。<br>开局冬天，连续二十来天地图上只有一个半有效资源点，到后头没处可去只好全员留家睡觉……第二十四天忽然刷出好多新地点，让鲍里斯去医院拾满了他的超大背包正准备接下来几天酿酒换粮的时候，战争突兀地在第二十五天结束了，这次全员HE</p>
-<h3 id="三周目通关"><a href="#三周目通关" class="headerlink" title="三周目通关"></a>三周目通关</h3><p>随机到二老组，开局犯罪高峰，陷入因伤致贫因贫致伤死循环，校长死后两天犯罪高峰结束了，教授靠SL一路撑了下来，但因在战争中受到不可逆转的伤害，尽管余生醉心学术但再没能取得任何成就……</p>
-<p>和大部分玩儿我的战争的人是在一周目受到最大触动不同，由于之前零零散散看过一些含剧透的安利，我全程没去任何标记为危险或不愿交易的地方，因此一周目并没遇到太多两难选择，更多的是感慨这游戏容错率真低，而三周目给我的感觉则和前两周目完全不一样。如果说一周目给我更多的是如果早知道xxx就好了，二周目给我的更多的是我知道我需要什么但可惜资源太少如果再刷给我一个xxx就好了，但这些“早知道”或者“如果就”其实很奢侈，因为它们是基于未来的，某一刻关于未来计划的落空要在若干天后才会看到结果，而在这中间的许多天里，也许转机就出现了，而在三周目，根本没有办法去奢侈地顾及未来，因为眼下都已经不一定能过得去了……<br>两个老人，开局就每晚遇抢劫，为了减轻被抢劫的伤害必须出去捡木头来封上房屋的破洞，但只剩一个人守家的必然结果是这个人会一天天不断受伤，然后绷带的库存耗尽，守家的这个人伤势已经重到晚上没办法再做任何睡在床上以外的事情，另一个人也只能守家没法再外出补充补给，坐吃山空的同时另一个人也开始不断受伤，黑市商人上门的时候为了换绷带，几乎用尽了所有象征着未来的材料。准备做集水器的材料卖掉了，没水做饭就吃生肉吧，至于这会耗更多的肉也顾不上了，反正不吃也是被抢；准备造壁炉的材料也卖掉了，反正如果伤治不好即使没死等冬天来了也没法出门捡柴火；最后是电子元件……木头塑料齿轮卖了还可能在未来伤好以后出去捡到或者买到，但电子元件在地图上是有限的，这张地图没有车库没有心灵手巧能造出它卖的汽修店儿子，电子元件用一个就少一个，卖完了将来就做不出防盗门，做不出防盗门再遇抢劫就必然会继续受伤，受伤了又必须要打绷带，自制绷带需要纯酒精，而蒸馏出纯酒精的机器没有电子元件就造不出来，造不出来就又只能倾家荡产去买绷带，从此陷入因贫致伤因伤致贫的死循环，任何一个有一丁点理智去想一想未来的人都不会卖掉它们，但已经致命伤了，再没有绷带都不一定还有明天，还说什么以后呢？于是这个曾经入选过菲尔兹奖提名的数学家做出了卖掉家里所有电子元件这种完全不像是他可能会做出的决定。再后来他熬过了战争，但由于战争创伤再也没能在学术上取得什么新的建树。而从之前看过的剧透里，他的HE是战后意志愈发坚定研究出现重大突破最终获得了菲尔兹奖的……</p>
-<h3 id="事后诸葛那些新手时踩过的坑"><a href="#事后诸葛那些新手时踩过的坑" class="headerlink" title="事后诸葛那些新手时踩过的坑"></a>事后诸葛那些新手时踩过的坑</h3><p>1.奇观误国。蔬菜园的搭建会消耗非常非常非常多的材料，搭成以后由于种菜需要的原料也不少因此使用率并不高，如果把所有蔬菜园的材料用来直接交易蔬菜，那么很可能材料换的比种出来的还多一点。</p>
-<p>2.标记为谨慎的地图不等于不偷不抢就没危险。即使以前去过交易过没出问题的地图，也不等于下一次去交易的时候不会冷不防吃枪子，如果地图描述看起来不大对劲，即使安全值标注为谨慎，每次去的时候也最好带上头盔或防弹背心之类的护具。</p>
-<p>3.守家时工具也计入武器。铲子斧子撬棍放在家里都算，如果它们的总数大于等于家里人数就会显示为全员都有武器了，这样在被袭击的时候能够很大程度减轻受伤的可能。冷兵器和热兵器在守家效果上并没有感觉出明显差别，修好破洞安上防盗门的情况下有两个人用普通工具守家也可以无伤度过犯罪高峰期。如果遇上资源匮乏的地图，捡到的子弹修复的枪支卖掉换其它更有用的物资是一个相对划算的选择。</p>
-<p>4.大部分爱抽烟爱喝咖啡的角色在没烟草咖啡的情况下并不会影响心情，但布鲁诺没烟抽会非常容易悲伤，罗曼除了要保证他的烟还千万不能让他处于非常饥饿状态，否则晚上大概率会打人，是真打，会把队友打成轻伤或把他自己打成重伤。</p>
-<p>5.最好要有的建造品：2个床，3个房屋漏洞，防盗门（需把工作台升到3级），2个捕鼠笼，1个二级灶台，1个水过滤器，1个二级金属工具台，1套工具（铲子、撬棍、斧头、菜刀），1个壁炉，1个制烟台或1个酿酒台，1个收音机。</p>
-<p>可有可无的建造品：第3个床，第2个水过滤器，第2个壁炉或升二级壁炉，热兵器。</p>
-<p>谨慎决定要不要建的建造品：草药园、蔬菜园。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-       
-    
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -597,12 +901,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">164k</span>
+    <span title="Symbols count total">181k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:42</span>
+    <span title="Reading time total">6:16</span>
 </div>
 
         
