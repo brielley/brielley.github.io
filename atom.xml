@@ -6,7 +6,7 @@
   <link href="https://brielley.github.io/atom.xml" rel="self"/>
   
   <link href="https://brielley.github.io/"/>
-  <updated>2021-03-25T13:40:54.120Z</updated>
+  <updated>2021-03-26T16:46:27.336Z</updated>
   <id>https://brielley.github.io/</id>
   
   <author>
@@ -17,13 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>第一人称冒险游戏Judas&#39; Trial试玩版出炉啦！</title>
+    <link href="https://brielley.github.io/2021/03/26/tech-project-judas-trial/"/>
+    <id>https://brielley.github.io/2021/03/26/tech-project-judas-trial/</id>
+    <published>2021-03-25T17:06:25.000Z</published>
+    <updated>2021-03-26T16:46:27.336Z</updated>
+    
+    <content type="html"><![CDATA[<iframe framborder="0" src="https://itch.io/embed/935785" width="552" height="167"><a href="https://brielley.itch.io/judastrial" target="_blank" rel="noopener">Judas'Trial by Brie Y. R.</a></iframe><h5 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h5><p>下载上面链接里的<code>.zip</code>文件，解压后双击<code>Judas&#39;Trial.exe</code>开始游戏。</p><h5 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h5><p><strong>W A S D</strong>： 移动<br><strong>左Shift + W A S D</strong>： 奔跑<br><strong>空格</strong>： 跳跃<br><strong>Tab</strong>：地图<br><strong>回车/鼠标左键</strong>：继续对话<br><strong>Esc</strong>：暂停菜单</p><h5 id="Tips："><a href="#Tips：" class="headerlink" title="Tips："></a>Tips：</h5><p>1）窗口模式下可以拖拽窗口边框自定义游戏尺寸，但更建议在默认的1080p全屏模式下玩。不建议把窗口开太小，或者对屏幕长宽比进行太大的调整，它们可能会导致UI无法完整显示，如果发生了这种情况，把窗口拖大一点或者切换成全屏模式就好。<br>2）游戏中有些小怪是只要你在它的视线内就会主动攻击，上方有血条，如果血条空了就会从头来过，多从头来几次可能会直接BE。时刻关注血条，如果血条比较危险了，可以靠近大脑或者吃耶稣血来回血，但都有副作用，最好是注意规避伤害，尤其是在跟npc对话或暂停前，尽可能找个安全的地方，比如掩体后面。<br>3）大体来说有两种通关方式，文通是跑完剧情做对绝大部分选择题，武通是把小怪全撞出去，文通武通没有绝对的路线选择，完全可以随缘各做一些，只要在时限内让理智回到100%以上就能HE。时限是3000秒，游戏内有机制可以获得更多时间，剧情通关时长大约1小时，武通视操(运)作(气)一般在20分钟以内。</p><h5 id="Feedback-needed"><a href="#Feedback-needed" class="headerlink" title="Feedback needed!"></a>Feedback needed!</h5><p><strong>如果玩的过程中有任何问题任何想法任何建议，或是发现任何bug，请一定一定告诉我！在这篇博文下留言，或是<a href="https://brielley.itch.io/judastria" target="_blank" rel="noopener">在itch.io留言</a>，或者<a href="mailto:judastrial@outlook.com" target="_blank" rel="noopener">发我邮件</a>都可。</strong></p><hr><h5 id="Inspirations："><a href="#Inspirations：" class="headerlink" title="Inspirations："></a>Inspirations：</h5><p>最早萌生出做这个游戏的念头是在2018年初，当时沉迷音乐剧Jesus Christ Superstar，像每个对BE耿耿于怀的人一样，我有一种强烈地想要有机会扭转结局的urge，记得当时在lofter上开过各种天马行空不切实际的脑洞。去年年初，我在unity asset store看到了这套素材，包括low-poly风格的人的身体内部、心、胃、脑、血细胞、绿色的怪物……一个游戏开始在我脑子里成型——在犹大疯狂天人交战的最后晚餐，他进入了自己的身体，不是物理上的身体，而是他灵魂的投射，他穿行在自己的身体里，像个局外人一样，从身体所呈现的一个个意向中，从他在这里遇到的一个个难题面临的一个个选择中，去更深入地了解自己，去重新审视自己那些存在已久但从未验证的观点，去重新思考自己的理想重新定位未来的方向，包括那个需要在最后晚餐上做出决定的关键抉择。</p><p>一开始的时候，我只希望把这个游戏设计得尽可能有可玩性就好，在unity里做了几种不同玩法的prototype后，我选择了自己机缘巧合撞出来却体感最好的撞撞撞机制，那是去年4月份。但在不久之后的5月，我玩到了一个也许改变了我整个游戏开发思路的独立游戏Disco Elysium，它让我开始思考和探索用游戏来更直接地表达抽象主题的可能。从此我的开发重心开始转移，重做了整个叙事系统，从JCS00的象征表现手法中汲取灵感，把游戏的整个过程做成了一场犹大与自我、以及与他心中的耶稣的对话，并尝试探讨utilitarianism与Kantianism，means与ends，love与trust，arrogant与insecure。虽然因为能力所限，这些尝试在实现时许多未能如我所想，但我很开心自己开始了这段尝试的旅程。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;iframe framborder=&quot;0&quot; src=&quot;https://itch.io/embed/935785&quot; width=&quot;552&quot; height=&quot;167&quot;&gt;&lt;a href=&quot;https://brielley.itch.io/judastrial&quot; target=&quot;_bl</summary>
+      
+    
+    
+    
+    <category term="Tech" scheme="https://brielley.github.io/categories/Tech/"/>
+    
+    <category term="Project" scheme="https://brielley.github.io/categories/Tech/Project/"/>
+    
+    
+    <category term="Game Dev" scheme="https://brielley.github.io/tags/Game-Dev/"/>
+    
+    <category term="Unity" scheme="https://brielley.github.io/tags/Unity/"/>
+    
+    <category term="Judas&#39;Trial" scheme="https://brielley.github.io/tags/Judas-Trial/"/>
+    
+    <category term="Early Access" scheme="https://brielley.github.io/tags/Early-Access/"/>
+    
+    <category term="My Indie Game" scheme="https://brielley.github.io/tags/My-Indie-Game/"/>
+    
+  </entry>
+  
+  <entry>
     <title>分享一个新搭的温登堡小房子</title>
     <link href="https://brielley.github.io/2021/03/04/game-sims-4-sharing-lots-havisham/"/>
     <id>https://brielley.github.io/2021/03/04/game-sims-4-sharing-lots-havisham/</id>
     <published>2021-03-04T14:55:55.000Z</published>
-    <updated>2021-03-25T13:40:54.120Z</updated>
+    <updated>2021-03-25T18:15:25.378Z</updated>
     
-    <content type="html"><![CDATA[<p>平层无需上下楼，前店后居结构，支持同时开咖啡店、酒吧、零售店。有预设好的咖啡店设备、酒吧设备、放蛋糕的陈列架、放画的长廊墙壁。</p><p>仅使用本体+同欢共乐dlc，无CC，放置前需先<code>bb.moveobjects on</code>。已生活模式测试，所有功能均可正常使用。</p><p>位置在温登堡老城区（Olde Platz）左上角的20x20用地，用地原名<code>Havisham House</code>，最好是把房子放在这里啦，如果放在其它地方可能会与周围环境冲突。</p><p><img src="/images/wdb01.webp" alt="正面"></p><p><img src="/images/wdb02.webp" alt="侧面"></p><p><img src="/images/wdb03.webp" alt="前院，小人可以在阳光下画画和写书"></p><p><img src="/images/wdb04.webp" alt="门厅，户外小沙发原本是给客人等位用的，但如果家有狗子会发现这里日常被狗子占据打盹"></p><p><img src="/images/wdb05.webp" alt="自营咖啡店营业中"></p><p><img src="/images/wdb06.webp" alt="打烊后的咖啡厅"></p><p><img src="/images/wdb07.webp" alt="自营酒吧营业中"></p><p><img src="/images/wdb08.webp" alt="打烊后的酒吧"></p><p><img src="/images/wdb09.webp" alt="小人在家开蛋糕店的烘培品陈列台，最多可以放27个蛋糕"></p><p><img src="/images/wdb10.webp" alt="连接营业区与居住区的走廊，一侧的墙壁是小人在家开画廊的画作陈列墙"></p><p><img src="/images/wdb11.webp" alt="平面图"></p><p>以上图片均使用游戏内置截图，除平面图有增加文字说明外，无后期处理。</p><p>房屋所有设施都在生活模式下测试过，可放心使用。主卧的浴缸摆放位置可以给大型犬洗澡，后院种的火龙果和死神花可以刚好被房檐遮挡，四季可收获，也可以通过在家开店售卖。</p><p><strong>下载与安装</strong></p><p><a href="http://www.simfileshare.net/download/2422278/" target="_blank" rel="noopener">下载zip文件</a> ，解压后放入<code>文档/Electronic Arts/The Sims 4/Tray</code>文件夹下，注意需把解压后的6个文件直接放入<code>Tray</code>夹，不能在外嵌套文件夹，不然游戏程序识别不了。</p><p><strong>或</strong> 工坊搜索id：<code>brielleyea</code>，在Showcase中找到<code>Havisham House</code>下载到Library。</p>]]></content>
+    <content type="html"><![CDATA[<p>平层无需上下楼，前店后居结构，支持同时开咖啡店、酒吧、零售店。有预设好的咖啡店设备、酒吧设备、放蛋糕的陈列架、放画的长廊墙壁。</p><p>仅使用本体+同欢共乐dlc，无CC，放置前需先<code>bb.moveobjects on</code>。已生活模式测试，所有功能均可正常使用。</p><p>位置在温登堡老城区（Olde Platz）左上角的20x20用地，用地原名<code>Havisham House</code>，最好是把房子放在这里啦，如果放在其它地方可能会与周围环境冲突。</p><p><img src="/images/wdb01.webp" alt="正面"></p><p><img src="/images/wdb02.webp" alt="侧面"></p><p><img src="/images/wdb03.webp" alt="前院，小人可以在阳光下画画和写书"></p><p><img src="/images/wdb04.webp" alt="门厅，户外小沙发原本是给客人等位用的，但如果家有狗子会发现这里日常被狗子占据打盹"></p><p><img src="/images/wdb05.webp" alt="自营咖啡店营业中"></p><p><img src="/images/wdb06.webp" alt="打烊后的咖啡厅"></p><p><img src="/images/wdb07.webp" alt="自营酒吧营业中"></p><p><img src="/images/wdb08.webp" alt="打烊后的酒吧"></p><p><img src="/images/wdb09.webp" alt="小人在家开蛋糕店的烘培品陈列台，最多可以放27个蛋糕"></p><p><img src="/images/wdb10.webp" alt="连接营业区与居住区的走廊，一侧的墙壁是小人在家开画廊的画作陈列墙"></p><p><img src="/images/wdb11.webp" alt="平面图"></p><p>以上图片均使用游戏内置截图，除平面图有增加文字说明外，无后期处理。</p><p>房屋所有设施都在生活模式下测试过，可放心使用。主卧的浴缸摆放位置可以给大型犬洗澡，后院种的火龙果和死神花可以刚好被房檐遮挡，四季可收获，也可以通过在家开店售卖。</p><p><strong>下载与安装</strong></p><p><a href="http://www.simfileshare.net/download/2422278/" target="_blank" rel="noopener">下载zip文件</a> ，解压后放入<code>文档/Electronic Arts/The Sims 4/Tray</code>文件夹下，注意需把解压后的7个文件直接放入<code>Tray</code>夹，不能在外嵌套文件夹，不然游戏程序识别不了。</p><p><strong>或</strong> 工坊搜索id：<code>brielleyea</code>，在Showcase中找到<code>Havisham House</code>下载到Library。</p>]]></content>
     
     
       
@@ -132,34 +166,6 @@
     <category term="Pipeline" scheme="https://brielley.github.io/tags/Pipeline/"/>
     
     <category term="PostProcessing" scheme="https://brielley.github.io/tags/PostProcessing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>This War Of Mine三周目通关纪念&amp;那些新手时踩过的坑</title>
-    <link href="https://brielley.github.io/2020/12/29/game-this-war-of-mine/"/>
-    <id>https://brielley.github.io/2020/12/29/game-this-war-of-mine/</id>
-    <published>2020-12-29T15:35:57.000Z</published>
-    <updated>2021-03-25T10:55:11.341Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一周目通关"><a href="#一周目通关" class="headerlink" title="一周目通关"></a>一周目通关</h3><p>罗曼受了致命伤，崩溃状态没法去医院，扎拉塔带着仅剩3块肉出去换了绷带回来的时候，发现他离开了避难所，家里少了一颗子弹，只少了一颗子弹，没有少枪，我以为他死了。最后看到结局他在战争中活了下来但因离开后的罪行被判十五年时松了口气，至少还活着。<br>两个妹子战后一个开始了新学业，一个开始了新家庭。大厨找到了他的朋友，她也幸存了下来。如果罗曼转致命伤那晚我让他出门拾荒他没和大厨打架就好了…… </p><h3 id="二周目通关"><a href="#二周目通关" class="headerlink" title="二周目通关"></a>二周目通关</h3><p>原本想弥补一周目罗曼的缺憾，没想这次随机到的角色没他。<br>开局冬天，连续二十来天地图上只有一个半有效资源点，到后头没处可去只好全员留家睡觉……第二十四天忽然刷出好多新地点，让鲍里斯去医院拾满了他的超大背包正准备接下来几天酿酒换粮的时候，战争突兀地在第二十五天结束了，这次全员HE</p><h3 id="三周目通关"><a href="#三周目通关" class="headerlink" title="三周目通关"></a>三周目通关</h3><p>随机到二老组，开局犯罪高峰，陷入因伤致贫因贫致伤死循环，校长死后两天犯罪高峰结束了，教授靠SL一路撑了下来，但因在战争中受到不可逆转的伤害，尽管余生醉心学术但再没能取得任何成就……</p><p>和大部分玩儿我的战争的人是在一周目受到最大触动不同，由于之前零零散散看过一些含剧透的安利，我全程没去任何标记为危险或不愿交易的地方，因此一周目并没遇到太多两难选择，更多的是感慨这游戏容错率真低，而三周目给我的感觉则和前两周目完全不一样。如果说一周目给我更多的是如果早知道xxx就好了，二周目给我的更多的是我知道我需要什么但可惜资源太少如果再刷给我一个xxx就好了，但这些“早知道”或者“如果就”其实很奢侈，因为它们是基于未来的，某一刻关于未来计划的落空要在若干天后才会看到结果，而在这中间的许多天里，也许转机就出现了，而在三周目，根本没有办法去奢侈地顾及未来，因为眼下都已经不一定能过得去了……<br>两个老人，开局就每晚遇抢劫，为了减轻被抢劫的伤害必须出去捡木头来封上房屋的破洞，但只剩一个人守家的必然结果是这个人会一天天不断受伤，然后绷带的库存耗尽，守家的这个人伤势已经重到晚上没办法再做任何睡在床上以外的事情，另一个人也只能守家没法再外出补充补给，坐吃山空的同时另一个人也开始不断受伤，黑市商人上门的时候为了换绷带，几乎用尽了所有象征着未来的材料。准备做集水器的材料卖掉了，没水做饭就吃生肉吧，至于这会耗更多的肉也顾不上了，反正不吃也是被抢；准备造壁炉的材料也卖掉了，反正如果伤治不好即使没死等冬天来了也没法出门捡柴火；最后是电子元件……木头塑料齿轮卖了还可能在未来伤好以后出去捡到或者买到，但电子元件在地图上是有限的，这张地图没有车库没有心灵手巧能造出它卖的汽修店儿子，电子元件用一个就少一个，卖完了将来就做不出防盗门，做不出防盗门再遇抢劫就必然会继续受伤，受伤了又必须要打绷带，自制绷带需要纯酒精，而蒸馏出纯酒精的机器没有电子元件就造不出来，造不出来就又只能倾家荡产去买绷带，从此陷入因贫致伤因伤致贫的死循环，任何一个有一丁点理智去想一想未来的人都不会卖掉它们，但已经致命伤了，再没有绷带都不一定还有明天，还说什么以后呢？于是这个曾经入选过菲尔兹奖提名的数学家做出了卖掉家里所有电子元件这种完全不像是他可能会做出的决定。再后来他熬过了战争，但由于战争创伤再也没能在学术上取得什么新的建树。而从之前看过的剧透里，他的HE是战后意志愈发坚定研究出现重大突破最终获得了菲尔兹奖的……</p><h3 id="事后诸葛那些新手时踩过的坑"><a href="#事后诸葛那些新手时踩过的坑" class="headerlink" title="事后诸葛那些新手时踩过的坑"></a>事后诸葛那些新手时踩过的坑</h3><p>1.奇观误国。蔬菜园的搭建会消耗非常非常非常多的材料，搭成以后由于种菜需要的原料也不少因此使用率并不高，如果把所有蔬菜园的材料用来直接交易蔬菜，那么很可能材料换的比种出来的还多一点。</p><p>2.标记为谨慎的地图不等于不偷不抢就没危险。即使以前去过交易过没出问题的地图，也不等于下一次去交易的时候不会冷不防吃枪子，如果地图描述看起来不大对劲，即使安全值标注为谨慎，每次去的时候也最好带上头盔或防弹背心之类的护具。</p><p>3.守家时工具也计入武器。铲子斧子撬棍放在家里都算，如果它们的总数大于等于家里人数就会显示为全员都有武器了，这样在被袭击的时候能够很大程度减轻受伤的可能。冷兵器和热兵器在守家效果上并没有感觉出明显差别，修好破洞安上防盗门的情况下有两个人用普通工具守家也可以无伤度过犯罪高峰期。如果遇上资源匮乏的地图，捡到的子弹修复的枪支卖掉换其它更有用的物资是一个相对划算的选择。</p><p>4.大部分爱抽烟爱喝咖啡的角色在没烟草咖啡的情况下并不会影响心情，但布鲁诺没烟抽会非常容易悲伤，罗曼除了要保证他的烟还千万不能让他处于非常饥饿状态，否则晚上大概率会打人，是真打，会把队友打成轻伤或把他自己打成重伤。</p><p>5.最好要有的建造品：2个床，3个房屋漏洞，防盗门（需把工作台升到3级），2个捕鼠笼，1个二级灶台，1个水过滤器，1个二级金属工具台，1套工具（铲子、撬棍、斧头、菜刀），1个壁炉，1个制烟台或1个酿酒台，1个收音机。</p><p>可有可无的建造品：第3个床，第2个水过滤器，第2个壁炉或升二级壁炉，热兵器。</p><p>谨慎决定要不要建的建造品：草药园、蔬菜园。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;一周目通关&quot;&gt;&lt;a href=&quot;#一周目通关&quot; class=&quot;headerlink&quot; title=&quot;一周目通关&quot;&gt;&lt;/a&gt;一周目通关&lt;/h3&gt;&lt;p&gt;罗曼受了致命伤，崩溃状态没法去医院，扎拉塔带着仅剩3块肉出去换了绷带回来的时候，发现他离开了避难所，家里少了一颗子弹</summary>
-      
-    
-    
-    
-    <category term="Game" scheme="https://brielley.github.io/categories/Game/"/>
-    
-    <category term="Indie" scheme="https://brielley.github.io/categories/Game/Indie/"/>
-    
-    
-    <category term="Gamer" scheme="https://brielley.github.io/tags/Gamer/"/>
-    
-    <category term="This War Of Mine" scheme="https://brielley.github.io/tags/This-War-Of-Mine/"/>
     
   </entry>
   
@@ -491,6 +497,34 @@
   </entry>
   
   <entry>
+    <title>This War Of Mine三周目通关纪念&amp;那些新手时踩过的坑</title>
+    <link href="https://brielley.github.io/2019/12/29/game-this-war-of-mine/"/>
+    <id>https://brielley.github.io/2019/12/29/game-this-war-of-mine/</id>
+    <published>2019-12-29T15:35:57.000Z</published>
+    <updated>2021-03-26T12:26:19.317Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一周目通关"><a href="#一周目通关" class="headerlink" title="一周目通关"></a>一周目通关</h3><p>罗曼受了致命伤，崩溃状态没法去医院，扎拉塔带着仅剩3块肉出去换了绷带回来的时候，发现他离开了避难所，家里少了一颗子弹，只少了一颗子弹，没有少枪，我以为他死了。最后看到结局他在战争中活了下来但因离开后的罪行被判十五年时松了口气，至少还活着。<br>两个妹子战后一个开始了新学业，一个开始了新家庭。大厨找到了他的朋友，她也幸存了下来。如果罗曼转致命伤那晚我让他出门拾荒他没和大厨打架就好了…… </p><h3 id="二周目通关"><a href="#二周目通关" class="headerlink" title="二周目通关"></a>二周目通关</h3><p>原本想弥补一周目罗曼的缺憾，没想这次随机到的角色没他。<br>开局冬天，连续二十来天地图上只有一个半有效资源点，到后头没处可去只好全员留家睡觉……第二十四天忽然刷出好多新地点，让鲍里斯去医院拾满了他的超大背包正准备接下来几天酿酒换粮的时候，战争突兀地在第二十五天结束了，这次全员HE</p><h3 id="三周目通关"><a href="#三周目通关" class="headerlink" title="三周目通关"></a>三周目通关</h3><p>随机到二老组，开局犯罪高峰，陷入因伤致贫因贫致伤死循环，校长死后两天犯罪高峰结束了，教授靠SL一路撑了下来，但因在战争中受到不可逆转的伤害，尽管余生醉心学术但再没能取得任何成就……</p><p>和大部分玩儿我的战争的人是在一周目受到最大触动不同，由于之前零零散散看过一些含剧透的安利，我全程没去任何标记为危险或不愿交易的地方，因此一周目并没遇到太多两难选择，更多的是感慨这游戏容错率真低，而三周目给我的感觉则和前两周目完全不一样。如果说一周目给我更多的是如果早知道xxx就好了，二周目给我的更多的是我知道我需要什么但可惜资源太少如果再刷给我一个xxx就好了，但这些“早知道”或者“如果就”其实很奢侈，因为它们是基于未来的，某一刻关于未来计划的落空要在若干天后才会看到结果，而在这中间的许多天里，也许转机就出现了，而在三周目，根本没有办法去奢侈地顾及未来，因为眼下都已经不一定能过得去了……<br>两个老人，开局就每晚遇抢劫，为了减轻被抢劫的伤害必须出去捡木头来封上房屋的破洞，但只剩一个人守家的必然结果是这个人会一天天不断受伤，然后绷带的库存耗尽，守家的这个人伤势已经重到晚上没办法再做任何睡在床上以外的事情，另一个人也只能守家没法再外出补充补给，坐吃山空的同时另一个人也开始不断受伤，黑市商人上门的时候为了换绷带，几乎用尽了所有象征着未来的材料。准备做集水器的材料卖掉了，没水做饭就吃生肉吧，至于这会耗更多的肉也顾不上了，反正不吃也是被抢；准备造壁炉的材料也卖掉了，反正如果伤治不好即使没死等冬天来了也没法出门捡柴火；最后是电子元件……木头塑料齿轮卖了还可能在未来伤好以后出去捡到或者买到，但电子元件在地图上是有限的，这张地图没有车库没有心灵手巧能造出它卖的汽修店儿子，电子元件用一个就少一个，卖完了将来就做不出防盗门，做不出防盗门再遇抢劫就必然会继续受伤，受伤了又必须要打绷带，自制绷带需要纯酒精，而蒸馏出纯酒精的机器没有电子元件就造不出来，造不出来就又只能倾家荡产去买绷带，从此陷入因贫致伤因伤致贫的死循环，任何一个有一丁点理智去想一想未来的人都不会卖掉它们，但已经致命伤了，再没有绷带都不一定还有明天，还说什么以后呢？于是这个曾经入选过菲尔兹奖提名的数学家做出了卖掉家里所有电子元件这种完全不像是他可能会做出的决定。再后来他熬过了战争，但由于战争创伤再也没能在学术上取得什么新的建树。而从之前看过的剧透里，他的HE是战后意志愈发坚定研究出现重大突破最终获得了菲尔兹奖的……</p><h3 id="事后诸葛那些新手时踩过的坑"><a href="#事后诸葛那些新手时踩过的坑" class="headerlink" title="事后诸葛那些新手时踩过的坑"></a>事后诸葛那些新手时踩过的坑</h3><p>1.奇观误国。蔬菜园的搭建会消耗非常非常非常多的材料，搭成以后由于种菜需要的原料也不少因此使用率并不高，如果把所有蔬菜园的材料用来直接交易蔬菜，那么很可能材料换的比种出来的还多一点。</p><p>2.标记为谨慎的地图不等于不偷不抢就没危险。即使以前去过交易过没出问题的地图，也不等于下一次去交易的时候不会冷不防吃枪子，如果地图描述看起来不大对劲，即使安全值标注为谨慎，每次去的时候也最好带上头盔或防弹背心之类的护具。</p><p>3.守家时工具也计入武器。铲子斧子撬棍放在家里都算，如果它们的总数大于等于家里人数就会显示为全员都有武器了，这样在被袭击的时候能够很大程度减轻受伤的可能。冷兵器和热兵器在守家效果上并没有感觉出明显差别，修好破洞安上防盗门的情况下有两个人用普通工具守家也可以无伤度过犯罪高峰期。如果遇上资源匮乏的地图，捡到的子弹修复的枪支卖掉换其它更有用的物资是一个相对划算的选择。</p><p>4.大部分爱抽烟爱喝咖啡的角色在没烟草咖啡的情况下并不会影响心情，但布鲁诺没烟抽会非常容易悲伤，罗曼除了要保证他的烟还千万不能让他处于非常饥饿状态，否则晚上大概率会打人，是真打，会把队友打成轻伤或把他自己打成重伤。</p><p>5.最好要有的建造品：2个床，3个房屋漏洞，防盗门（需把工作台升到3级），2个捕鼠笼，1个二级灶台，1个水过滤器，1个二级金属工具台，1套工具（铲子、撬棍、斧头、菜刀），1个壁炉，1个制烟台或1个酿酒台，1个收音机。</p><p>可有可无的建造品：第3个床，第2个水过滤器，第2个壁炉或升二级壁炉，热兵器。</p><p>谨慎决定要不要建的建造品：草药园、蔬菜园。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;一周目通关&quot;&gt;&lt;a href=&quot;#一周目通关&quot; class=&quot;headerlink&quot; title=&quot;一周目通关&quot;&gt;&lt;/a&gt;一周目通关&lt;/h3&gt;&lt;p&gt;罗曼受了致命伤，崩溃状态没法去医院，扎拉塔带着仅剩3块肉出去换了绷带回来的时候，发现他离开了避难所，家里少了一颗子弹</summary>
+      
+    
+    
+    
+    <category term="Game" scheme="https://brielley.github.io/categories/Game/"/>
+    
+    <category term="Indie" scheme="https://brielley.github.io/categories/Game/Indie/"/>
+    
+    
+    <category term="Gamer" scheme="https://brielley.github.io/tags/Gamer/"/>
+    
+    <category term="This War Of Mine" scheme="https://brielley.github.io/tags/This-War-Of-Mine/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Dec2, 2019</title>
     <link href="https://brielley.github.io/2019/12/02/life-diary-late-night-cave-191202/"/>
     <id>https://brielley.github.io/2019/12/02/life-diary-late-night-cave-191202/</id>
@@ -555,39 +589,6 @@
     
     
     <category term="To Love Life For What It Is" scheme="https://brielley.github.io/tags/To-Love-Life-For-What-It-Is/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>36问</title>
-    <link href="https://brielley.github.io/2019/10/13/life-musical-jcs00-judus-36-questions/"/>
-    <id>https://brielley.github.io/2019/10/13/life-musical-jcs00-judus-36-questions/</id>
-    <published>2019-10-13T04:36:00.342Z</published>
-    <updated>2021-03-23T17:35:49.003Z</updated>
-    
-    <content type="html"><![CDATA[<p><em>-旧文存档，原发于lofter-</em></p><hr><ul><li><p>一个脑洞，如果在Ju带来罗马士兵一切走向无可挽回之前，Ju和JC听到了彼此对这36问的回答，有没有可能不走向命定的BE呢？</p></li><li><p>以下脑洞仅限于JCS00作品，不涉及历史和宗教同名人物。</p></li></ul><hr><p><strong>Q1. 这世界上你最想邀请谁共进晚餐？</strong></p><p>Ju：和JC。是的，如你所见，我们每晚都在一起晚餐，但我想和他单独共进晚餐。我们需要谈谈，现在事态每小时都在恶化。我试过在清晨的路上拦住他，但那时间太短，我刚迫使他正面问题就被到来的使徒们打断；我试过在深夜去他的房间找他，但Mary总在那里，并阻止我们谈话。我需要一个晚餐，我们需要好好谈谈。</p><p>JC：和我父。在听从所有的where和how之后，我想和他共进晚餐，问一问他why。</p><p><strong>Q2. 你想成名吗？以什么方式成名？</strong></p><p>Ju：想。我想因把our ideals变为现实，而在我们退休后，they’ll still talk about us when we’ve died。</p><p>JC：想。以不仅是be noticed than i ever was before，更重要的是the things i said and done matter more的方式。</p><p><strong>Q3. 打电话之前你会不会演练一下要说的内容？为什么？</strong></p><p>Ju：电话是什么？不过对于重要的事情我觉得提前演练是有必要的，因为很多事情我们不能等到彻底gone sour得无可挽回之后才去悔不当初。</p><p>JC：电话是什么？不过我所说的一切，都comes to me from far beyond，因此演练并无必要。</p><p><strong>Q4. 对你来说，完美的一天是什么样的？</strong></p><p>Ju：清晨，在拦住JC和他说事的时候他没有回避，我们认真地讨论了问题并且商议出了最佳的解决方法。白天，我们的活动一切顺利，没有任何的talk of god，没有任何给我们带来安全隐患的事件发生。晚餐，我们愉快的分吃面包和红酒，没有奢侈的香膏，没有不详的预言，没有回避没有争吵。深夜，JC能拥有没有噩梦的睡眠直到天明，这样我便也能一夜安眠。</p><p>JC：不存在“完美”的“一”天，因为完美的必须是永恒的。</p><p><strong>Q5. 你上次自己唱歌是什么时候，给别人唱呢？</strong></p><p>Ju：上次自己唱歌是在耶路撒冷，那时JC所发出的光简直令人目眩神迷，我觉得我一直以来焦灼不安的心仿佛平静了下来，情不自禁地想跟着大家一起唱歌，不，我没有唱出声，我只在心里自己唱着。上次给别人唱是在有一天清晨在路上拦住JC的时候，我给他唱了一首拿萨勒的小木匠，想要唤起他对理想生活的向往，勇敢直面并解决眼前的问题，我差一点就成功了。</p><p>JC：上次自己唱歌是在客西马尼，我曾以为我是唱给父的，但最后发现我只是唱给自己。上次给别人唱是在耶路撒冷，当人们为我唱着和撒那的时候，我也为他们歌唱，让他们不要只唱给我，也唱给他们自己他们彼此。</p><p><strong>Q6. 如果你能活到90岁，同时可以选择身体或思想的某样一直保持30岁，你会怎么选？</strong></p><p>Ju：我选择身体。因为身体会衰老，我需要在90岁仍然拥有强壮如30岁的身体，来做好JC永远的左膀右臂；而基于同样的原因，我不想让思想停滞在30岁的时候，我的思想必须每一年每一月每一分每一秒都胜过前一年前一月前一分前一秒，这样才能在面对纷至沓来的困境时为他披荆斩棘。</p><p>JC：这样的选择并不存在。我手中所拥有的一切，都来自于遥远的彼世，我所能做的唯一选择，是将灵魂交予我父。30与90并无区别，即使3年，也可以如30一样，也可以如90漫长。</p><p><strong>Q7. 你是否曾经预感到自己会以怎样的方式死去？</strong></p><p>Ju：是的。准确的说，不止我自己。当我背过身，迫使自己忘记他的魅力所带来的目眩神迷，我的头脑开始变得明晰，我可以清楚的看到我们将很快落到什么样万劫不复的境地。于是我开始用我所有能想到的方法，来让我们都活下去。</p><p>JC：是的。（说着目光往Ju的方向停顿了片刻）那非常痛苦。</p><p><strong>Q8. 说出自己和对方相似的三个地方</strong></p><p>Ju：有相同的理想、在共同为理想而行动、认为人们应该彼此相爱。</p><p>JC：同为上帝面前的灵魂、有相似的困惑、相信人们应该彼此相爱。</p><p><strong>Q9. 你最感激你人生里拥有的什么？</strong></p><p>Ju：my mind. 我觉得mind是一个人所能拥有的最重要最本质最美好的东西，我无比感激它的觉醒，并且愿意付出一切来保卫它的存在。不过最近，我发现我的mind不再像过去那样clear了，我不知道是否光太明亮反而使人目盲，但无法否认，每当我离光越近，我的mind会越混沌，仿佛它和我身上的每一部分一样，想要飞入光中融化自己。我不知道，是否追随JC实现our ideals的代价是my mind，甚至our minds。但作为一个mind仍存的人，我想我此时需要做的事情是尽快找到两全的方法。是的，我相信这样的方法存在，我需要的只是时间。</p><p>JC：my spirit. 我所拥有的一切都来自于far beyond，我可能是一块rock或者stone，但感谢Father，让我拥有spirit，拥有选择是否commend my spirit to His hands的机会，尽管代价是选择的痛苦。</p><p><strong>Q10. 如果你能改变自己成长过程中的某个方面，你会选什么?</strong></p><p>Ju：有时候我会想，如果一些成长中的经历改变，我或许就不会像现在这样，我可以和其他使徒一样，在JC的圣光中忘记自己。但如果可以选，我并不希望失去它们，它们塑造了我，我需要它们，JC需要它们。</p><p>JC：有时候我会希望Father能take this cup away from me，但更多的时候，我希望这个cup能更大一点，这样我就不用对the suffering说heal yourselves，只是there’s nothing in my hands。</p><p><strong>Q11. 花4分钟时间，尽可能详细地告诉对方你的人生经历</strong></p><p>Ju：在我刚追随JC的时候，我曾打算这样做，但JC告诉我什么也不用说。那时我认为这是因为我对他不重要，他不想花费时间，我得让自己更重要。后来我发现他从不问任何人的过去经历，我猜或许他是想表达过去不重要，重要的是未来。再后来我成为了他的right-hand man，他仍然告诉我什么也不用说他都知道，我想他或许是想表达信任才最重要。</p><p>JC：所有人都知道我的经历，我也知道所有人的经历，Ju并不例外。</p><p><strong>Q12. 如果你明天醒来时拥有了某种才能或能力，你希望那会是什么？</strong></p><p>Ju：我希望有一种能兼顾for our good和save him的方法，如果不能得兼，那就确保能save him if i could.</p><p>JC：看到我的行为的reward，看到一切不会是in vain。</p><p>-tbc-</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;em&gt;-旧文存档，原发于lofter-&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;一个脑洞，如果在Ju带来罗马士兵一切走向无可挽回之前，Ju和JC听到了彼此对这36问的回答，有没有可能不走向命定的BE呢？&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;以下脑洞仅限于JCS0</summary>
-      
-    
-    
-    
-    <category term="Life" scheme="https://brielley.github.io/categories/Life/"/>
-    
-    <category term="Musical" scheme="https://brielley.github.io/categories/Life/Musical/"/>
-    
-    
-    <category term="Musical" scheme="https://brielley.github.io/tags/Musical/"/>
-    
-    <category term="JCS" scheme="https://brielley.github.io/tags/JCS/"/>
     
   </entry>
   
