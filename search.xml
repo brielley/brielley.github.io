@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>流浪狗生存模拟器A Stray&#39;s Tale</title>
+      <link href="/2021/04/03/tech-project-a-strays-tale/"/>
+      <url>/2021/04/03/tech-project-a-strays-tale/</url>
+      
+        <content type="html"><![CDATA[<iframe framborder="0" src="https://itch.io/embed/977117" width="552" height="167"><a href="https://brielley.itch.io/a-strays-tale" target="_blank" rel="noopener">A Stray's Tale by Brie Y. R.</a></iframe><h5 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h5><p>下载上面链接里的<code>.zip</code>文件，解压后双击<code>A Stray&#39;s Tale.exe</code>开始游戏。</p><h5 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h5><p><strong>W A S D</strong>： 行走<br><strong>左Shift + W A S D</strong>： 冲刺     （注：冲刺会消耗耐力，耐力耗尽会自动切换为行走，需松开shift才能恢复耐力）</p><h5 id="这个游戏目前是在prototype阶段，会持续更新。"><a href="#这个游戏目前是在prototype阶段，会持续更新。" class="headerlink" title="这个游戏目前是在prototype阶段，会持续更新。"></a>这个游戏目前是在prototype阶段，会持续更新。</h5><p><strong>当前版本已有的功能主要包括</strong>：</p><ul><li>探索城市，翻找垃圾袋并获得随机的食物和饮水满足一天所需，如果食物或者饮水中任何一样耗尽都会结束游戏。</li><li>时间系统。可以在城市内探索的时间仅限于早上5-7点，在屏幕右下方会看到计时器，如果没有在7点前离开城市，会被社工带到流浪动物救助站，游戏结束。</li><li>天气系统。每天的天气是随机的，当天的天气除了影响音效以外，还会与其它系统产生联动，比如目前版本已经有的与干渴系统的联动：晴天需要的饮水量是阴雨天的两倍。在之后更新其它功能后还会有与疾病系统的联动（雨天会更容易感冒）、与npc互动的联动（不同天气能解锁特定的npc互动事件），以及和解谜玩法的联动（不同天气有特殊解谜玩法）。</li><li>生存危机。城市中的危险无处不在，比如绝不减速的汽车，如果被撞几无几率生还；比如高高的堤岸，一旦掉到海里将没法再游上岸，只能在耗尽力气后沉入水中；比如看起来很诱人，但对狗狗来说致命的含有巧克力或葡萄的食物……</li></ul><p><strong>开发中的功能还有</strong>：</p><ul><li>疾病系统。包括吃坏了肚子和淋了雨感冒这样的短期可自愈疾病，和喝太多汽水得糖尿病或喝太多咖啡得心脏病这样会一直持续影响的慢性疾病。</li><li>信念系统。和饥饿与干渴一样，信念也会每天自然消耗，并且在归零的时候结束游戏。在车站等待一直没有回家的主人会增长信念，在与npc的互动中感觉到连结也会增长信念。</li><li>npc事件与好感系统。与npc互动除了增长信念以外，还会增长与这个npc的好感值。好感值达到一定数字以上会解锁一些让生存更容易的新互动，比如流浪汉会帮你去拿那些高高的盖着盖子或者口子特别窄的垃圾箱里的食物，比如有小姑娘会帮你在公园的角落放个水碗这样雨天就都有水喝了，甚至之前必死的被车撞，如果发生时正好有好感度高的npc走过，会被救治，虽然之后一段时间会有一个受伤的debuff，但能活下来。</li><li>解谜系统。比较确定会做的主要是一些怎么更好地生存相关的解谜，主要包括怎么够到那些特别高的垃圾桶，怎么打开金属罐头，怎么解开消防栓的密码锁喝水等等。另外，有在考虑要不要做一些侦探类解谜，包括去追寻主人失踪的原因，甚至救回主人，以及几个npc的侦探解谜线。但这部分我还没想好，也许后面有可能决定不做，因为我还是更想把这个游戏做成一个生存游戏，不太想里面有太多叙事线。再或者也许等生存相关功能都完成开发以后，考虑做个侦探解谜的故事模式。</li><li>捏狗系统。在游戏最前面可以捏狗……准确的说是半捏狗，没有拉杆，只可以选狗狗的品种、大小、毛色这样。然后主要是不同的狗狗能力会有一些区别，有的跑得更快，但耐力少；有的跑得不快，但耐力强；有的不擅长跑但擅长跳；有的跑跳都普通但咬合力强可以空口咬开铝罐头；有的跑跳咬都平平但吃得少；有的特别萌跟npc互动好感涨得更快等等</li></ul><p><strong>作为一个还在开发早期的游戏，亟需各种反馈来改进后续阶段的开发。如果你在玩的过程中遇到任何问题，或者有任何想法和建议，或是发现任何bug，请一定一定告诉我！在这篇博文下留言，或是<a href="https://brielley.itch.io/a-strays-tale" target="_blank" rel="noopener">在itch.io留言</a>，或者<a href="mailto:judastrial@outlook.com" target="_blank" rel="noopener">发我邮件</a>都可。你的反馈是这个游戏改进的契机。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tech </category>
+          
+          <category> Project </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> Game Dev </tag>
+            
+            <tag> My Indie Game </tag>
+            
+            <tag> A Stray&#39;s Tale </tag>
+            
+            <tag> Prototype </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一人称冒险游戏Judas&#39; Trial试玩版出炉啦！</title>
       <link href="/2021/03/26/tech-project-judas-trial/"/>
       <url>/2021/03/26/tech-project-judas-trial/</url>
@@ -22,15 +57,15 @@
       
         <tags>
             
+            <tag> Unity </tag>
+            
             <tag> Game Dev </tag>
             
-            <tag> Unity </tag>
+            <tag> My Indie Game </tag>
             
             <tag> Judas&#39;Trial </tag>
             
             <tag> Early Access </tag>
-            
-            <tag> My Indie Game </tag>
             
         </tags>
       
@@ -146,9 +181,9 @@
       
         <tags>
             
-            <tag> Game Dev </tag>
-            
             <tag> Unity </tag>
+            
+            <tag> Game Dev </tag>
             
             <tag> Pipeline </tag>
             
@@ -268,9 +303,9 @@
       
         <tags>
             
-            <tag> Game Dev </tag>
-            
             <tag> Unity </tag>
+            
+            <tag> Game Dev </tag>
             
             <tag> Fungus </tag>
             
