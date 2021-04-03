@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Urbanist, Source Han Sans:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="环境变量配置错误问题原因：通常来说在安装Nodejs和Hexo时，会自动进行环境变量配置。但有时系统未进行该配置，或在安装其它程序后，其它程序安装时对环境变量的自动配置覆盖了之前安装Hexo时的配置，导致path报错。 问题表现：在使用$ hexo g等命令时报错，错误提示为： 1Erorr: Command not found  问题解决：手动配置环境变量，将Nodejs和Hexo加入环境变量，">
+<meta name="keywords" content="Hexo,生命不息debug不止">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Solutions to Hexo Errors I">
+<meta property="og:url" content="https://brielley.github.io/2020/03/03/tech-blog-hexo-errors-and-solutions/index.html">
+<meta property="og:site_name" content="Brielley">
+<meta property="og:description" content="环境变量配置错误问题原因：通常来说在安装Nodejs和Hexo时，会自动进行环境变量配置。但有时系统未进行该配置，或在安装其它程序后，其它程序安装时对环境变量的自动配置覆盖了之前安装Hexo时的配置，导致path报错。 问题表现：在使用$ hexo g等命令时报错，错误提示为： 1Erorr: Command not found  问题解决：手动配置环境变量，将Nodejs和Hexo加入环境变量，">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2021-03-24T06:13:15.032Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Solutions to Hexo Errors I">
+<meta name="twitter:description" content="环境变量配置错误问题原因：通常来说在安装Nodejs和Hexo时，会自动进行环境变量配置。但有时系统未进行该配置，或在安装其它程序后，其它程序安装时对环境变量的自动配置覆盖了之前安装Hexo时的配置，导致path报错。 问题表现：在使用$ hexo g等命令时报错，错误提示为： 1Erorr: Command not found  问题解决：手动配置环境变量，将Nodejs和Hexo加入环境变量，">
+  <link rel="canonical" href="https://brielley.github.io/2020/03/03/tech-blog-hexo-errors-and-solutions/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Solutions to Hexo Errors I | Brielley</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Brielley" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Brielley</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-what's-new">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>What's New</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tech">
+      
+    
+
+    <a href="/categories/Tech/" rel="section"><i class="fa fa-fw fa-keyboard-o"></i>Tech</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-game">
+      
+    
+
+    <a href="/categories/Game/" rel="section"><i class="fa fa-fw fa-gamepad"></i>Game</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-life">
+      
+    
+
+    <a href="/categories/Life/" rel="section"><i class="fa fa-fw fa-paint-brush"></i>Life</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>Search</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://brielley.github.io/2020/03/03/tech-blog-hexo-errors-and-solutions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Solutions to Hexo Errors I
+
+          
+        </h1>
+
+        <div class="post-meta">
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-03-03 00:23:23" itemprop="dateCreated datePublished" datetime="2020-03-03T00:23:23+08:00">2020-03-03</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+              <span>1.1k</span>
+            </span>
+          
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+              <span>2 mins.</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="环境变量配置错误"><a href="#环境变量配置错误" class="headerlink" title="环境变量配置错误"></a>环境变量配置错误</h4><p>问题原因：<br>通常来说在安装Nodejs和Hexo时，会自动进行环境变量配置。但有时系统未进行该配置，或在安装其它程序后，其它程序安装时对环境变量的自动配置覆盖了之前安装Hexo时的配置，导致path报错。</p>
+<p>问题表现：<br>在使用<code>$ hexo g</code>等命令时报错，错误提示为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Erorr: Command not found</span><br></pre></td></tr></table></figure>
+
+<p>问题解决：<br>手动配置环境变量，将Nodejs和Hexo加入环境变量，具体如下：</p>
+<p>Nodejs:<br>找到<code>/nodejs</code>在c盘中的位置，一般是在<code>/program files</code>或<code>/program files(x86)</code>下，复制该文件夹路径，如<code>C:\Program Files\nodejs</code><br>打开<code>控制面板——系统和安全——系统——高级系统设置——高级——环境变量——系统变量——Path——编辑——新建</code>，如上面复制的<code>C:\Program Files\nodejs</code>路径不在<code>Path</code>列表中，则将以上粘贴到新建行。</p>
+<p>Hexo:<br>同样，找到<code>\blog\hexo\node_modules\hexo\bin</code>在电脑中的位置，复制该文件夹路径，如<code>D:\BLOG\hexo\node_modules\hexo\bin</code>，复制到上面所示的<code>Path</code>处。</p>
+<h4 id="本地服务器端口冲突"><a href="#本地服务器端口冲突" class="headerlink" title="本地服务器端口冲突"></a>本地服务器端口冲突</h4><p>问题原因：<br>Hexo博客默认使用的本地服务器端口为4000，但这个端口很容易被别的进程占用，导致无法使用<code>http://localhost:4000</code>进行博客的本地预览。</p>
+<p>问题表现：<br>在使用<code>$ hexo s</code>时报错，错误提示为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: listen EADDRINUSE</span><br></pre></td></tr></table></figure>
+
+<p>同时<code>http://localhost:4000</code>上看不到博客页面。</p>
+<p>问题解决：<br>改在别的端口预览就好了，比如5000，在<code>$ hexo s</code>时使用如下语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -p 5000</span><br></pre></td></tr></table></figure>
+
+<p>然后浏览器打开<code>http://localhost:5000</code>进行本地预览即可。</p>
+<h4 id="Nunjuck解析错误"><a href="#Nunjuck解析错误" class="headerlink" title="Nunjuck解析错误"></a>Nunjuck解析错误</h4><p>问题原因：<br>Hexo博客是使用Nunjucks来进行解析的，这会导致博文中的`{{ }}`或`{% %}`一类的字符与之冲突，从而无法生成html文件。</p>
+<p>问题表现：<br>在使用<code>$ hexo g</code>时报错，错误提示为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Nunjucks Error: [Line xxx, Column xxx] unexpected token: &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>问题解决：<br>在会冲突的字符前后，使用<code>raw</code>把字符包裹起来，避免解析时报错。具体使用方式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;需包裹的字符&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需注意的是，如果不对<code>.md</code>的文件中的冲突字符进行上述包裹操作，即使<code>.md</code>文件并不放在<code>_posts</code>文件夹下，而是仅仅放在诸如<code>_drafts</code>等文件夹下，也无法正常使用<code>$ hexo g</code>命令。</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2019\10\03\tech-blog-on-github-pages\" rel="bookmark">How to Build a Blog on Github Pages</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2020\05\07\life-makeup-tips\" rel="bookmark">Make-up Tips II</a></div>
+      
+    </li>
+  
+  </ul>
+
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+            
+              <a href="/tags/生命不息debug不止/" rel="tag"><i class="fa fa-tag"></i> 生命不息debug不止</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/03/01/tech-study-notes-python/" rel="next" title="Python Study Notes I">
+                  <i class="fa fa-chevron-left"></i> Python Study Notes I
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/03/11/tech-game-dev-mooc-1/" rel="prev" title="Online Courses about Game Design and Development">
+                  Online Courses about Game Design and Development <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="gitalk-container"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境变量配置错误"><span class="nav-number">1.</span> <span class="nav-text">环境变量配置错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地服务器端口冲突"><span class="nav-number">2.</span> <span class="nav-text">本地服务器端口冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nunjuck解析错误"><span class="nav-number">3.</span> <span class="nav-text">Nunjuck解析错误</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar1.png"
+      alt="Brielley">
+  <p class="site-author-name" itemprop="name">Brielley</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:brielley@163.com" title="E-mail &rarr; mailto:brielley@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://brielley.itch.io" title="Itch.io &rarr; https://brielley.itch.io" rel="noopener" target="_blank"><i class="fa fa-fw fa-gamepad"></i>Itch.io</a>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/en" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Brielley. All Rights Reserved.</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="Symbols count total">183k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">6:22</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '3a5d7f48d7abd0cc624f',
+      clientSecret: '8f09323c8535bf597359196d51dca4821f547c44',
+      repo: 'brielley.github.io',
+      owner: 'brielley',
+      admin: ['brielley'],
+      id: '1c203561a244eb4c3a30ccc979e4a7f1',
+        language: 'en',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>

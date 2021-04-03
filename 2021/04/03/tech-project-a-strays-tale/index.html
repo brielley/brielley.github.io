@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Urbanist, Source Han Sans:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="A Stray&apos;s Tale by Brie Y. R.  安装：下载上面链接里的.zip文件，解压后双击A Stray&amp;#39;s Tale.exe开始游戏。 操作：W A S D： 行走左Shift + W A S D： 冲刺     （注：冲刺会消耗耐力，耐力耗尽会自动切换为行走，需松开shift才能恢复耐力） 这个游戏目前是在prototype阶段，会持续更新。当前版本已有的功能主要包括：">
+<meta name="keywords" content="Game Dev,Unity,A Stray&#39;s Tale,Prototype,My Indie Game">
+<meta property="og:type" content="article">
+<meta property="og:title" content="流浪狗生存模拟器A Stray&#39;s Tale">
+<meta property="og:url" content="https://brielley.github.io/2021/04/03/tech-project-a-strays-tale/index.html">
+<meta property="og:site_name" content="Brielley">
+<meta property="og:description" content="A Stray&apos;s Tale by Brie Y. R.  安装：下载上面链接里的.zip文件，解压后双击A Stray&amp;#39;s Tale.exe开始游戏。 操作：W A S D： 行走左Shift + W A S D： 冲刺     （注：冲刺会消耗耐力，耐力耗尽会自动切换为行走，需松开shift才能恢复耐力） 这个游戏目前是在prototype阶段，会持续更新。当前版本已有的功能主要包括：">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2021-04-03T13:07:21.784Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="流浪狗生存模拟器A Stray&#39;s Tale">
+<meta name="twitter:description" content="A Stray&apos;s Tale by Brie Y. R.  安装：下载上面链接里的.zip文件，解压后双击A Stray&amp;#39;s Tale.exe开始游戏。 操作：W A S D： 行走左Shift + W A S D： 冲刺     （注：冲刺会消耗耐力，耐力耗尽会自动切换为行走，需松开shift才能恢复耐力） 这个游戏目前是在prototype阶段，会持续更新。当前版本已有的功能主要包括：">
+  <link rel="canonical" href="https://brielley.github.io/2021/04/03/tech-project-a-strays-tale/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>流浪狗生存模拟器A Stray's Tale | Brielley</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Brielley" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Brielley</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-what's-new">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>What's New</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tech">
+      
+    
+
+    <a href="/categories/Tech/" rel="section"><i class="fa fa-fw fa-keyboard-o"></i>Tech</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-game">
+      
+    
+
+    <a href="/categories/Game/" rel="section"><i class="fa fa-fw fa-gamepad"></i>Game</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-life">
+      
+    
+
+    <a href="/categories/Life/" rel="section"><i class="fa fa-fw fa-paint-brush"></i>Life</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>Search</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://brielley.github.io/2021/04/03/tech-project-a-strays-tale/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Brielley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brielley">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">流浪狗生存模拟器A Stray's Tale
+
+          
+        </h1>
+
+        <div class="post-meta">
+          
+
+          
+            <i class="fa fa-thumb-tack"></i> 
+            <span class="post-meta-divider">|</span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2021-04-03 17:18:56" itemprop="dateCreated datePublished" datetime="2021-04-03T17:18:56+08:00">2021-04-03</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/Project/" itemprop="url" rel="index"><span itemprop="name">Project</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+              <span>1.4k</span>
+            </span>
+          
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+              <span>3 mins.</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <iframe framborder="0" src="https://itch.io/embed/977117" width="552" height="167"><a href="https://brielley.itch.io/a-strays-tale" target="_blank" rel="noopener">A Stray's Tale by Brie Y. R.</a></iframe>
+
+<h5 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h5><p>下载上面链接里的<code>.zip</code>文件，解压后双击<code>A Stray&#39;s Tale.exe</code>开始游戏。</p>
+<h5 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h5><p><strong>W A S D</strong>： 行走<br><strong>左Shift + W A S D</strong>： 冲刺     （注：冲刺会消耗耐力，耐力耗尽会自动切换为行走，需松开shift才能恢复耐力）</p>
+<h5 id="这个游戏目前是在prototype阶段，会持续更新。"><a href="#这个游戏目前是在prototype阶段，会持续更新。" class="headerlink" title="这个游戏目前是在prototype阶段，会持续更新。"></a>这个游戏目前是在prototype阶段，会持续更新。</h5><p><strong>当前版本已有的功能主要包括</strong>：</p>
+<ul>
+<li>探索城市，翻找垃圾袋并获得随机的食物和饮水满足一天所需，如果食物或者饮水中任何一样耗尽都会结束游戏。</li>
+<li>时间系统。可以在城市内探索的时间仅限于早上5-7点，在屏幕右下方会看到计时器，如果没有在7点前离开城市，会被社工带到流浪动物救助站，游戏结束。</li>
+<li>天气系统。每天的天气是随机的，当天的天气除了影响音效以外，还会与其它系统产生联动，比如目前版本已经有的与干渴系统的联动：晴天需要的饮水量是阴雨天的两倍。在之后更新其它功能后还会有与疾病系统的联动（雨天会更容易感冒）、与npc互动的联动（不同天气能解锁特定的npc互动事件），以及和解谜玩法的联动（不同天气有特殊解谜玩法）。</li>
+<li>生存危机。城市中的危险无处不在，比如绝不减速的汽车，如果被撞几无几率生还；比如高高的堤岸，一旦掉到海里将没法再游上岸，只能在耗尽力气后沉入水中；比如看起来很诱人，但对狗狗来说致命的含有巧克力或葡萄的食物……</li>
+</ul>
+<p><strong>开发中的功能还有</strong>：</p>
+<ul>
+<li>疾病系统。包括吃坏了肚子和淋了雨感冒这样的短期可自愈疾病，和喝太多汽水得糖尿病或喝太多咖啡得心脏病这样会一直持续影响的慢性疾病。</li>
+<li>信念系统。和饥饿与干渴一样，信念也会每天自然消耗，并且在归零的时候结束游戏。在车站等待一直没有回家的主人会增长信念，在与npc的互动中感觉到连结也会增长信念。</li>
+<li>npc事件与好感系统。与npc互动除了增长信念以外，还会增长与这个npc的好感值。好感值达到一定数字以上会解锁一些让生存更容易的新互动，比如流浪汉会帮你去拿那些高高的盖着盖子或者口子特别窄的垃圾箱里的食物，比如有小姑娘会帮你在公园的角落放个水碗这样雨天就都有水喝了，甚至之前必死的被车撞，如果发生时正好有好感度高的npc走过，会被救治，虽然之后一段时间会有一个受伤的debuff，但能活下来。</li>
+<li>解谜系统。比较确定会做的主要是一些怎么更好地生存相关的解谜，主要包括怎么够到那些特别高的垃圾桶，怎么打开金属罐头，怎么解开消防栓的密码锁喝水等等。另外，有在考虑要不要做一些侦探类解谜，包括去追寻主人失踪的原因，甚至救回主人，以及几个npc的侦探解谜线。但这部分我还没想好，也许后面有可能决定不做，因为我还是更想把这个游戏做成一个生存游戏，不太想里面有太多叙事线。再或者也许等生存相关功能都完成开发以后，考虑做个侦探解谜的故事模式。</li>
+<li>捏狗系统。在游戏最前面可以捏狗……准确的说是半捏狗，没有拉杆，只可以选狗狗的品种、大小、毛色这样。然后主要是不同的狗狗能力会有一些区别，有的跑得更快，但耐力少；有的跑得不快，但耐力强；有的不擅长跑但擅长跳；有的跑跳都普通但咬合力强可以空口咬开铝罐头；有的跑跳咬都平平但吃得少；有的特别萌跟npc互动好感涨得更快等等</li>
+</ul>
+<p><strong>作为一个还在开发早期的游戏，亟需各种反馈来改进后续阶段的开发。如果你在玩的过程中遇到任何问题，或者有任何想法和建议，或是发现任何bug，请一定一定告诉我！在这篇博文下留言，或是<a href="https://brielley.itch.io/a-strays-tale" target="_blank" rel="noopener">在itch.io留言</a>，或者<a href="mailto:judastrial@outlook.com" target="_blank" rel="noopener">发我邮件</a>都可。你的反馈是这个游戏改进的契机。</strong></p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2021\03\26\tech-project-judas-trial\" rel="bookmark">第一人称冒险游戏Judas' Trial试玩版出炉啦！</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2021\01\02\tech-game-dev-unity-vfx\" rel="bookmark">Unity项目画质改进的一些思路</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2020\08\15\tech-game-dev-unity-fungus\" rel="bookmark">Unity插件安利：Fungus</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2020\08\15\tech-game-dev-music-making\" rel="bookmark">How to use IMSLP and GarageBand to make game music</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2020\03\11\tech-game-dev-mooc-1\" rel="bookmark">Online Courses about Game Design and Development</a></div>
+      
+    </li>
+  
+  </ul>
+
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Game-Dev/" rel="tag"><i class="fa fa-tag"></i> Game Dev</a>
+            
+              <a href="/tags/Unity/" rel="tag"><i class="fa fa-tag"></i> Unity</a>
+            
+              <a href="/tags/A-Stray-s-Tale/" rel="tag"><i class="fa fa-tag"></i> A Stray's Tale</a>
+            
+              <a href="/tags/Prototype/" rel="tag"><i class="fa fa-tag"></i> Prototype</a>
+            
+              <a href="/tags/My-Indie-Game/" rel="tag"><i class="fa fa-tag"></i> My Indie Game</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2021/03/26/tech-project-judas-trial/" rel="next" title="第一人称冒险游戏Judas' Trial试玩版出炉啦！">
+                  <i class="fa fa-chevron-left"></i> 第一人称冒险游戏Judas' Trial试玩版出炉啦！
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="gitalk-container"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装："><span class="nav-number">1.</span> <span class="nav-text">安装：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#操作："><span class="nav-number">2.</span> <span class="nav-text">操作：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#这个游戏目前是在prototype阶段，会持续更新。"><span class="nav-number">3.</span> <span class="nav-text">这个游戏目前是在prototype阶段，会持续更新。</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar1.png"
+      alt="Brielley">
+  <p class="site-author-name" itemprop="name">Brielley</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:brielley@163.com" title="E-mail &rarr; mailto:brielley@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://brielley.itch.io" title="Itch.io &rarr; https://brielley.itch.io" rel="noopener" target="_blank"><i class="fa fa-fw fa-gamepad"></i>Itch.io</a>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/en" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Brielley. All Rights Reserved.</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="Symbols count total">183k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">6:22</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '3a5d7f48d7abd0cc624f',
+      clientSecret: '8f09323c8535bf597359196d51dca4821f547c44',
+      repo: 'brielley.github.io',
+      owner: 'brielley',
+      admin: ['brielley'],
+      id: 'fe3e9db38a52dca13d565e3952e450c1',
+        language: 'en',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>
